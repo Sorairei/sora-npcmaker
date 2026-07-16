@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sorairei NPC Maker</title>
+    <link rel="icon" type="image/png" href="assets/beetales-avatar.png">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="data.js"></script>
@@ -10,8 +11,17 @@
 </head>
 <body>
     <header class="rpg-header">
-        <h1 style="font-family: 'Cinzel Decorative', cursive; color: var(--accent); text-shadow: 0 2px 8px rgba(180,140,58,0.5); font-size: 24px; letter-spacing: 2px;">Sorairei <span style="color: #dfd3be; font-size: 16px; letter-spacing: 1px; font-weight: 400;">NPC Maker</span></h1>
+        <div class="header-brand">
+            <img class="beetales-logo" src="assets/beetales-logo-v2.png" alt="The BeeTales">
+            <h1>Sorairei <span>NPC Maker</span></h1>
+        </div>
         <div class="header-actions">
+            <a class="github-sponsor-btn" href="https://github.com/sponsors/Sorairei" target="_blank" rel="noopener noreferrer" aria-label="Sponsor Sorairei on GitHub">
+                <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16">
+                    <path d="m8 14.25-.75-.66C3.15 9.95.5 7.59.5 4.69.5 2.33 2.35.5 4.75.5 6.1.5 7.4 1.12 8 2.09 8.6 1.12 9.9.5 11.25.5c2.4 0 4.25 1.83 4.25 4.19 0 2.9-2.65 5.26-6.75 8.9Z"></path>
+                </svg>
+                <span>Sponsor</span>
+            </a>
             <button id="btn-info" class="info-circle-btn" onclick="window.showHelpModal()" title="About / Help">i</button>
             <button id="btn-new" class="rpg-btn" onclick="window.resetNPC()">New NPC</button>
             <button id="btn-generate" class="rpg-btn highlight" onclick="window.showLuaModal()">Generate .LUA</button>
@@ -228,6 +238,16 @@
         </main>
     </div>
     </div> <!-- End rpg-layout-container -->
+
+    <footer class="site-footer">
+        <img class="footer-mascot" src="assets/sora-avatar.png" alt="Sora, Sorairei's mascot">
+        <p>&copy; 2026 Sorairei. Part of <span>The BeeTales</span>.</p>
+        <nav aria-label="Footer links">
+            <a href="LICENSE">MIT License</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="https://github.com/Sorairei/sora-npcmaker" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+    </footer>
 
     <!-- Modal -->
     <div id="output-modal" class="modal-overlay">
