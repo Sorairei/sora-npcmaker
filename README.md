@@ -1,53 +1,165 @@
-# Sorairei NPC Maker
+<p align="center">
+  <img src="assets/beetales-logo-v2.png" alt="The BeeTales" width="520">
+</p>
 
-Sorairei NPC Maker is a specialized visual editor designed for the rapid creation of NPCs within the **Canary Server** ecosystem (RevScripts). This tool provides a professional interface for configuring character attributes, visual appearances, and trade systems with absolute precision.
+<h1 align="center">Sorairei NPC Maker</h1>
 
----
+<p align="center">
+  A browser-based visual editor for creating Canary Server NPCs with RevScripts.
+</p>
 
-## Technical Specifications
+<p align="center">
+  <a href="https://github.com/Sorairei/sora-npcmaker"><strong>View the repository</strong></a>
+  ·
+  <a href="https://github.com/Sorairei/sora-npcmaker/issues">Report an issue</a>
+  ·
+  <a href="https://github.com/sponsors/Sorairei">Sponsor the project</a>
+</p>
 
-| Feature | Description |
-| :--- | :--- |
-| **System Compatibility** | Native support for Canary Server RevScripts. |
-| **Visual Outfitter** | Real-time preview for 240+ outfits including Male, Female, and Monsters. |
-| **Color Management** | Full RGB palette support for Head, Primary, Secondary, and Detail components. |
-| **Trade System** | Integrated item catalog with search-by-ID and search-by-name functionality. |
-| **Keyword Handler** | Support for custom conversation triggers and automated responses. |
-| **Lua Generator** | Exports high-cleanliness code following the official RevScript standards. |
+<p align="center">
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-8b6914.svg"></a>
+  <img alt="Vanilla JavaScript" src="https://img.shields.io/badge/JavaScript-vanilla-f7df1e.svg?logo=javascript&logoColor=111111">
+  <img alt="Browser only" src="https://img.shields.io/badge/runtime-browser%20only-5b4636.svg">
+  <a href="https://github.com/sponsors/Sorairei"><img alt="GitHub Sponsors" src="https://img.shields.io/badge/sponsor-GitHub%20Sponsors-bf3989.svg?logo=githubsponsors&logoColor=white"></a>
+</p>
 
----
+## Overview
 
-## Core Functionality
+Sorairei NPC Maker is a specialized visual editor for rapidly building NPC scripts for the **Canary Server** ecosystem. It combines character configuration, a real-time outfit preview, a searchable item catalog, trade management, dialogue editing, custom keyword responses, and clean Lua export in a single interface.
 
-### Character Customization
-The editor allows for full control over the NPC's visual identity. Users can select look-types, manage addons, and assign mounts while having a persistent real-time preview of the character's appearance.
+The application is made from static HTML, CSS, JavaScript, images, and local catalog data. It requires no build step, backend, database, account, API key, or server-side processing. Open `index.html` in a modern browser, configure the NPC, and download the generated RevScript.
 
-### NPC Trade Integration
-A comprehensive trade list manager is included, allowing for the configuration of purchase and sale prices directly within the UI. The internal database is synced to ensure ID consistency with modern server distributions.
+## Contents
 
-### Advanced Dialogue Configuration
-Custom interaction keywords can be implemented through a streamlined interface. The generator automatically maps these triggers to the `keywordHandler` system used by Canary.
+- [Highlights](#highlights)
+- [How it works](#how-it-works)
+- [Character and dialogue configuration](#character-and-dialogue-configuration)
+- [Trade system](#trade-system)
+- [Architecture](#architecture)
+- [Repository structure](#repository-structure)
+- [Security and privacy](#security-and-privacy)
+- [Installation and usage](#installation-and-usage)
+- [Validation](#validation)
+- [Limitations](#limitations)
+- [Contributing](#contributing)
+- [Sponsorship](#sponsorship)
+- [License](#license)
 
----
+## Highlights
 
-## Security and Integrity
+| Area | Capabilities |
+| --- | --- |
+| Canary compatibility | Generates NPC Lua following the Canary Server RevScript structure |
+| Visual outfitter | Real-time preview for 240+ male, female, and monster outfits |
+| Appearance | Look type, addons, mounts, and indexed Tibia colors for head, primary, secondary, and detail areas |
+| Item catalog | Bundled modern item database with category filters and search by client ID or name |
+| Trading | Buy and sell price configuration with a reviewable trade list |
+| Dialogue | Greeting, farewell, walk-away messages, and custom keyword responses |
+| Lua export | Readable generated source with direct `.lua` download |
+| Deployment | Static browser application with no package installation required at runtime |
 
-The application implements several layers of data protection to ensure server stability:
+## How it works
 
-*   **HTML Sanitization**: All user-provided strings are passed through a sanitization layer to prevent cross-site scripting (XSS).
-*   **Lua Logic Escaping**: Dialogue strings and item names are escaped to handle special characters, preventing Lua syntax errors during server loading.
-*   **RevScript Formatting**: Generated code utilizes tabbed indentation and multiline block structures for maximum readability and server-side compatibility.
+1. The user defines the NPC name, health, walk interval, and walk radius.
+2. Outfit, addon, mount, and color controls update the visual preview immediately.
+3. Catalog selections build the NPC's buy and sell inventory.
+4. Dialogue fields and keyword-response pairs define conversation behavior.
+5. The generator converts the in-memory NPC state into a Canary-compatible RevScript.
+6. The generated Lua can be reviewed in the application and downloaded as a `.lua` file.
 
----
+No project data is uploaded or persisted by the application. Starting a new NPC reloads the page and clears the current in-memory configuration.
 
-## Implementation & Usage
+## Character and dialogue configuration
 
-1.  **Deployment**: Open `index.html` in a standard web browser.
-2.  **Configuration**: Define NPC attributes (health, radius), visual properties, and trade items.
-3.  **Export**: Utilize the **Generate .LUA** feature to produce a standards-compliant script.
-4.  **Install**: Place the exported `.lua` file into the server's `data/npc` directory.
+### General settings
 
-### Validation
+| Setting | Purpose | Generated field |
+| --- | --- | --- |
+| NPC name | Internal and displayed NPC identity | `npcConfig.name` and `npcConfig.description` |
+| Health | Current and maximum health | `npcConfig.health` and `npcConfig.maxHealth` |
+| Walk interval | Delay between movement attempts | `npcConfig.walkInterval` |
+| Walk radius | Allowed movement distance; `0` creates a stationary NPC | `npcConfig.walkRadius` |
+
+### Appearance
+
+The outfitter groups available looks into male, female, and monster categories. Users can enable outfit addons, select a mount, choose colors from the Tibia palette, or randomize colors and the complete appearance. The preview is refreshed through the Oracle OTS outfit image service.
+
+### Dialogue and keywords
+
+The standard greeting, farewell, and walk-away messages support Canary placeholders such as `|PLAYERNAME|`. Additional trigger-response pairs are exported through `keywordHandler:addKeyword`, allowing the NPC to answer custom conversation topics.
+
+## Trade system
+
+The bundled catalog can be filtered by item category or searched by item name and modern client ID. Each selected item may define a buy price, a sell price, or both. The resulting trade list is emitted as `npcConfig.shop`, together with the standard Canary buy, sell, and item-check callbacks.
+
+Item names, prices, and client IDs remain visible in the editor before export so the complete shop configuration can be reviewed.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    DATA[Item, outfit, and mount data] --> UI[Visual editor]
+    UI --> STATE[In-memory NPC state]
+    PALETTE[Outfit and color controls] --> STATE
+    PALETTE --> PREVIEW[Oracle OTS outfit preview]
+    CATALOG[Catalog and trade editor] --> STATE
+    DIALOGUE[Dialogue and keywords] --> STATE
+    STATE --> GENERATOR[Lua generator]
+    GENERATOR --> REVIEW[Generated script review]
+    REVIEW --> DOWNLOAD[Lua file download]
+```
+
+### Main design boundaries
+
+- **Presentation layer:** `index.html` and `styles.css` define the RPG-inspired editor, panels, modals, responsive layout, and BeeTales branding.
+- **State and interaction layer:** `app.js` owns the current NPC configuration, UI events, catalog search, palette behavior, preview updates, and download flow.
+- **Generation layer:** `generator.js` escapes user strings, validates numeric settings, and serializes the NPC state into Canary RevScript Lua.
+- **Data layer:** `data.js`, `outfit_data.js`, and `items/` provide the local item, outfit, mount, category, and sprite catalogs.
+- **External preview boundary:** only character preview images depend on the Oracle OTS service; Lua generation remains local.
+
+## Repository structure
+
+| Path | Responsibility |
+| --- | --- |
+| `index.html` | Application shell, editor panels, generated-code modal, help content, and footer |
+| `styles.css` | RPG visual system, responsive layout, controls, tables, modals, branding, and footer styles |
+| `app.js` | NPC state, UI interactions, autocomplete, catalog, outfitter, colors, dialogue, and downloads |
+| `generator.js` | Canary RevScript Lua generation, defaults, validation, and escaping |
+| `data.js` | Item catalog, categories, mounts, and fallback outfit metadata |
+| `outfit_data.js` | Named male, female, and monster outfit definitions |
+| `items/` | Local item sprite catalog used by search, categories, and trade lists |
+| `assets/` | BeeTales logo, Sora mascot, and favicon assets |
+| `test/` | Dependency-free Node.js regression tests for Lua generation |
+| `.github/FUNDING.yml` | GitHub Sponsors configuration |
+
+## Security and privacy
+
+| Protection | Behavior |
+| --- | --- |
+| HTML sanitization | Dynamic item names, values, and keyword content are escaped before insertion into rendered tables |
+| Lua string escaping | Backslashes, quotes, line endings, and tabs are escaped before entering generated Lua strings |
+| Numeric safeguards | Health and movement settings use safe defaults when invalid values are supplied |
+| Local generation | NPC configuration and Lua generation remain inside the browser |
+| No tracking | The project contains no accounts, analytics, advertising, or remote storage |
+
+The application does request remote Google Fonts and outfit preview images. Item sprites, catalog data, application logic, and Lua generation are served locally.
+
+## Installation and usage
+
+1. Clone or download the repository.
+2. Open `index.html` in a modern browser.
+3. Configure the NPC's general settings, appearance, shop, dialogue, and keywords.
+4. Select **Generate .LUA** and review the resulting script.
+5. Download the file and place it in the Canary server's `data/npc` directory.
+
+```bash
+git clone https://github.com/Sorairei/sora-npcmaker.git
+cd sora-npcmaker
+```
+
+No runtime dependency installation is required.
+
+## Validation
 
 With Node.js 18 or newer installed, run the dependency-free syntax and generator test suite:
 
@@ -55,12 +167,33 @@ With Node.js 18 or newer installed, run the dependency-free syntax and generator
 npm run check
 ```
 
----
+The validation command checks `app.js` and `generator.js` syntax and runs regression coverage for default generation, stationary NPCs, invalid numeric values, Lua string escaping, and shop callbacks.
+
+## Limitations
+
+- Outfit previews require an internet connection and availability of the Oracle OTS image service.
+- Google Fonts are loaded remotely; the browser uses fallback fonts if they are unavailable.
+- The current NPC configuration is held in memory and is not restored after reloading or closing the page.
+- The application exports Canary Server RevScripts and does not target every Open Tibia server distribution.
+- Item and outfit availability reflects the bundled catalog and may require periodic updates as server data evolves.
+- Generated scripts should be reviewed before installation on a production server.
+
+## Contributing
+
+Bug reports, catalog corrections, compatibility fixes, interface improvements, and documentation updates are welcome. Use [GitHub Issues](https://github.com/Sorairei/sora-npcmaker/issues) for reproducible problems or feature proposals.
+
+Contributions should preserve the static browser architecture, Canary RevScript compatibility, existing BeeTales visual identity, and dependency-free runtime.
+
+## Sponsorship
+
+Sorairei NPC Maker is free and open source. If the tool saves time while building a Canary server, you can support continued maintenance through [GitHub Sponsors](https://github.com/sponsors/Sorairei).
 
 ## License
 
-This project is licensed under the **MIT License**. Refer to the `LICENSE` file for full legal documentation.
+Released under the [MIT License](LICENSE). Copyright © 2026 [Sorairei](https://github.com/Sorairei).
 
 ---
 
-*Note: Individual application logic is client-side; however, character visual previews require an active connection to the Oracle OTS API for asset rendering.*
+<p align="center">
+  Built with care by <a href="https://github.com/Sorairei">Sorairei</a> and the BeeTales community.
+</p>
