@@ -199,7 +199,6 @@ window.renderCatalog = function (category, activeBtnEl) {
 
 // Autocomplete
 function initAutocomplete() {
-    console.log("Initializing Autocomplete...");
     var searchInput = gid('shop-item-search');
     var dropdown    = gid('shop-item-dropdown');
     
@@ -207,6 +206,11 @@ function initAutocomplete() {
         console.error("Critical: Search elements not found in DOM");
         return;
     }
+
+    // Initialization may be requested again by future UI changes. Avoid
+    // stacking duplicate input and document listeners when that happens.
+    if (searchInput.dataset.autocompleteReady === 'true') return;
+    searchInput.dataset.autocompleteReady = 'true';
 
     function handleInput(e) {
         var raw = searchInput.value || "";
@@ -296,8 +300,6 @@ function initAutocomplete() {
             dropdown.style.display = 'none';
         }
     });
-
-    console.log("Autocomplete Initialized Successfully");
 }
 
 
@@ -514,8 +516,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Autocomplete
     initAutocomplete();
-    // Safety retry in case of DOM lag
-    setTimeout(initAutocomplete, 500); 
 
     // Mounts
     var mountSel = gid('mount-select');
@@ -556,9 +556,6 @@ document.addEventListener('DOMContentLoaded', function () {
             window.renderCatalog(categories[0], filters.firstElementChild);
         }
     }
-
-    initAutocomplete();
-
     // Basic config fields
     gid('npc-name').addEventListener('input',          function (e) { window.NPC.state.name                  = e.target.value; });
     gid('npc-walk-interval').addEventListener('input', function (e) { window.NPC.state.walkInterval           = parseInt(e.target.value); });

@@ -1,0 +1,7 @@
+{
+  "name": "sora-npcmaker",
+  "private": true,
+  "scripts": {
+    "check": "node --check app.js && node --check generator.js && node --test"
+  }
+}

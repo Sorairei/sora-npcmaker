@@ -2,11 +2,21 @@ window.generateLUA = function(state) {
 	// Helpers
 	const safeLua = (str) => {
 		if (!str) return "";
-		// Escape backslashes first, then double quotes, then newlines
+		// Escape backslashes first, then characters that would break or alter a Lua string.
 		return String(str)
 			.replace(/\\/g, '\\\\')
 			.replace(/"/g, '\\"')
+			.replace(/\r/g, '\\r')
+			.replace(/\t/g, '\\t')
 			.replace(/\n/g, '\\n');
+	};
+	const positiveInteger = (value, fallback) => {
+		const parsed = Number.parseInt(value, 10);
+		return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+	};
+	const nonNegativeInteger = (value, fallback) => {
+		const parsed = Number.parseInt(value, 10);
+		return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
 	};
 
 	let name = safeLua(state.name || "Default NPC");
@@ -19,10 +29,10 @@ window.generateLUA = function(state) {
 	lua += `npcConfig.name = internalNpcName\n`;
 	lua += `npcConfig.description = internalNpcName\n\n`;
 
-	lua += `npcConfig.health = ${parseInt(state.health) || 100}\n`;
+	lua += `npcConfig.health = ${positiveInteger(state.health, 100)}\n`;
 	lua += `npcConfig.maxHealth = npcConfig.health\n`;
-	lua += `npcConfig.walkInterval = ${parseInt(state.walkInterval) || 2000}\n`;
-	lua += `npcConfig.walkRadius = ${parseInt(state.walkRadius) || 2}\n\n`;
+	lua += `npcConfig.walkInterval = ${positiveInteger(state.walkInterval, 2000)}\n`;
+	lua += `npcConfig.walkRadius = ${nonNegativeInteger(state.walkRadius, 2)}\n\n`;
 
 	// Outfit
 	lua += `npcConfig.outfit = {\n`;

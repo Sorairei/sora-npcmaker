@@ -47,6 +47,14 @@ The application implements several layers of data protection to ensure server st
 3.  **Export**: Utilize the **Generate .LUA** feature to produce a standards-compliant script.
 4.  **Install**: Place the exported `.lua` file into the server's `data/npc` directory.
 
+### Validation
+
+With Node.js 18 or newer installed, run the dependency-free syntax and generator test suite:
+
+```bash
+npm run check
+```
+
 ---
 
 ## License
