@@ -235,8 +235,8 @@ img { max-width: 100%; }
 #preview-outfit { position:absolute; left:50%; top:50%; max-width:none; transform:translate(-50%,-50%) scale(var(--outfit-scale,2)); transform-origin:center; image-rendering:pixelated; }
 .preview-name {
   position:absolute;
-  left:50%;
-  bottom:calc(100% + 10px);
+  left:var(--visible-center-x,50%);
+  top:calc(var(--visible-outfit-top,0px) - 24px);
   z-index:3;
   max-width:min(230px,calc(100vw - 70px));
   overflow:hidden;
@@ -258,8 +258,8 @@ img { max-width: 100%; }
 }
 .preview-healthbar {
   position:absolute;
-  left:50%;
-  bottom:calc(100% + 3px);
+  left:var(--visible-center-x,50%);
+  top:calc(var(--visible-outfit-top,0px) - 8px);
   z-index:3;
   width:36px;
   height:5px;
