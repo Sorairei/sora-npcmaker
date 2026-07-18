@@ -18,6 +18,8 @@ window.generateLUA = function(state) {
 		const parsed = Number.parseInt(value, 10);
 		return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
 	};
+	const outfit = state.outfit || {};
+	const dialogue = state.dialogue || {};
 
 	let name = safeLua(state.name || "Default NPC");
 	
@@ -36,14 +38,15 @@ window.generateLUA = function(state) {
 
 	// Outfit
 	lua += `npcConfig.outfit = {\n`;
-	lua += `\tlookType = ${state.outfit.lookType || 128},\n`;
-	lua += `\tlookHead = ${state.outfit.lookHead || 0},\n`;
-	lua += `\tlookBody = ${state.outfit.lookBody || 0},\n`;
-	lua += `\tlookLegs = ${state.outfit.lookLegs || 0},\n`;
-	lua += `\tlookFeet = ${state.outfit.lookFeet || 0},\n`;
-	lua += `\tlookAddons = ${state.outfit.lookAddons || 0},\n`;
-	if(state.outfit.mount > 0) {
-		lua += `\tlookMount = ${state.outfit.mount},\n`;
+	lua += `\tlookType = ${positiveInteger(outfit.lookType, 128)},\n`;
+	lua += `\tlookHead = ${nonNegativeInteger(outfit.lookHead, 0)},\n`;
+	lua += `\tlookBody = ${nonNegativeInteger(outfit.lookBody, 0)},\n`;
+	lua += `\tlookLegs = ${nonNegativeInteger(outfit.lookLegs, 0)},\n`;
+	lua += `\tlookFeet = ${nonNegativeInteger(outfit.lookFeet, 0)},\n`;
+	lua += `\tlookAddons = ${nonNegativeInteger(outfit.lookAddons, 0)},\n`;
+	const mount = positiveInteger(outfit.mount, 0);
+	if(mount > 0) {
+		lua += `\tlookMount = ${mount},\n`;
 	}
 	lua += `}\n\n`;
 
@@ -65,9 +68,9 @@ window.generateLUA = function(state) {
 	lua += `npcType.onCloseChannel = function(npc, creature)\n\tnpcHandler:onCloseChannel(npc, creature)\nend\n\n`;
 
 	// Messages
-	lua += `npcHandler:setMessage(MESSAGE_GREET, "${safeLua(state.dialogue.greet) || 'Hello |PLAYERNAME|.'}")\n`;
-	lua += `npcHandler:setMessage(MESSAGE_FAREWELL, "${safeLua(state.dialogue.farewell) || 'Farewell.'}")\n`;
-	lua += `npcHandler:setMessage(MESSAGE_WALKAWAY, "${safeLua(state.dialogue.walkaway) || 'How rude!'}")\n`;
+	lua += `npcHandler:setMessage(MESSAGE_GREET, "${safeLua(dialogue.greet) || 'Hello |PLAYERNAME|.'}")\n`;
+	lua += `npcHandler:setMessage(MESSAGE_FAREWELL, "${safeLua(dialogue.farewell) || 'Farewell.'}")\n`;
+	lua += `npcHandler:setMessage(MESSAGE_WALKAWAY, "${safeLua(dialogue.walkaway) || 'How rude!'}")\n`;
 	lua += `npcHandler:setMessage(MESSAGE_SENDTRADE, "Sure.")\n\n`;
 
 	// Keywords
@@ -83,9 +86,15 @@ window.generateLUA = function(state) {
 	lua += `npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)\n\n`;
 
 	// Shop
-	if (state.tradeItems && state.tradeItems.length > 0) {
+	const tradeItems = (state.tradeItems || []).map(item => ({
+		id: positiveInteger(item.id, 0),
+		name: item.name,
+		buy: positiveInteger(item.buy, 0),
+		sell: positiveInteger(item.sell, 0)
+	})).filter(item => item.id > 0 && (item.buy > 0 || item.sell > 0));
+	if (tradeItems.length > 0) {
 		lua += `npcConfig.shop = {\n`;
-		state.tradeItems.forEach(item => {
+		tradeItems.forEach(item => {
 			let buyStr = item.buy > 0 ? `, buy = ${item.buy}` : '';
 			let sellStr = item.sell > 0 ? `, sell = ${item.sell}` : '';
 			lua += `\t{ itemName = "${safeLua(item.name)}", clientId = ${item.id}${buyStr}${sellStr} },\n`;

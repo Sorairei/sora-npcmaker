@@ -163,9 +163,14 @@ window.downloadLua = function () {
     if (!text) return;
     var blob = new Blob([text], { type: 'text/plain' });
     var a = document.createElement('a');
-    a.download = (window.NPC.state.name || 'npc').toLowerCase().replace(/\s+/g, '_') + '.lua';
-    a.href = URL.createObjectURL(blob);
+    var safeName = (window.NPC.state.name || 'npc').toLowerCase()
+        .replace(/[^a-z0-9_-]+/g, '_')
+        .replace(/^_+|_+$/g, '') || 'npc';
+    var objectUrl = URL.createObjectURL(blob);
+    a.download = safeName + '.lua';
+    a.href = objectUrl;
     a.click();
+    setTimeout(function () { URL.revokeObjectURL(objectUrl); }, 0);
 };
 
 window.showHelpModal = function () {
@@ -307,7 +312,6 @@ function initAutocomplete() {
 
     // Bind multiple events for broad compatibility
     searchInput.addEventListener('input', handleInput);
-    searchInput.addEventListener('keyup', handleInput);
     searchInput.addEventListener('focus', handleInput);
 
     // Close on outside click
@@ -489,8 +493,8 @@ function fitPreviewOutfit() {
     scale = Math.max(0.25, scale);
 
     var bounds = getPreviewOutfitBounds(image.naturalWidth, image.naturalHeight);
-    var labelCenterX = ((bounds.label[0] + bounds.label[2]) / 2) * scale;
-    var labelTop = bounds.label[1] * scale;
+    var labelCenterX = bounds.anchor.x * scale;
+    var labelTop = bounds.anchor.y * scale;
 
     stage.style.width = Math.round(image.naturalWidth * scale) + 'px';
     stage.style.height = Math.round(image.naturalHeight * scale) + 'px';

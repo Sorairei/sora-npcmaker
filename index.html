@@ -12,7 +12,7 @@
     <script src="data.js"></script>
     <script src="outfit_data.js"></script>
     <script src="outfit_bounds.js?v=20260717-visible-bounds"></script>
-    <script src="preview_geometry.js?v=20260718-stable-label-anchor"></script>
+    <script src="preview_geometry.js?v=20260718-tibia-tile-anchor"></script>
 </head>
 <body>
     <a class="skip-link" href="#editor">Skip to editor</a>
@@ -310,57 +310,57 @@
             </div>
             
             <div style="padding: 25px; max-height: 80vh; overflow-y: auto; color: #ccc;">
-                <p style="margin-bottom: 25px; font-size: 14px; opacity: 0.8;">A modern, web-based visual editor for creating NPCs for Canary OTServ and Global Servers.</p>
+                <p style="margin-bottom: 25px; font-size: 14px; opacity: 0.8;">A modern, browser-based toolkit for building, previewing, and exporting NPCs for Canary, Crystal, and TFS 1.8 servers.</p>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
                     <div style="background: #2a2a2a; padding: 15px; border-radius: 4px; border-left: 3px solid var(--accent);">
                         <div style="color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase;">Version</div>
-                        <div style="color: #fff; font-size: 15px;">v1.4.0 (Cinematic)</div>
+                        <div style="color: #fff; font-size: 15px;">v1.5.0 (Catalog &amp; Preview Audit)</div>
                     </div>
                     <div style="background: #2a2a2a; padding: 15px; border-radius: 4px; border-left: 3px solid var(--accent);">
-                        <div style="color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase;">Status</div>
+                        <div style="color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase;">Compatibility</div>
                         <div style="color: #fff; font-size: 15px;">Canary / Crystal / TFS 1.8</div>
                     </div>
                     <div style="background: #2a2a2a; padding: 15px; border-radius: 4px; border-left: 3px solid var(--accent);">
-                        <div style="color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase;">Developed by</div>
-                        <div style="color: #fff; font-size: 15px;">Gemini & Sorairei</div>
+                        <div style="color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase;">Catalog</div>
+                        <div style="color: #fff; font-size: 15px;">6,835 items / 28 categories</div>
                     </div>
                     <div style="background: #2a2a2a; padding: 15px; border-radius: 4px; border-left: 3px solid var(--accent);">
                         <div style="color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase;">Repository</div>
                         <div style="color: #fff; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                            <a href="https://github.com/Sorairei/sora-npcmaker" target="_blank" style="color:#dfd3be; text-decoration:none;">github.com/Sorairei/sora-npcmaker</a>
+                            <a href="https://github.com/Sorairei/sora-npcmaker" target="_blank" rel="noopener noreferrer" style="color:#dfd3be; text-decoration:none;">github.com/Sorairei/sora-npcmaker</a>
                         </div>
                     </div>
                 </div>
 
                 <div style="margin-bottom: 30px;">
                     <h3 style="color: var(--accent); font-size: 14px; text-transform: uppercase; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
-                        🎯 Features
+                        🎯 Current features
                     </h3>
                     <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8; font-size: 14px;">
                         <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--accent);">•</span> Visual character editor with 249+ outfits
+                            <span style="color: var(--accent);">•</span> 995 named outfits and monster appearances with 245 mounts
                         </li>
                         <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--accent);">•</span> Complete shop system (buy/sell items)
+                            <span style="color: var(--accent);">•</span> Searchable catalog with 6,835 item sprites across 28 audited categories
                         </li>
                         <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--accent);">•</span> Custom conversation messages
+                            <span style="color: var(--accent);">•</span> XML and OTB-aware item classification with reusable import tooling
                         </li>
                         <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--accent);">•</span> Keywords system for interactions
+                            <span style="color: var(--accent);">•</span> Tibia-style character names and health bars with stable outfit, addon, and monster anchoring
                         </li>
                         <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--accent);">•</span> Real-time character preview
+                            <span style="color: var(--accent);">•</span> Trade, dialogue, custom keyword, outfit color, addon, and mount configuration
                         </li>
                         <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--accent);">•</span> Lua script generation and export
+                            <span style="color: var(--accent);">•</span> Tested Lua RevScript generation and local export
                         </li>
                     </ul>
                 </div>
 
                 <div style="padding-top: 20px; border-top: 1px solid #333; font-size: 12px; opacity: 0.7;">
-                    <p>Using outfit generator from <a href="https://outfit-images.ots.me/" target="_blank" style="color: var(--accent); text-decoration: none;">outfit-images.ots.me</a>. Credits to the original authors.</p>
+                    <p>Created by Sorairei for the BeeTales community. Outfit previews are powered by <a href="https://outfit-images.ots.me/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">outfit-images.ots.me</a>, with credit to its original authors.</p>
                 </div>
             </div>
             
@@ -371,6 +371,6 @@
     </div>
 
     <script src="generator.js"></script>
-    <script src="app.js?v=20260718-stable-label-anchor"></script>
+    <script src="app.js?v=20260718-tibia-tile-anchor"></script>
 </body>
 </html>

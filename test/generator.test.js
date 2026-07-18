@@ -85,3 +85,32 @@ test('includes configured shop prices and callbacks', () => {
   assert.match(lua, /npcType\.onBuyItem/);
   assert.match(lua, /npcType\.onSellItem/);
 });
+
+test('sanitizes numeric outfit and shop values before emitting Lua', () => {
+  const lua = generateLUA(createState({
+    outfit: {
+      lookType: 'invalid',
+      lookHead: -1,
+      lookBody: '22px',
+      lookLegs: 33.8,
+      lookFeet: Infinity,
+      lookAddons: -2,
+      mount: 'not-a-mount'
+    },
+    tradeItems: [
+      { id: '3043', name: 'crystal coin', buy: '10000.9', sell: Infinity },
+      { id: 'invalid', name: 'broken item', buy: 100, sell: 0 },
+      { id: 3031, name: 'gold coin', buy: 0, sell: 0 }
+    ]
+  }));
+
+  assert.match(lua, /lookType = 128/);
+  assert.match(lua, /lookHead = 0/);
+  assert.match(lua, /lookBody = 22/);
+  assert.match(lua, /lookLegs = 33/);
+  assert.match(lua, /lookFeet = 0/);
+  assert.match(lua, /lookAddons = 0/);
+  assert.doesNotMatch(lua, /lookMount/);
+  assert.match(lua, /clientId = 3043, buy = 10000/);
+  assert.doesNotMatch(lua, /broken item|gold coin|Infinity|NaN/);
+});

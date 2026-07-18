@@ -50,9 +50,9 @@ The application is made from static HTML, CSS, JavaScript, images, and local cat
 | Area | Capabilities |
 | --- | --- |
 | Engine compatibility | Generates RevScript NPC Lua for Canary, Crystal, and TFS 1.8 workflows |
-| Visual outfitter | Real-time preview for 240+ male, female, and monster outfits |
-| Appearance | Look type, addons, mounts, and indexed Tibia colors for head, primary, secondary, and detail areas |
-| Item catalog | Bundled modern item database with category filters and search by client ID or name |
+| Visual outfitter | Real-time preview for 995 named male, female, and monster appearances |
+| Appearance | Look type, addons, 245 mounts, indexed Tibia colors, and stable Tibia-style name and health bar positioning |
+| Item catalog | 6,835 bundled item sprites across 28 audited categories, searchable by client ID or name |
 | Trading | Buy and sell price configuration with a reviewable trade list |
 | Dialogue | Greeting, farewell, walk-away messages, and custom keyword responses |
 | Lua export | Readable generated source with direct `.lua` download |
@@ -113,6 +113,7 @@ flowchart LR
 
 - **Presentation layer:** `index.html` and `styles.css` define the RPG-inspired editor, panels, modals, responsive layout, and BeeTales branding.
 - **State and interaction layer:** `app.js` owns the current NPC configuration, UI events, catalog search, palette behavior, preview updates, and download flow.
+- **Preview geometry layer:** `preview_geometry.js` keeps creature information anchored to Tibia's bottom-right 32x32 creature tile, independently of addon and monster silhouettes.
 - **Generation layer:** `generator.js` escapes user strings, validates numeric settings, and serializes the NPC state into Canary RevScript Lua.
 - **Data layer:** `data.js`, `outfit_data.js`, and `items/` provide the local item, outfit, mount, category, and sprite catalogs.
 - **External preview boundary:** only character preview images depend on the Oracle OTS service; Lua generation remains local.
@@ -125,9 +126,12 @@ flowchart LR
 | `styles.css` | RPG visual system, responsive layout, controls, tables, modals, branding, and footer styles |
 | `app.js` | NPC state, UI interactions, autocomplete, catalog, outfitter, colors, dialogue, and downloads |
 | `generator.js` | Canary RevScript Lua generation, defaults, validation, and escaping |
+| `preview_geometry.js` | Stable outfit, addon, mount, and monster preview anchoring |
 | `data.js` | Item catalog, categories, mounts, and fallback outfit metadata |
 | `outfit_data.js` | Named male, female, and monster outfit definitions |
+| `outfit_bounds.js` | Generated visible sprite bounds used by preview geometry |
 | `items/` | Local item sprite catalog used by search, categories, and trade lists |
+| `tools/` | XML/OTB catalog importer, classification overrides, and outfit-bound generator |
 | `assets/` | BeeTales logo, Sora mascot, and favicon assets |
 | `test/` | Dependency-free Node.js regression tests for Lua generation |
 | `.github/FUNDING.yml` | GitHub Sponsors configuration |
@@ -138,7 +142,7 @@ flowchart LR
 | --- | --- |
 | HTML sanitization | Dynamic item names, values, and keyword content are escaped before insertion into rendered tables |
 | Lua string escaping | Backslashes, quotes, line endings, and tabs are escaped before entering generated Lua strings |
-| Numeric safeguards | Health and movement settings use safe defaults when invalid values are supplied |
+| Numeric safeguards | Health, movement, outfit, mount, item ID, and shop price values are normalized before Lua generation |
 | Local generation | NPC configuration and Lua generation remain inside the browser |
 | No tracking | The project contains no accounts, analytics, advertising, or remote storage |
 
@@ -188,7 +192,7 @@ With Node.js 18 or newer installed, run the dependency-free syntax and generator
 npm run check
 ```
 
-The validation command checks application, generator, and importer syntax and runs regression coverage for default generation, stationary NPCs, invalid numeric values, Lua string escaping, shop callbacks, item categorization, and corpse exclusion.
+The validation command checks application, preview geometry, generator, and importer syntax. Regression coverage includes default generation, stationary NPCs, numeric normalization, Lua string escaping, shop callbacks, XML/OTB categorization, corpse exclusion, stable addon positioning, mount bounds, and 32px/64px monster anchors.
 
 ## Limitations
 

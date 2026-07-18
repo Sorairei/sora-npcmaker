@@ -26,28 +26,36 @@
         ];
     }
 
+    function resolveTileAnchor(width, height) {
+        // Tibia anchors creature information to the bottom-right 32x32 tile
+        // occupied by the creature, not to the highest visible sprite pixel.
+        return {
+            x: Math.max(0, width - 16),
+            y: Math.max(0, height - 32)
+        };
+    }
+
     function resolveBounds(boundsTable, lookType, addonState, mountLookType, width, height) {
         var states = boundsTable[String(lookType)];
         var baseBounds = states && states[0] ? states[0] : null;
         var visibleBounds = states && states[addonState] ? states[addonState] : baseBounds;
-        var labelBounds = baseBounds || visibleBounds;
 
         if (mountLookType) {
             var mountStates = boundsTable[String(mountLookType)];
             var mountBounds = mountStates && mountStates[0] ? mountStates[0] : null;
             visibleBounds = unionBounds(visibleBounds, mountBounds);
-            labelBounds = unionBounds(labelBounds, mountBounds);
         }
 
         return {
             visible: clampBounds(visibleBounds, width, height),
-            label: clampBounds(labelBounds, width, height)
+            anchor: resolveTileAnchor(width, height)
         };
     }
 
     return {
         unionBounds: unionBounds,
         clampBounds: clampBounds,
+        resolveTileAnchor: resolveTileAnchor,
         resolveBounds: resolveBounds
     };
 }));
