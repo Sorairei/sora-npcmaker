@@ -74,8 +74,9 @@ This release expands the editor's catalogs, preview accuracy, and commercial NPC
 - Added checks for suspicious price deviations, duplicate shop entries, and infinite self-trade profit loops.
 - Added lazy-loaded item thumbnails to template inventories and subtype-aware `count` generation for relevant shop entries.
 - Added performance safeguards that defer the compact shop dataset until requested and paginate large inventories without removing items from Lua export.
+- Added cache-safe asset versions, retryable shop-data loading, paginated economy reports, complete catalog search ranking, lazy footer artwork, and optimized background images.
 - Added a two-row decorative shop shelf built from the local Tibia item GIF catalog without changing the NPC Shop Tools panel dimensions.
-- Expanded the dependency-free regression suite to 27 passing tests.
+- Expanded the dependency-free regression suite to 28 passing tests.
 
 ## How it works
 
@@ -187,7 +188,7 @@ flowchart LR
 | Static shop import | Development-time NPC sources are parsed as text and are never executed or shipped to the browser |
 | No tracking | The project contains no accounts, analytics, advertising, or remote storage |
 
-The application does request remote Google Fonts and outfit preview images. Item sprites, catalog data, application logic, and Lua generation are served locally.
+The application requests remote outfit preview images. Fonts use the local system stack, while item sprites, catalog data, application logic, and Lua generation are served locally.
 
 ## Installation and usage
 
@@ -233,12 +234,12 @@ With Node.js 18 or newer installed, run the dependency-free syntax and generator
 npm run check
 ```
 
-The validation command checks application, preview geometry, generator, compact dataset, shop tooling, and importer syntax. The current 27-test suite covers default generation, stationary NPCs, numeric normalization, Lua string escaping, subtype-aware shop callbacks, XML/OTB categorization, corpse exclusion, stable addon positioning, mount bounds, monster anchors, gold-only template filtering, categorized supply tables, quest-message exclusion, price references, merging, duplicates, and self-trade loops.
+The validation command checks application, preview geometry, generator, compact dataset, shop tooling, and importer syntax. The current 28-test suite covers default generation, stationary NPCs, numeric normalization, Lua string escaping, subtype-aware shop callbacks, XML/OTB categorization, corpse exclusion, stable addon positioning, mount bounds, monster anchors, gold-only template filtering, categorized supply tables, complete catalog search ranking, quest-message exclusion, price references, merging, duplicates, and self-trade loops.
 
 ## Limitations
 
 - Outfit previews require an internet connection and availability of the Oracle OTS image service.
-- Google Fonts are loaded remotely; the browser uses fallback fonts if they are unavailable.
+- The selected system font varies slightly by operating system and browser.
 - The current NPC configuration is held in memory and is not restored after reloading or closing the page.
 - The application exports RevScripts for Canary, Crystal, and TFS 1.8 workflows and does not target every Open Tibia server distribution.
 - Item and outfit availability reflects the bundled catalog and may require periodic updates as server data evolves.

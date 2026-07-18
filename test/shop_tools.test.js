@@ -18,6 +18,21 @@ test('merges only missing item and subtype combinations', () => {
   assert.deepEqual(tools.mergeTradeItems(current, incoming), [current[0], incoming[1]]);
 });
 
+test('searches the complete catalog before ranking exact matches', () => {
+  const catalog = {};
+  for (let index = 0; index < 150; index += 1) {
+    catalog[String(index)] = { name: `sword fragment ${index}` };
+  }
+  catalog['9999'] = { name: 'sword' };
+
+  const index = tools.buildCatalogSearchIndex(catalog);
+  const results = tools.findCatalogItems(index, 'sword', 30);
+
+  assert.equal(index.length, 151);
+  assert.equal(results.length, 30);
+  assert.deepEqual(results[0], { id: '9999', name: 'sword', rank: 0 });
+});
+
 test('finds duplicates, self-trade loops, and reference-price deviations', () => {
   const report = tools.analyzeEconomy([
     { id: '3350', name: 'bow', buy: 100, sell: 120 },

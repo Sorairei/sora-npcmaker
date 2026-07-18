@@ -6,19 +6,19 @@
     <title>Sorairei NPC Maker</title>
     <meta name="description" content="Build NPC scripts visually for Canary, Crystal, and TFS 1.8, then export clean Lua directly in your browser.">
     <meta name="theme-color" content="#050b07">
-    <link rel="icon" type="image/png" sizes="1024x1024" href="assets/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="styles.css?v=20260717-visible-bounds">
-    <script src="data.js"></script>
-    <script src="outfit_data.js"></script>
-    <script src="outfit_bounds.js?v=20260717-visible-bounds"></script>
-    <script src="preview_geometry.js?v=20260718-mounted-label-offset"></script>
+    <link rel="stylesheet" href="styles.css?v=20260718-performance-audit">
+    <script src="data.js?v=20260718-performance-audit"></script>
+    <script src="outfit_data.js?v=20260718-performance-audit"></script>
+    <script src="outfit_bounds.js?v=20260718-performance-audit"></script>
+    <script src="preview_geometry.js?v=20260718-performance-audit"></script>
 </head>
 <body>
     <a class="skip-link" href="#editor">Skip to editor</a>
     <header class="rpg-header">
         <div class="header-brand">
-            <img class="beetales-logo" src="assets/beetales-logo-v2.png" alt="The BeeTales" width="1200" height="357">
+            <img class="beetales-logo" src="assets/beetales-logo-v2.png" alt="The BeeTales" width="1200" height="357" decoding="async">
             <div class="product-lockup">
                 <span class="product-kicker">Open Tibia creator toolkit</span>
                 <h1>Sorairei <span>NPC Maker</span></h1>
@@ -53,7 +53,7 @@
                     <div class="character-stage" id="character-stage">
                         <span class="preview-name" id="preview-name">Unnamed NPC</span>
                         <span class="preview-healthbar" aria-hidden="true"><i></i></span>
-                        <img id="preview-outfit" src="https://outfit-images-oracle.ots.me/latest_walk/animoutfit.php?id=128&addons=0&head=0&body=0&legs=0&feet=0&mount=0&direction=3" alt="Outfit Preview">
+                        <img id="preview-outfit" src="https://outfit-images-oracle.ots.me/latest_walk/animoutfit.php?id=128&addons=0&head=0&body=0&legs=0&feet=0&mount=0&direction=3" alt="Outfit Preview" decoding="async">
                     </div>
                 </div>
                 <p class="preview-caption">Changes to outfit, colors, addons, and mounts appear here automatically.</p>
@@ -299,7 +299,7 @@
     </div> <!-- End rpg-layout-container -->
 
     <footer class="site-footer">
-        <img class="footer-mascot" src="assets/sora-avatar.png" alt="Sora, Sorairei's mascot" width="1254" height="1254">
+        <img class="footer-mascot" src="assets/sora-avatar.png" alt="Sora, Sorairei's mascot" width="1254" height="1254" loading="lazy" decoding="async">
         <div class="footer-brand"><strong>The BeeTales</strong><p>&copy; 2026 Sorairei. Built for Canary, Crystal, and TFS 1.8.</p></div>
         <nav aria-label="Footer links">
             <a href="https://github.com/Sorairei/sora-npcmaker?tab=MIT-1-ov-file" target="_blank" rel="noopener noreferrer">MIT License</a>
@@ -367,6 +367,14 @@
                 <button class="modal-close" type="button" onclick="window.closeEconomyAnalyzer()" aria-label="Close economy analyzer">&times;</button>
             </div>
             <div id="economy-summary" class="economy-summary"></div>
+            <div class="economy-pagination" aria-label="Economy result pages">
+                <span id="economy-range">0 items</span>
+                <div>
+                    <button id="economy-prev" class="rpg-btn" type="button">Previous</button>
+                    <span id="economy-page">Page 1 of 1</span>
+                    <button id="economy-next" class="rpg-btn" type="button">Next</button>
+                </div>
+            </div>
             <div id="economy-results" class="economy-results" aria-live="polite">
                 <div class="shop-tool-empty">Loading reference prices...</div>
             </div>
@@ -448,8 +456,8 @@
         </div>
     </div>
 
-    <script src="generator.js"></script>
-    <script src="shop_tools.js?v=20260718-shop-npc-toolkit"></script>
-    <script src="app.js?v=20260718-shop-npc-toolkit"></script>
+    <script src="generator.js?v=20260718-performance-audit"></script>
+    <script src="shop_tools.js?v=20260718-performance-audit"></script>
+    <script src="app.js?v=20260718-performance-audit"></script>
 </body>
 </html>

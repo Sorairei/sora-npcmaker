@@ -162,19 +162,30 @@ var shopTemplatesPerPage = 50;
 var templateItemPage = 0;
 var templateItemQuery = '';
 var templateItemsPerPage = 100;
+var economyReport = null;
+var economyPage = 0;
+var economyItemsPerPage = 100;
 
 function loadShopTemplateData() {
     if (window.SHOP_TEMPLATE_DATA) return Promise.resolve(window.SHOP_TEMPLATE_DATA);
     if (shopDataPromise) return shopDataPromise;
     shopDataPromise = new Promise(function (resolve, reject) {
         var script = document.createElement('script');
-        script.src = 'shop_templates.js?v=20260718-shop-npc-toolkit';
+        script.src = 'shop_templates.js?v=20260718-performance-audit';
         script.async = true;
         script.onload = function () {
             if (window.SHOP_TEMPLATE_DATA) resolve(window.SHOP_TEMPLATE_DATA);
-            else reject(new Error('The shop template dataset is invalid.'));
+            else {
+                shopDataPromise = null;
+                script.remove();
+                reject(new Error('The shop template dataset is invalid.'));
+            }
         };
-        script.onerror = function () { reject(new Error('The shop template dataset could not be loaded.')); };
+        script.onerror = function () {
+            shopDataPromise = null;
+            script.remove();
+            reject(new Error('The shop template dataset could not be loaded. Please try again.'));
+        };
         document.head.appendChild(script);
     });
     return shopDataPromise;
@@ -394,17 +405,37 @@ function economyDifferenceText(actual, reference, difference) {
 
 function renderEconomyReport(report) {
     var summary = gid('economy-summary');
-    var results = gid('economy-results');
     var stats = [
         ['Items', report.summary.items], ['Referenced', report.summary.referenced],
         ['Warnings', report.summary.warnings], ['Duplicates', report.summary.duplicates], ['Trade loops', report.summary.loops]
     ];
     summary.innerHTML = stats.map(function (stat) { return '<div class="economy-stat"><strong>' + stat[1] + '</strong><span>' + stat[0] + '</span></div>'; }).join('');
-    if (!report.results.length) {
+    economyReport = report;
+    economyPage = 0;
+    renderEconomyPage();
+}
+
+function renderEconomyPage() {
+    var results = gid('economy-results');
+    var range = gid('economy-range');
+    var pageLabel = gid('economy-page');
+    var previousButton = gid('economy-prev');
+    var nextButton = gid('economy-next');
+    if (!results || !range || !pageLabel || !previousButton || !nextButton || !economyReport) return;
+    var items = economyReport.results;
+    var pageCount = Math.max(1, Math.ceil(items.length / economyItemsPerPage));
+    economyPage = Math.min(Math.max(0, economyPage), pageCount - 1);
+    var start = economyPage * economyItemsPerPage;
+    var visibleItems = items.slice(start, start + economyItemsPerPage);
+    range.textContent = items.length ? 'Showing ' + (start + 1) + '–' + (start + visibleItems.length) + ' of ' + items.length : '0 items';
+    pageLabel.textContent = 'Page ' + (economyPage + 1) + ' of ' + pageCount;
+    previousButton.disabled = economyPage === 0;
+    nextButton.disabled = economyPage >= pageCount - 1;
+    if (!visibleItems.length) {
         results.innerHTML = '<div class="shop-tool-empty">Add items to the current trade list before running the analysis.</div>';
         return;
     }
-    results.innerHTML = report.results.map(function (item) {
+    results.innerHTML = visibleItems.map(function (item) {
         var notes = [];
         if (item.loop) notes.push('Infinite self-trade risk: the NPC buys this item for more than it sells it.');
         if (item.duplicate) notes.push('Duplicate item and subtype entry.');
@@ -481,14 +512,13 @@ window.renderCatalog = function (category, activeBtnEl) {
         var info = APP_DATA.items[id];
         if (info.category !== category) return;
 
-        var div = document.createElement('div');
-        div.style.cssText = 'text-align:center;cursor:pointer;padding:5px;border:1px solid transparent;border-radius:3px;';
+        var div = document.createElement('button');
+        div.type = 'button';
+        div.className = 'catalog-item';
+        div.setAttribute('aria-label', 'Select ' + info.name + ', item ' + id);
         div.innerHTML =
-            '<img src="items/' + window.sanitize(id) + '.gif" style="width:32px;height:32px;object-fit:contain;image-rendering:pixelated;" onerror="this.src=\'\'" title="' + window.sanitize(info.name) + '">' +
+            '<img src="items/' + window.sanitize(id) + '.gif" loading="lazy" decoding="async" onerror="this.style.visibility=\'hidden\'" title="' + window.sanitize(info.name) + '">' +
             '<div style="font-size:10px;color:#ad9372;margin-top:3px;word-break:break-all;">' + window.sanitize(info.name) + '</div>';
-
-        div.onmouseover = function () { div.style.background = 'rgba(255,255,255,0.08)'; div.style.borderColor = 'var(--accent)'; };
-        div.onmouseout  = function () { div.style.background = 'transparent'; div.style.borderColor = 'transparent'; };
         div.onclick = (function (itemId, itemName) {
             return function () {
                 gid('shop-item-search').value = itemName;
@@ -504,6 +534,8 @@ window.renderCatalog = function (category, activeBtnEl) {
 function initAutocomplete() {
     var searchInput = gid('shop-item-search');
     var dropdown    = gid('shop-item-dropdown');
+    var itemSearchIndex = null;
+    var autocompleteTimer = null;
     
     if (!searchInput || !dropdown) {
         console.error("Critical: Search elements not found in DOM");
@@ -536,34 +568,8 @@ function initAutocomplete() {
             return;
         }
 
-        var results = [];
-        var ids = Object.keys(items);
-        
-        // Use a simple high-speed loop
-        for (var i = 0; i < ids.length; i++) {
-            var id   = ids[i];
-            var info = items[id];
-            var name = (info.name || "").toLowerCase();
-            
-            // Priority matching
-            var rank = -1;
-            if (id === val) rank = 0;
-            else if (name.indexOf(val) === 0) rank = 1;
-            else if (name.indexOf(val) !== -1) rank = 2;
-            
-            if (rank !== -1) {
-                results.push({ id: id, name: info.name, rank: rank });
-                if (results.length > 100) break; // Hard limit for safety
-            }
-        }
-
-        // Sort: Rank first, then alphabetically
-        results.sort(function(a, b) {
-            if (a.rank !== b.rank) return a.rank - b.rank;
-            return a.name.localeCompare(b.name);
-        });
-
-        var displayLimit = results.slice(0, 30);
+        if (!itemSearchIndex) itemSearchIndex = SHOP_TOOLS.buildCatalogSearchIndex(items);
+        var displayLimit = SHOP_TOOLS.findCatalogItems(itemSearchIndex, val, 30);
         
         if (displayLimit.length > 0) {
             displayLimit.forEach(function(res) {
@@ -593,7 +599,10 @@ function initAutocomplete() {
     }
 
     // Bind multiple events for broad compatibility
-    searchInput.addEventListener('input', handleInput);
+    searchInput.addEventListener('input', function () {
+        clearTimeout(autocompleteTimer);
+        autocompleteTimer = setTimeout(handleInput, 60);
+    });
     searchInput.addEventListener('focus', handleInput);
 
     // Close on outside click
@@ -823,6 +832,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (shopTemplateNext) shopTemplateNext.addEventListener('click', function () {
         shopTemplatePage += 1;
         loadShopTemplateData().then(renderTemplateList).catch(function () {});
+    });
+    var economyPrevious = gid('economy-prev');
+    var economyNext = gid('economy-next');
+    if (economyPrevious) economyPrevious.addEventListener('click', function () {
+        economyPage = Math.max(0, economyPage - 1);
+        renderEconomyPage();
+    });
+    if (economyNext) economyNext.addEventListener('click', function () {
+        economyPage += 1;
+        renderEconomyPage();
     });
 
     // Tabs

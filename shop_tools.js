@@ -41,6 +41,35 @@
         return result;
     }
 
+    function buildCatalogSearchIndex(catalog) {
+        return Object.keys(catalog || {}).map(function (id) {
+            var item = catalog[id] || {};
+            var name = String(item.name || '');
+            return { id: id, name: name, normalizedName: name.toLowerCase() };
+        });
+    }
+
+    function findCatalogItems(catalogOrIndex, query, limit) {
+        var value = String(query || '').trim().toLowerCase();
+        if (!value) return [];
+        var results = [];
+        var index = Array.isArray(catalogOrIndex) ? catalogOrIndex : buildCatalogSearchIndex(catalogOrIndex);
+        index.forEach(function (item) {
+            var id = item.id;
+            var name = item.name;
+            var normalizedName = item.normalizedName;
+            var rank = -1;
+            if (id === value || normalizedName === value) rank = 0;
+            else if (normalizedName.indexOf(value) === 0) rank = 1;
+            else if (normalizedName.indexOf(value) !== -1) rank = 2;
+            if (rank >= 0) results.push({ id: id, name: name, rank: rank });
+        });
+        results.sort(function (left, right) {
+            return left.rank - right.rank || left.name.localeCompare(right.name) || Number(left.id) - Number(right.id);
+        });
+        return results.slice(0, Math.max(1, Number(limit) || 30));
+    }
+
     function percentDifference(actual, reference) {
         if (!actual || !reference) return null;
         return Math.round(((actual - reference) / reference) * 100);
@@ -107,7 +136,9 @@
 
     return {
         analyzeEconomy: analyzeEconomy,
+        buildCatalogSearchIndex: buildCatalogSearchIndex,
         expandTemplateItems: expandTemplateItems,
+        findCatalogItems: findCatalogItems,
         mergeTradeItems: mergeTradeItems
     };
 }));
