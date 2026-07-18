@@ -67,6 +67,7 @@ function extractTable(source, assignment) {
 function luaString(value) {
   if (!value) return '';
   return value
+    .replace(/\\z\s*/g, '')
     .replace(/\\n/g, '\n')
     .replace(/\\r/g, '\r')
     .replace(/\\t/g, '\t')
@@ -86,15 +87,16 @@ function readNumber(source, key, fallback = 0) {
 
 function parseShopEntries(shopSource) {
   const entries = [];
-  const entryPattern = /\{([^{}]*\bitemName\s*=\s*"((?:\\.|[^"\\])*)"[^{}]*\bclientId\s*=\s*(\d+)[^{}]*)\}/g;
+  const entryPattern = /\{([^{}]*\bclientId\s*=\s*(\d+)[^{}]*)\}/g;
   for (const match of shopSource.matchAll(entryPattern)) {
     const body = match[1];
     const buy = readNumber(body, 'buy', 0);
     const sell = readNumber(body, 'sell', 0);
     if (!buy && !sell) continue;
+    const name = readString(body, /\bitemName\s*=\s*"((?:\\.|[^"\\])*)"/);
     entries.push({
-      id: match[3],
-      name: luaString(match[2]),
+      id: match[2],
+      name,
       buy,
       sell,
       count: readNumber(body, 'count', 0)
@@ -125,7 +127,10 @@ function classifyTemplate(entries, items) {
 function parseNpcTemplate(filename, appData, exclusions) {
   const source = fs.readFileSync(filename, 'utf8');
   if (/npcConfig\.currency\s*=/.test(source)) return { excludedCurrency: true };
-  const shopSource = extractTable(source, 'npcConfig.shop');
+  let shopSource = extractTable(source, 'npcConfig.shop');
+  if ((!shopSource || parseShopEntries(shopSource).length === 0) && /table\.insert\(npcConfig\.shop\s*,/.test(source)) {
+    shopSource = extractTable(source, 'itemsTable');
+  }
   const outfitSource = extractTable(source, 'npcConfig.outfit');
   if (!shopSource || !outfitSource) return null;
 
@@ -134,10 +139,13 @@ function parseNpcTemplate(filename, appData, exclusions) {
   let excludedItems = 0;
   const merged = new Map();
   for (const entry of parseShopEntries(shopSource)) {
-    if (!appData.items[entry.id] || excludedIds.has(entry.id) || namePatterns.some((pattern) => pattern.test(entry.name))) {
+    const catalogItem = appData.items[entry.id];
+    const entryName = entry.name || catalogItem?.name || '';
+    if (!catalogItem || excludedIds.has(entry.id) || namePatterns.some((pattern) => pattern.test(entryName))) {
       excludedItems += 1;
       continue;
     }
+    entry.name = entryName;
     const previous = merged.get(entry.id + ':' + entry.count);
     if (previous) {
       if (entry.buy) previous.buy = previous.buy ? Math.min(previous.buy, entry.buy) : entry.buy;
@@ -169,9 +177,9 @@ function parseNpcTemplate(filename, appData, exclusions) {
         readNumber(outfitSource, 'lookAddons', 0),
         readNumber(outfitSource, 'lookMount', 0)
       ],
-      greet: safeMessage(readString(source, /setMessage\(MESSAGE_GREET,\s*"((?:\\.|[^"\\])*)"/)),
-      farewell: safeMessage(readString(source, /setMessage\(MESSAGE_FAREWELL,\s*"((?:\\.|[^"\\])*)"/)),
-      walkaway: safeMessage(readString(source, /setMessage\(MESSAGE_WALKAWAY,\s*"((?:\\.|[^"\\])*)"/)),
+      greet: safeMessage(readString(source, /setMessage\(\s*MESSAGE_GREET,\s*"((?:\\.|[^"\\])*)"/)),
+      farewell: safeMessage(readString(source, /setMessage\(\s*MESSAGE_FAREWELL,\s*"((?:\\.|[^"\\])*)"/)),
+      walkaway: safeMessage(readString(source, /setMessage\(\s*MESSAGE_WALKAWAY,\s*"((?:\\.|[^"\\])*)"/)),
       items: entries.map((entry) => [Number(entry.id), entry.buy, entry.sell, entry.count])
     },
     excludedItems
@@ -183,7 +191,7 @@ function parseReferencePrices(filename, appData, exclusions) {
   const excludedIds = new Set((exclusions.ids || []).map(String));
   const namePatterns = (exclusions.namePatterns || []).map((pattern) => new RegExp(pattern, 'i'));
   const entries = parseShopEntries(fs.readFileSync(filename, 'utf8')).filter((entry) => (
-    appData.items[entry.id] && !excludedIds.has(entry.id) && !namePatterns.some((pattern) => pattern.test(entry.name))
+    appData.items[entry.id] && !excludedIds.has(entry.id) && !namePatterns.some((pattern) => pattern.test(entry.name || appData.items[entry.id].name))
   ));
   const merged = new Map();
   for (const entry of entries) {
@@ -250,8 +258,8 @@ function buildExternalLootTemplate(npcFilename, pricesFilename, appData, exclusi
       readNumber(outfitSource, 'lookMount', 0)
     ],
     greet: 'Ah, a customer! Be greeted, |PLAYERNAME|! I buy all kinds of loot. Would you like to {trade}?',
-    farewell: safeMessage(readString(npcSource, /setMessage\(MESSAGE_FAREWELL,\s*"((?:\\.|[^"\\])*)"/)),
-    walkaway: safeMessage(readString(npcSource, /setMessage\(MESSAGE_WALKAWAY,\s*"((?:\\.|[^"\\])*)"/)),
+    farewell: safeMessage(readString(npcSource, /setMessage\(\s*MESSAGE_FAREWELL,\s*"((?:\\.|[^"\\])*)"/)),
+    walkaway: safeMessage(readString(npcSource, /setMessage\(\s*MESSAGE_WALKAWAY,\s*"((?:\\.|[^"\\])*)"/)),
     items: entries.map((entry) => [Number(entry.id), entry.buy, entry.sell, entry.count])
   };
 }

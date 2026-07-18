@@ -77,6 +77,40 @@ test('drops quest-oriented greetings while retaining the commercial shop', () =>
   assert.equal(result.template.items.length, 1);
 });
 
+test('flattens local categorized shop tables without importing callback logic', () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'shop-template-'));
+  const filename = path.join(directory, 'supply-merchant.lua');
+  fs.writeFileSync(filename, `
+local internalNpcName = "Supply Merchant"
+local npcConfig = {}
+npcConfig.outfit = { lookType = 130 }
+local itemsTable = {
+  potions = {
+    { itemName = "rope", clientId = 3003, buy = 50, sell = 15 },
+    { itemid = 3350, clientId = 3350, buy = 400 }
+  }
+}
+npcConfig.shop = {}
+for _, categoryTable in pairs(itemsTable) do
+  for _, itemTable in ipairs(categoryTable) do
+    table.insert(npcConfig.shop, itemTable)
+  end
+end
+player:addItem(9000, 1)
+npcHandler:setMessage(
+  MESSAGE_GREET,
+  "Welcome, |PLAYERNAME|.\\z
+  Ask me for a {trade}."
+)
+`);
+
+  const result = parseNpcTemplate(filename, appData, exclusions);
+
+  assert.equal(result.template.name, 'Supply Merchant');
+  assert.equal(result.template.greet, 'Welcome, |PLAYERNAME|.Ask me for a {trade}.');
+  assert.deepEqual(result.template.items, [[3003, 50, 15, 0], [3350, 400, 0, 0]]);
+});
+
 test('deduplicates NPC names and builds best Tibia RL reference prices', () => {
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'shop-template-'));
   fs.writeFileSync(path.join(directory, 'first.lua'), npcSource({

@@ -54,7 +54,7 @@ The application is made from static HTML, CSS, JavaScript, images, and local cat
 | Visual outfitter | Real-time preview for 995 named male, female, and monster appearances |
 | Appearance | Look type, addons, 245 mounts, indexed Tibia colors, and stable Tibia-style name and health bar positioning |
 | Item catalog | 6,835 bundled item sprites across 28 audited categories, searchable by client ID or name |
-| Trading | Buy and sell price configuration, item thumbnails, 272 audited gold-shop templates, and Tibia RL economy checks |
+| Trading | Buy and sell price configuration, item thumbnails, 301 audited gold-shop templates, and Tibia RL economy checks |
 | Dialogue | Greeting, farewell, walk-away messages, and custom keyword responses |
 | Lua export | Readable generated source with direct `.lua` download |
 | Deployment | Static browser application with no package installation required at runtime |
@@ -66,14 +66,15 @@ This release expands the editor's catalogs, preview accuracy, and commercial NPC
 - Audited the complete item catalog against XML and OTB metadata, prioritizing canonical `primarytype` armor slots and using `weaponType` for weapons, shields, and compatible fallback records.
 - Expanded and corrected usable item categories, including fist weapons and newer equipment, while keeping unsupported objects in `Others` and excluding corpse states and static map objects.
 - Stabilized Tibia-style name and health-bar positioning across outfits, addons, monsters, and mounted characters.
-- Added 272 statically audited **NPC Shop Templates** containing only identity, outfit, basic messages, and standard gold-based shop entries.
+- Added 301 statically audited **NPC Shop Templates** containing only identity, outfit, basic messages, and standard gold-based shop entries.
 - Added **The Lootmonger**, a standard-system bulk loot merchant that buys 1,344 catalogued loot items and sells the 24 items with validated prices in both directions.
+- Added static support for categorized supply merchants such as Xodet, flattening their local shop tables into standard buy/sell entries without importing quest or reward callbacks.
 - Added safe **Use Template** and **Merge Items** workflows without importing quest callbacks, missions, rewards, storages, teleports, item exchanges, or custom currencies.
 - Added the **Smart Economy Analyzer** with 1,900 estimated Tibia RL item references, including 1,455 entries from the primary price table.
 - Added checks for suspicious price deviations, duplicate shop entries, and infinite self-trade profit loops.
 - Added lazy-loaded item thumbnails to template inventories and subtype-aware `count` generation for relevant shop entries.
 - Added performance safeguards that defer the compact shop dataset until requested and paginate large inventories without removing items from Lua export.
-- Expanded the dependency-free regression suite to 25 passing tests.
+- Expanded the dependency-free regression suite to 27 passing tests.
 
 ## How it works
 
@@ -231,7 +232,7 @@ With Node.js 18 or newer installed, run the dependency-free syntax and generator
 npm run check
 ```
 
-The validation command checks application, preview geometry, generator, compact dataset, shop tooling, and importer syntax. The current 25-test suite covers default generation, stationary NPCs, numeric normalization, Lua string escaping, subtype-aware shop callbacks, XML/OTB categorization, corpse exclusion, stable addon positioning, mount bounds, monster anchors, gold-only template filtering, quest-message exclusion, price references, merging, duplicates, and self-trade loops.
+The validation command checks application, preview geometry, generator, compact dataset, shop tooling, and importer syntax. The current 27-test suite covers default generation, stationary NPCs, numeric normalization, Lua string escaping, subtype-aware shop callbacks, XML/OTB categorization, corpse exclusion, stable addon positioning, mount bounds, monster anchors, gold-only template filtering, categorized supply tables, quest-message exclusion, price references, merging, duplicates, and self-trade loops.
 
 ## Limitations
 
