@@ -21,7 +21,7 @@ test('addons do not move the Tibia tile anchor', () => {
     assert.deepEqual(withTallAddon.anchor, { x: 80, y: 64 });
 });
 
-test('mounts affect visible bounds without moving the tile anchor', () => {
+test('mounts apply Tibia\'s small upward information offset', () => {
     const bounds = {
         '128': [[31, 31, 64, 64], [20, 10, 64, 64]],
         '400': [[24, 28, 72, 80]]
@@ -30,7 +30,7 @@ test('mounts affect visible bounds without moving the tile anchor', () => {
     const result = resolveBounds(bounds, 128, 1, 400, 96, 96);
 
     assert.deepEqual(result.visible, [20, 10, 72, 80]);
-    assert.deepEqual(result.anchor, { x: 80, y: 64 });
+    assert.deepEqual(result.anchor, { x: 80, y: 62 });
 });
 
 test('different monster silhouettes share the same anchor for the same canvas', () => {

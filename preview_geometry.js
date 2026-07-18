@@ -26,12 +26,13 @@
         ];
     }
 
-    function resolveTileAnchor(width, height) {
+    function resolveTileAnchor(width, height, mounted) {
         // Tibia anchors creature information to the bottom-right 32x32 tile
         // occupied by the creature, not to the highest visible sprite pixel.
+        // Mounted riders use a small upward information displacement in-game.
         return {
             x: Math.max(0, width - 16),
-            y: Math.max(0, height - 32)
+            y: Math.max(0, height - 32 - (mounted ? 2 : 0))
         };
     }
 
@@ -48,7 +49,7 @@
 
         return {
             visible: clampBounds(visibleBounds, width, height),
-            anchor: resolveTileAnchor(width, height)
+            anchor: resolveTileAnchor(width, height, Boolean(mountLookType))
         };
     }
 
