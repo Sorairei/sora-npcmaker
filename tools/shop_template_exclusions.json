@@ -1,0 +1,34 @@
+{
+  "ids": [],
+  "npcNamePatterns": [
+    "^Loot Buyer$",
+    "^Testserver Assistant$"
+  ],
+  "messagePatterns": [
+    "\\bquest\\b",
+    "\\bmission\\b",
+    "\\bstorage\\b",
+    "\\breward\\b",
+    "\\bmonument\\b",
+    "\\bsarcophagus\\b",
+    "\\btoken\\b",
+    "\\bbadge\\b",
+    "\\bmedal\\b"
+  ],
+  "namePatterns": [
+    "\\btoken\\b",
+    "\\bbadge\\b",
+    "\\bmedal\\b",
+    "\\bcertificate\\b",
+    "\\bdeed\\b",
+    "\\bdocument\\b",
+    "\\bvoucher\\b",
+    "\\bticket\\b",
+    "\\bpermit\\b",
+    "\\bpermission\\b",
+    "\\bquest\\b",
+    "\\bmission\\b",
+    "\\bproof of\\b",
+    "\\bkey(?: ring)?\\b"
+  ]
+}

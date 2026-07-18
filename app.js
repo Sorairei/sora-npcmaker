@@ -84,16 +84,23 @@ window.renderTradeItems = function () {
     var tbody = gid('shop-items-tbody');
     if (!tbody) return;
     tbody.innerHTML = '';
-    window.NPC.state.tradeItems.forEach(function (item, index) {
+    var visibleItems = window.NPC.state.tradeItems.slice(0, 300);
+    visibleItems.forEach(function (item, index) {
         var tr = document.createElement('tr');
         tr.innerHTML =
             '<td><img src="items/' + window.sanitize(item.id) + '.gif" style="width:24px;image-rendering:pixelated;" onerror="this.style.display=\'none\'"></td>' +
-            '<td>' + window.sanitize(item.name) + '<div style="font-size:10px;color:#777">ID: ' + window.sanitize(item.id) + '</div></td>' +
+            '<td>' + window.sanitize(item.name) + '<div style="font-size:10px;color:#777">ID: ' + window.sanitize(item.id) + (item.count ? ' · Count: ' + window.sanitize(item.count) : '') + '</div></td>' +
             '<td style="color:#2ecc71">' + window.sanitize(item.buy) + ' gp</td>' +
             '<td style="color:#e74c3c">' + window.sanitize(item.sell) + ' gp</td>' +
             '<td style="text-align:center"><button class="rpg-btn danger" style="padding:4px 10px;font-size:11px;" onclick="window.removeItem(' + index + ')">X</button></td>';
         tbody.appendChild(tr);
     });
+    if (window.NPC.state.tradeItems.length > visibleItems.length) {
+        var summaryRow = document.createElement('tr');
+        summaryRow.innerHTML = '<td colspan="5" style="padding:14px;text-align:center;color:var(--muted)">' +
+            (window.NPC.state.tradeItems.length - visibleItems.length) + ' additional items are included in the Lua export.</td>';
+        tbody.appendChild(summaryRow);
+    }
 };
 
 // Keywords
@@ -145,6 +152,228 @@ function closeModal(modal) {
     if (modalReturnFocus && typeof modalReturnFocus.focus === 'function') modalReturnFocus.focus();
     modalReturnFocus = null;
 }
+
+// NPC Shop Templates and Tibia RL Economy Analyzer
+var shopDataPromise = null;
+var selectedShopTemplate = null;
+var shopTemplateRenderTimer = null;
+
+function loadShopTemplateData() {
+    if (window.SHOP_TEMPLATE_DATA) return Promise.resolve(window.SHOP_TEMPLATE_DATA);
+    if (shopDataPromise) return shopDataPromise;
+    shopDataPromise = new Promise(function (resolve, reject) {
+        var script = document.createElement('script');
+        script.src = 'shop_templates.js?v=20260718-shop-npc-toolkit';
+        script.async = true;
+        script.onload = function () {
+            if (window.SHOP_TEMPLATE_DATA) resolve(window.SHOP_TEMPLATE_DATA);
+            else reject(new Error('The shop template dataset is invalid.'));
+        };
+        script.onerror = function () { reject(new Error('The shop template dataset could not be loaded.')); };
+        document.head.appendChild(script);
+    });
+    return shopDataPromise;
+}
+
+function templateItems(template) {
+    return SHOP_TOOLS.expandTemplateItems(template, APP_DATA.items);
+}
+
+function templateSearchText(template) {
+    if (template._search) return template._search;
+    var names = (template.items || []).map(function (entry) {
+        var item = APP_DATA.items[String(entry[0])];
+        return item ? item.name : '';
+    });
+    template._search = (template.name + ' ' + template.type + ' ' + names.join(' ')).toLowerCase();
+    return template._search;
+}
+
+function renderTemplateList(data) {
+    var list = gid('shop-template-list');
+    var meta = gid('shop-template-meta');
+    if (!list || !meta) return;
+    var query = (gid('shop-template-search').value || '').trim().toLowerCase();
+    var type = gid('shop-template-type').value;
+    var matches = data.templates.filter(function (template) {
+        return (!type || template.type === type) && (!query || templateSearchText(template).includes(query));
+    });
+    var visible = matches.slice(0, 100);
+    meta.textContent = matches.length + ' shops · ' + data.meta.referenceItems.toLocaleString() + ' reference items';
+    list.innerHTML = '';
+    if (!visible.length) {
+        list.innerHTML = '<div class="shop-tool-empty">No audited shop matches this search.</div>';
+        return;
+    }
+    var fragment = document.createDocumentFragment();
+    visible.forEach(function (template) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'shop-template-card' + (selectedShopTemplate === template ? ' active' : '');
+        button.innerHTML = '<strong>' + window.sanitize(template.name) + '</strong><span><em>' + window.sanitize(template.type) + '</em>' + template.items.length + ' items</span>';
+        button.addEventListener('click', function () {
+            selectedShopTemplate = template;
+            renderTemplateList(data);
+            renderTemplateDetail(template);
+        });
+        fragment.appendChild(button);
+    });
+    list.appendChild(fragment);
+}
+
+function outfitPreviewUrl(outfit) {
+    return 'https://outfit-images-oracle.ots.me/latest_walk/animoutfit.php?id=' + outfit[0] +
+        '&addons=' + outfit[5] + '&head=' + outfit[1] + '&body=' + outfit[2] +
+        '&legs=' + outfit[3] + '&feet=' + outfit[4] + '&mount=' + outfit[6] + '&direction=3';
+}
+
+function renderTemplateDetail(template) {
+    var detail = gid('shop-template-detail');
+    if (!detail) return;
+    var items = templateItems(template);
+    var visibleItems = items.slice(0, 300);
+    var rows = visibleItems.map(function (item) {
+        return '<div class="template-item-row"><span>' + window.sanitize(item.name) + ' <small>#' + window.sanitize(item.id) + (item.count ? ' · ' + window.sanitize(item.count) : '') + '</small></span>' +
+            '<span>' + (item.buy ? item.buy.toLocaleString() + ' gp' : '—') + '</span><span>' + (item.sell ? item.sell.toLocaleString() + ' gp' : '—') + '</span></div>';
+    }).join('');
+    detail.innerHTML =
+        '<div class="template-detail-heading"><div class="template-outfit-preview"><img src="' + outfitPreviewUrl(template.outfit) + '" alt="' + window.sanitize(template.name) + ' outfit"></div>' +
+        '<div><h3>' + window.sanitize(template.name) + '</h3><p>' + window.sanitize(template.type) + ' shop · ' + items.length + ' gold-priced items · No quest logic</p></div>' +
+        '<div class="template-detail-actions"><button id="template-replace" class="rpg-btn highlight" type="button">Use Template</button><button id="template-merge" class="rpg-btn" type="button">Merge Items</button></div></div>' +
+        '<div class="template-message-grid"><div class="template-message"><span>Greeting</span><p>' + window.sanitize(template.greet || 'Welcome, |PLAYERNAME|. Ask me for a {trade}.') + '</p></div>' +
+        '<div class="template-message"><span>Farewell</span><p>' + window.sanitize(template.farewell || 'Goodbye.') + '</p></div></div>' +
+        '<div class="template-items"><div class="template-items-header"><span>Item</span><span>NPC sells</span><span>NPC buys</span></div>' + rows +
+        (items.length > visibleItems.length ? '<div class="shop-tool-empty">' + (items.length - visibleItems.length) + ' additional items will still be included when this template is used.</div>' : '') + '</div>';
+    gid('template-replace').addEventListener('click', function () { applyShopTemplate(template, false); });
+    gid('template-merge').addEventListener('click', function () { applyShopTemplate(template, true); });
+}
+
+function syncTemplateOutfit(outfit) {
+    var lookType = String(outfit[0] || 128);
+    var info = typeof OUTFIT_DATA !== 'undefined' ? OUTFIT_DATA[lookType] : null;
+    var type = info && info.type ? info.type : 'monster';
+    var button = document.querySelector('.outfit-filter-btn[data-filter="' + type + '"]');
+    if (typeof window.filterOutfits === 'function') window.filterOutfits(type, button);
+    var select = gid('outfit-select');
+    if (select && !select.querySelector('option[value="' + lookType + '"]')) {
+        var option = document.createElement('option');
+        option.value = lookType;
+        option.textContent = (info ? info.name : 'NPC outfit') + ' (' + lookType + ')';
+        select.appendChild(option);
+    }
+    if (select) select.value = lookType;
+    gid('addon1').checked = (outfit[5] & 1) === 1;
+    gid('addon2').checked = (outfit[5] & 2) === 2;
+    gid('mount-check').checked = Number(outfit[6]) > 0;
+    gid('mount-selector-group').style.display = Number(outfit[6]) > 0 ? 'block' : 'none';
+    if (gid('mount-select')) gid('mount-select').value = String(outfit[6] || 0);
+    window.NPC.state.outfit = {
+        lookType: Number(outfit[0]) || 128,
+        lookHead: Number(outfit[1]) || 0,
+        lookBody: Number(outfit[2]) || 0,
+        lookLegs: Number(outfit[3]) || 0,
+        lookFeet: Number(outfit[4]) || 0,
+        lookAddons: Number(outfit[5]) || 0,
+        mount: Number(outfit[6]) || 0
+    };
+    updatePreview();
+}
+
+function applyShopTemplate(template, mergeOnly) {
+    var incoming = templateItems(template);
+    if (mergeOnly) {
+        window.NPC.state.tradeItems = SHOP_TOOLS.mergeTradeItems(window.NPC.state.tradeItems, incoming);
+        window.renderTradeItems();
+        closeModal(gid('shop-template-modal'));
+        return;
+    }
+    if ((window.NPC.state.name || window.NPC.state.tradeItems.length || window.NPC.state.keywords.length) &&
+        !window.confirm('Replace the current NPC identity, outfit, messages, and shop items with this shop template?')) return;
+    window.NPC.state.name = template.name;
+    window.NPC.state.tradeItems = incoming;
+    window.NPC.state.keywords = [];
+    window.NPC.state.dialogue = {
+        greet: template.greet || 'Welcome, |PLAYERNAME|. Ask me for a {trade}.',
+        farewell: template.farewell || 'Goodbye.',
+        walkaway: template.walkaway || template.farewell || 'Goodbye.'
+    };
+    gid('npc-name').value = window.NPC.state.name;
+    gid('msg-greet').value = window.NPC.state.dialogue.greet;
+    gid('msg-farewell').value = window.NPC.state.dialogue.farewell;
+    gid('msg-walkaway').value = window.NPC.state.dialogue.walkaway;
+    updatePreviewName(window.NPC.state.name);
+    syncTemplateOutfit(template.outfit);
+    window.renderTradeItems();
+    window.renderKeywords();
+    closeModal(gid('shop-template-modal'));
+}
+
+function initializeShopTemplateFilters(data) {
+    var select = gid('shop-template-type');
+    if (!select || select.options.length > 1) return;
+    Array.from(new Set(data.templates.map(function (template) { return template.type; }))).sort().forEach(function (type) {
+        var option = document.createElement('option');
+        option.value = type;
+        option.textContent = type;
+        select.appendChild(option);
+    });
+}
+
+window.showShopTemplates = function () {
+    openModal(gid('shop-template-modal'));
+    loadShopTemplateData().then(function (data) {
+        initializeShopTemplateFilters(data);
+        renderTemplateList(data);
+    }).catch(function (error) {
+        gid('shop-template-list').innerHTML = '<div class="shop-tool-empty">' + window.sanitize(error.message) + '</div>';
+        gid('shop-template-meta').textContent = 'Unavailable';
+    });
+};
+
+window.closeShopTemplates = function () { closeModal(gid('shop-template-modal')); };
+
+function economyDifferenceText(actual, reference, difference) {
+    if (!actual) return 'Not configured';
+    if (!reference || difference === null) return actual.toLocaleString() + ' gp · No reference';
+    var sign = difference > 0 ? '+' : '';
+    return actual.toLocaleString() + ' gp · RL ' + reference.toLocaleString() + ' (' + sign + difference + '%)';
+}
+
+function renderEconomyReport(report) {
+    var summary = gid('economy-summary');
+    var results = gid('economy-results');
+    var stats = [
+        ['Items', report.summary.items], ['Referenced', report.summary.referenced],
+        ['Warnings', report.summary.warnings], ['Duplicates', report.summary.duplicates], ['Trade loops', report.summary.loops]
+    ];
+    summary.innerHTML = stats.map(function (stat) { return '<div class="economy-stat"><strong>' + stat[1] + '</strong><span>' + stat[0] + '</span></div>'; }).join('');
+    if (!report.results.length) {
+        results.innerHTML = '<div class="shop-tool-empty">Add items to the current trade list before running the analysis.</div>';
+        return;
+    }
+    results.innerHTML = report.results.map(function (item) {
+        var notes = [];
+        if (item.loop) notes.push('Infinite self-trade risk: the NPC buys this item for more than it sells it.');
+        if (item.duplicate) notes.push('Duplicate item and subtype entry.');
+        if (!item.loop && !item.duplicate && item.severity === 'warning') notes.push('Price differs by at least 25% from the estimated RL reference.');
+        if (!notes.length) notes.push(item.hasReference ? 'Price is within the expected reference range.' : 'No RL reference is available for this item.');
+        return '<div class="economy-result"><div><strong>' + window.sanitize(item.name) + '</strong><small>#' + window.sanitize(item.id) + (item.count ? ' · Count ' + item.count : '') + '</small></div>' +
+            '<div><small>NPC sells to player</small>' + economyDifferenceText(item.buy, item.referenceBuy, item.buyDifference) + '</div>' +
+            '<div><small>NPC buys from player</small>' + economyDifferenceText(item.sell, item.referenceSell, item.sellDifference) + '</div>' +
+            '<div><span class="economy-status ' + item.severity + '">' + item.severity + '</span><small>' + window.sanitize(notes.join(' ')) + '</small></div></div>';
+    }).join('');
+}
+
+window.showEconomyAnalyzer = function () {
+    openModal(gid('economy-modal'));
+    loadShopTemplateData().then(function (data) {
+        renderEconomyReport(SHOP_TOOLS.analyzeEconomy(window.NPC.state.tradeItems, data.references));
+    }).catch(function (error) {
+        gid('economy-results').innerHTML = '<div class="shop-tool-empty">' + window.sanitize(error.message) + '</div>';
+    });
+};
+
+window.closeEconomyAnalyzer = function () { closeModal(gid('economy-modal')); };
 
 window.showLuaModal = function () {
     var modal = gid('output-modal');
@@ -517,6 +746,18 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.key !== 'Escape' && event.key !== 'Esc') return;
         var activeModal = document.querySelector('.modal-overlay.active');
         if (activeModal) closeModal(activeModal);
+    });
+
+    var templateSearch = gid('shop-template-search');
+    var templateType = gid('shop-template-type');
+    if (templateSearch) templateSearch.addEventListener('input', function () {
+        clearTimeout(shopTemplateRenderTimer);
+        shopTemplateRenderTimer = setTimeout(function () {
+            loadShopTemplateData().then(renderTemplateList).catch(function () {});
+        }, 80);
+    });
+    if (templateType) templateType.addEventListener('change', function () {
+        loadShopTemplateData().then(renderTemplateList).catch(function () {});
     });
 
     // Tabs

@@ -78,10 +78,10 @@ test('escapes user-provided Lua strings', () => {
 
 test('includes configured shop prices and callbacks', () => {
   const lua = generateLUA(createState({
-    tradeItems: [{ id: 2160, name: 'crystal coin', buy: 10000, sell: 9500 }]
+    tradeItems: [{ id: 2160, name: 'crystal coin', buy: 10000, sell: 9500, count: 7 }]
   }));
 
-  assert.match(lua, /itemName = "crystal coin", clientId = 2160, buy = 10000, sell = 9500/);
+  assert.match(lua, /itemName = "crystal coin", clientId = 2160, buy = 10000, sell = 9500, count = 7/);
   assert.match(lua, /npcType\.onBuyItem/);
   assert.match(lua, /npcType\.onSellItem/);
 });

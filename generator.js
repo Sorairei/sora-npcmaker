@@ -90,14 +90,16 @@ window.generateLUA = function(state) {
 		id: positiveInteger(item.id, 0),
 		name: item.name,
 		buy: positiveInteger(item.buy, 0),
-		sell: positiveInteger(item.sell, 0)
+		sell: positiveInteger(item.sell, 0),
+		count: positiveInteger(item.count, 0)
 	})).filter(item => item.id > 0 && (item.buy > 0 || item.sell > 0));
 	if (tradeItems.length > 0) {
 		lua += `npcConfig.shop = {\n`;
 		tradeItems.forEach(item => {
 			let buyStr = item.buy > 0 ? `, buy = ${item.buy}` : '';
 			let sellStr = item.sell > 0 ? `, sell = ${item.sell}` : '';
-			lua += `\t{ itemName = "${safeLua(item.name)}", clientId = ${item.id}${buyStr}${sellStr} },\n`;
+			let countStr = item.count > 0 ? `, count = ${item.count}` : '';
+			lua += `\t{ itemName = "${safeLua(item.name)}", clientId = ${item.id}${buyStr}${sellStr}${countStr} },\n`;
 		});
 		lua += `}\n`;
 		

@@ -90,6 +90,19 @@ The standard greeting, farewell, and walk-away messages support Canary placehold
 
 ## Trade system
 
+The Trade workspace includes two optional, browser-friendly commercial NPC tools:
+
+- **NPC Shop Templates** provides audited gold-only merchants. A template may replace the current NPC's identity, outfit, basic messages, and shop, or merge only missing shop entries. Quest exchanges, custom currencies, mission logic, rewards, storage checks, and teleport behavior are excluded.
+- **Smart Economy Analyzer** compares the current shop against estimated Tibia RL prices and reports suspicious deviations, duplicate entries, and configurations that permit an infinite self-trade profit.
+
+The compact reference dataset is loaded only when either tool is opened. Source Lua files are parsed statically during development and are never shipped or executed in the user's browser.
+
+Regenerate the audited dataset with an existing NPC directory and an optional primary RL price table:
+
+```powershell
+node tools/import_shop_templates.js --npc-dir "path/to/npc" --prices "path/to/shops.lua" --output shop_templates.js
+```
+
 The bundled catalog can be filtered by item category or searched by item name and modern client ID. Each selected item may define a buy price, a sell price, or both. The resulting trade list is emitted as `npcConfig.shop`, together with the standard Canary buy, sell, and item-check callbacks.
 
 Item names, prices, and client IDs remain visible in the editor before export so the complete shop configuration can be reviewed.
@@ -131,7 +144,7 @@ flowchart LR
 | `outfit_data.js` | Named male, female, and monster outfit definitions |
 | `outfit_bounds.js` | Generated visible sprite bounds used by preview geometry |
 | `items/` | Local item sprite catalog used by search, categories, and trade lists |
-| `tools/` | XML/OTB catalog importer, classification overrides, and outfit-bound generator |
+| `tools/` | XML/OTB catalog importer, shop-template importer, classification overrides, and outfit-bound generator |
 | `assets/` | BeeTales logo, Sora mascot, and favicon assets |
 | `test/` | Dependency-free Node.js regression tests for Lua generation |
 | `.github/FUNDING.yml` | GitHub Sponsors configuration |

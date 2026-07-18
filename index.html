@@ -159,6 +159,18 @@
             <div id="tab-shop" class="tab-content rpg-panel trade-panel">
                 <p class="eyebrow">Step 02 · Commerce</p>
                 <h2 class="panel-title">Trade settings</h2>
+
+                <div class="shop-tools-bar" aria-label="NPC shop tools">
+                    <div class="shop-tools-copy">
+                        <span class="shop-tools-kicker">NPC shop tools</span>
+                        <strong>Build a gold-based merchant faster</strong>
+                        <small>Start from an audited shop template or validate the current prices.</small>
+                    </div>
+                    <div class="shop-tools-actions">
+                        <button class="rpg-btn" type="button" onclick="window.showShopTemplates()">NPC Shop Templates</button>
+                        <button class="rpg-btn highlight" type="button" onclick="window.showEconomyAnalyzer()">Analyze Economy</button>
+                    </div>
+                </div>
                 
                 <!-- 1. Top Row: Search & Price settings -->
                 <div class="trade-entry-row">
@@ -301,6 +313,51 @@
         </div>
     </div>
 
+    <!-- NPC Shop Templates -->
+    <div id="shop-template-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="shop-template-title">
+        <div class="modal-box rpg-panel shop-tool-modal">
+            <div class="shop-tool-header">
+                <div>
+                    <p class="eyebrow">Shop NPCs only</p>
+                    <h2 class="panel-title" id="shop-template-title">NPC Shop Templates</h2>
+                    <p>Audited gold shops with identity, outfit, greeting, farewell, and commercial items only.</p>
+                </div>
+                <button class="modal-close" type="button" onclick="window.closeShopTemplates()" aria-label="Close shop templates">&times;</button>
+            </div>
+            <div class="shop-template-toolbar">
+                <input id="shop-template-search" class="rpg-input" type="search" placeholder="Search NPC or item name">
+                <select id="shop-template-type" class="rpg-input" aria-label="Filter templates by shop type">
+                    <option value="">All shop types</option>
+                </select>
+                <span id="shop-template-meta" class="shop-data-status">Loading audited shops...</span>
+            </div>
+            <div class="shop-template-layout">
+                <div id="shop-template-list" class="shop-template-list" aria-live="polite"></div>
+                <div id="shop-template-detail" class="shop-template-detail">
+                    <div class="shop-tool-empty">Select a shop NPC to preview its commercial setup.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Economy Analyzer -->
+    <div id="economy-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="economy-title">
+        <div class="modal-box rpg-panel shop-tool-modal economy-modal-box">
+            <div class="shop-tool-header">
+                <div>
+                    <p class="eyebrow">Tibia RL price estimates</p>
+                    <h2 class="panel-title" id="economy-title">Smart Economy Analyzer</h2>
+                    <p>Checks the current NPC for suspicious prices, duplicates, and infinite self-trade loops.</p>
+                </div>
+                <button class="modal-close" type="button" onclick="window.closeEconomyAnalyzer()" aria-label="Close economy analyzer">&times;</button>
+            </div>
+            <div id="economy-summary" class="economy-summary"></div>
+            <div id="economy-results" class="economy-results" aria-live="polite">
+                <div class="shop-tool-empty">Loading reference prices...</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Help -->
     <div id="help-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="help-title">
         <div class="modal-box rpg-panel help-box">
@@ -315,7 +372,7 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
                     <div style="background: #2a2a2a; padding: 15px; border-radius: 4px; border-left: 3px solid var(--accent);">
                         <div style="color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase;">Version</div>
-                        <div style="color: #fff; font-size: 15px;">v1.5.0 (Catalog &amp; Preview Audit)</div>
+                        <div style="color: #fff; font-size: 15px;">v1.6.0 (Shop NPC Toolkit)</div>
                     </div>
                     <div style="background: #2a2a2a; padding: 15px; border-radius: 4px; border-left: 3px solid var(--accent);">
                         <div style="color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase;">Compatibility</div>
@@ -354,6 +411,12 @@
                             <span style="color: var(--accent);">•</span> Trade, dialogue, custom keyword, outfit color, addon, and mount configuration
                         </li>
                         <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: var(--accent);">•</span> Audited gold-only NPC shop templates with safe replace and merge workflows
+                        </li>
+                        <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: var(--accent);">•</span> Tibia RL economy checks for price deviations, duplicates, and self-trade loops
+                        </li>
+                        <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
                             <span style="color: var(--accent);">•</span> Tested Lua RevScript generation and local export
                         </li>
                     </ul>
@@ -371,6 +434,7 @@
     </div>
 
     <script src="generator.js"></script>
-    <script src="app.js?v=20260718-mounted-label-offset"></script>
+    <script src="shop_tools.js?v=20260718-shop-npc-toolkit"></script>
+    <script src="app.js?v=20260718-shop-npc-toolkit"></script>
 </body>
 </html>
