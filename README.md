@@ -112,7 +112,7 @@ The Trade workspace includes two optional, browser-friendly commercial NPC tools
 - **NPC Shop Templates** provides audited gold-only merchants. A template may replace the current NPC's identity, outfit, basic messages, and shop, or merge only missing shop entries. Quest exchanges, custom currencies, mission logic, rewards, storage checks, and teleport behavior are excluded.
 - **Smart Economy Analyzer** compares the current shop against estimated Tibia RL prices and reports suspicious deviations, duplicate entries, and configurations that permit an infinite self-trade profit.
 
-Template inventories display local item-sprite thumbnails beside each item name and client ID. Images use native lazy loading, while searchable 100-item pages provide Previous/Next navigation without removing any item from the state or Lua exporter.
+The template browser paginates all available shop NPCs in groups of 50, while preserving name/item search and shop-type filters. Template inventories display local item-sprite thumbnails beside each item name and client ID. Images use native lazy loading, while searchable 100-item pages provide Previous/Next navigation without removing any item from the state or Lua exporter.
 
 The compact reference dataset is loaded only when either tool is opened. Source Lua files are parsed statically during development and are never shipped or executed in the user's browser.
 

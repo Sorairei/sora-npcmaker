@@ -157,6 +157,8 @@ function closeModal(modal) {
 var shopDataPromise = null;
 var selectedShopTemplate = null;
 var shopTemplateRenderTimer = null;
+var shopTemplatePage = 0;
+var shopTemplatesPerPage = 50;
 var templateItemPage = 0;
 var templateItemQuery = '';
 var templateItemsPerPage = 100;
@@ -201,8 +203,17 @@ function renderTemplateList(data) {
     var matches = data.templates.filter(function (template) {
         return (!type || template.type === type) && (!query || templateSearchText(template).includes(query));
     });
-    var visible = matches.slice(0, 100);
+    var pageCount = Math.max(1, Math.ceil(matches.length / shopTemplatesPerPage));
+    shopTemplatePage = Math.min(Math.max(0, shopTemplatePage), pageCount - 1);
+    var start = shopTemplatePage * shopTemplatesPerPage;
+    var visible = matches.slice(start, start + shopTemplatesPerPage);
     meta.textContent = matches.length + ' shops · ' + data.meta.referenceItems.toLocaleString() + ' reference items';
+    var pageLabel = gid('shop-template-page');
+    var previousButton = gid('shop-template-prev');
+    var nextButton = gid('shop-template-next');
+    if (pageLabel) pageLabel.textContent = 'Page ' + (shopTemplatePage + 1) + ' of ' + pageCount;
+    if (previousButton) previousButton.disabled = shopTemplatePage === 0;
+    if (nextButton) nextButton.disabled = shopTemplatePage >= pageCount - 1;
     list.innerHTML = '';
     if (!visible.length) {
         list.innerHTML = '<div class="shop-tool-empty">No audited shop matches this search.</div>';
@@ -218,7 +229,8 @@ function renderTemplateList(data) {
             selectedShopTemplate = template;
             templateItemPage = 0;
             templateItemQuery = '';
-            renderTemplateList(data);
+            list.querySelectorAll('.shop-template-card').forEach(function (card) { card.classList.remove('active'); });
+            button.classList.add('active');
             renderTemplateDetail(template);
         });
         fragment.appendChild(button);
@@ -792,12 +804,24 @@ document.addEventListener('DOMContentLoaded', function () {
     var templateSearch = gid('shop-template-search');
     var templateType = gid('shop-template-type');
     if (templateSearch) templateSearch.addEventListener('input', function () {
+        shopTemplatePage = 0;
         clearTimeout(shopTemplateRenderTimer);
         shopTemplateRenderTimer = setTimeout(function () {
             loadShopTemplateData().then(renderTemplateList).catch(function () {});
         }, 80);
     });
     if (templateType) templateType.addEventListener('change', function () {
+        shopTemplatePage = 0;
+        loadShopTemplateData().then(renderTemplateList).catch(function () {});
+    });
+    var shopTemplatePrevious = gid('shop-template-prev');
+    var shopTemplateNext = gid('shop-template-next');
+    if (shopTemplatePrevious) shopTemplatePrevious.addEventListener('click', function () {
+        shopTemplatePage = Math.max(0, shopTemplatePage - 1);
+        loadShopTemplateData().then(renderTemplateList).catch(function () {});
+    });
+    if (shopTemplateNext) shopTemplateNext.addEventListener('click', function () {
+        shopTemplatePage += 1;
         loadShopTemplateData().then(renderTemplateList).catch(function () {});
     });
 
