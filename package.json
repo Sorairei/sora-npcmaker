@@ -2,6 +2,6 @@
   "name": "sora-npcmaker",
   "private": true,
   "scripts": {
-    "check": "node --check app.js && node --check generator.js && node --check tools/import_items.js && node --test"
+    "check": "node --check app.js && node --check preview_geometry.js && node --check generator.js && node --check tools/import_items.js && node --test"
   }
 }

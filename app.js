@@ -455,40 +455,26 @@ function updatePreviewName(value) {
     previewName.textContent = String(value || '').trim() || 'Unnamed NPC';
 }
 
-function unionPreviewBounds(first, second) {
-    if (!first) return second;
-    if (!second) return first;
-    return [
-        Math.min(first[0], second[0]),
-        Math.min(first[1], second[1]),
-        Math.max(first[2], second[2]),
-        Math.max(first[3], second[3])
-    ];
-}
-
-function getVisibleOutfitBounds(width, height) {
+function getPreviewOutfitBounds(width, height) {
     var outfit = window.NPC.state.outfit;
     var boundsTable = typeof OUTFIT_BOUNDS !== 'undefined' ? OUTFIT_BOUNDS : {};
-    var states = boundsTable[String(outfit.lookType)];
-    var bounds = states && states[outfit.lookAddons] ? states[outfit.lookAddons].slice() : null;
+    var mountLookType = 0;
 
     if (outfit.mount) {
-        var mountLookType = outfit.mount;
+        mountLookType = outfit.mount;
         if (mountLookType < 300 && typeof TFS_MOUNT_LOOKTYPES !== 'undefined') {
             mountLookType = TFS_MOUNT_LOOKTYPES[String(mountLookType)] || mountLookType;
         }
-        var mountStates = boundsTable[String(mountLookType)];
-        var mountBounds = mountStates && mountStates[0] ? mountStates[0] : null;
-        bounds = unionPreviewBounds(bounds, mountBounds);
     }
 
-    if (!bounds) return [0, 0, width, height];
-    return [
-        Math.max(0, Math.min(width, bounds[0])),
-        Math.max(0, Math.min(height, bounds[1])),
-        Math.max(0, Math.min(width, bounds[2])),
-        Math.max(0, Math.min(height, bounds[3]))
-    ];
+    return PREVIEW_GEOMETRY.resolveBounds(
+        boundsTable,
+        outfit.lookType,
+        outfit.lookAddons,
+        mountLookType,
+        width,
+        height
+    );
 }
 
 function fitPreviewOutfit() {
@@ -502,15 +488,15 @@ function fitPreviewOutfit() {
     var scale = Math.min(2, availableWidth / image.naturalWidth, availableHeight / image.naturalHeight);
     scale = Math.max(0.25, scale);
 
-    var bounds = getVisibleOutfitBounds(image.naturalWidth, image.naturalHeight);
-    var visibleCenterX = ((bounds[0] + bounds[2]) / 2) * scale;
-    var visibleTop = bounds[1] * scale;
+    var bounds = getPreviewOutfitBounds(image.naturalWidth, image.naturalHeight);
+    var labelCenterX = ((bounds.label[0] + bounds.label[2]) / 2) * scale;
+    var labelTop = bounds.label[1] * scale;
 
     stage.style.width = Math.round(image.naturalWidth * scale) + 'px';
     stage.style.height = Math.round(image.naturalHeight * scale) + 'px';
     stage.style.setProperty('--outfit-scale', scale.toFixed(4));
-    stage.style.setProperty('--visible-center-x', visibleCenterX.toFixed(2) + 'px');
-    stage.style.setProperty('--visible-outfit-top', visibleTop.toFixed(2) + 'px');
+    stage.style.setProperty('--label-center-x', labelCenterX.toFixed(2) + 'px');
+    stage.style.setProperty('--label-anchor-top', labelTop.toFixed(2) + 'px');
 }
 
 // Initialization
