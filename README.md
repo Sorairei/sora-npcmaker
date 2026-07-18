@@ -159,6 +159,21 @@ cd sora-npcmaker
 
 No runtime dependency installation is required.
 
+## Updating the item catalog
+
+The dependency-free importer matches new `items/*.gif` filenames to one or more
+Open Tibia XML catalogs and updates `data.js` without touching existing entries:
+
+```bash
+node tools/import_items.js --xml path/to/items.xml --xml path/to/newer-items.xml --overrides tools/item_overrides.json --git-untracked
+```
+
+Later XML files take priority over earlier ones. Categories are derived first
+from `primarytype`, then from `weaponType`, with conservative fallbacks for
+slots and well-known item names. Unsupported items go to `Others`, while
+decaying corpse states are excluded. Add confirmed names or category exceptions
+to `tools/item_overrides.json`; use `--dry-run` to preview counts without writing.
+
 ## Validation
 
 With Node.js 18 or newer installed, run the dependency-free syntax and generator test suite:
@@ -167,7 +182,7 @@ With Node.js 18 or newer installed, run the dependency-free syntax and generator
 npm run check
 ```
 
-The validation command checks `app.js` and `generator.js` syntax and runs regression coverage for default generation, stationary NPCs, invalid numeric values, Lua string escaping, and shop callbacks.
+The validation command checks application, generator, and importer syntax and runs regression coverage for default generation, stationary NPCs, invalid numeric values, Lua string escaping, shop callbacks, item categorization, and corpse exclusion.
 
 ## Limitations
 

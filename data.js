@@ -26851,6 +26851,586 @@ const APP_DATA = {
     "2352": {
       "name": "thick trunk",
       "category": "Household"
+    },
+    "51760": {
+      "name": "refined bow",
+      "category": "Distance"
+    },
+    "51895": {
+      "name": "brooch",
+      "category": "Others"
+    },
+    "51976": {
+      "name": "jade dragon head",
+      "category": "Others"
+    },
+    "51977": {
+      "name": "book of wisdom",
+      "category": "Books"
+    },
+    "51978": {
+      "name": "bounty talisman",
+      "category": "Others"
+    },
+    "52332": {
+      "name": "crypt spine",
+      "category": "Distance"
+    },
+    "52333": {
+      "name": "crypt splitter",
+      "category": "Axe"
+    },
+    "52334": {
+      "name": "crypt breaker",
+      "category": "Club"
+    },
+    "52335": {
+      "name": "crypt strike",
+      "category": "Fist"
+    },
+    "52336": {
+      "name": "crypt bile",
+      "category": "Wands"
+    },
+    "52337": {
+      "name": "crypt jaw",
+      "category": "Rods"
+    },
+    "52338": {
+      "name": "crypt slicer",
+      "category": "Sword"
+    },
+    "52348": {
+      "name": "stag helmet",
+      "category": "Helmets"
+    },
+    "52349": {
+      "name": "stag robe",
+      "category": "Armors"
+    },
+    "52350": {
+      "name": "stag plate",
+      "category": "Armors"
+    },
+    "52351": {
+      "name": "stag legs",
+      "category": "Legs"
+    },
+    "52352": {
+      "name": "stag shinguards",
+      "category": "Boots"
+    },
+    "52353": {
+      "name": "stag boots",
+      "category": "Boots"
+    },
+    "52354": {
+      "name": "stag footwraps",
+      "category": "Boots"
+    },
+    "52355": {
+      "name": "stag spellbook",
+      "category": "Spellbooks"
+    },
+    "52356": {
+      "name": "stag scrolls",
+      "category": "Spellbooks"
+    },
+    "52357": {
+      "name": "stag shield",
+      "category": "Shields"
+    },
+    "52358": {
+      "name": "muglex clan footman soul core",
+      "category": "Soul Core"
+    },
+    "52359": {
+      "name": "muglex clan assassin soul core",
+      "category": "Soul Core"
+    },
+    "52360": {
+      "name": "corrupted ghost soul core",
+      "category": "Soul Core"
+    },
+    "52361": {
+      "name": "corrupted skeleton soul core",
+      "category": "Soul Core"
+    },
+    "52586": {
+      "name": "ice-covered certificate of ancestry",
+      "category": "Others"
+    },
+    "52589": {
+      "name": "folded artefact carpet VIII",
+      "category": "Others"
+    },
+    "52632": {
+      "name": "night harpy beak",
+      "category": "Others"
+    },
+    "52633": {
+      "name": "night harpy feathers",
+      "category": "Others"
+    },
+    "52634": {
+      "name": "oak wood",
+      "category": "Others"
+    },
+    "52635": {
+      "name": "salvaged iron parts",
+      "category": "Others"
+    },
+    "52636": {
+      "name": "tender venison",
+      "category": "Others"
+    },
+    "52637": {
+      "name": "repair kit for boats",
+      "category": "Others"
+    },
+    "52638": {
+      "name": "marinated sturgeon",
+      "category": "Others"
+    },
+    "52649": {
+      "name": "refined stag shield",
+      "category": "Shields"
+    },
+    "52657": {
+      "name": "fiery crypt rune",
+      "category": "Others"
+    },
+    "52658": {
+      "name": "icy crypt rune",
+      "category": "Others"
+    },
+    "52659": {
+      "name": "deathly crypt rune",
+      "category": "Others"
+    },
+    "52660": {
+      "name": "ancient crypt rune",
+      "category": "Others"
+    },
+    "52661": {
+      "name": "necromantic crypt rune",
+      "category": "Others"
+    },
+    "52662": {
+      "name": "silver poniard",
+      "category": "Others"
+    },
+    "52663": {
+      "name": "cuirass plate",
+      "category": "Others"
+    },
+    "52664": {
+      "name": "stag parchment",
+      "category": "Others"
+    },
+    "52705": {
+      "name": "necromantic core",
+      "category": "Others"
+    },
+    "52706": {
+      "name": "toe nails",
+      "category": "Others"
+    },
+    "52707": {
+      "name": "giant tusk",
+      "category": "Others"
+    },
+    "52708": {
+      "name": "fetid heart",
+      "category": "Others"
+    },
+    "52709": {
+      "name": "cryptic fossil",
+      "category": "Others"
+    },
+    "52710": {
+      "name": "worn guide book",
+      "category": "Books"
+    },
+    "52711": {
+      "name": "golden claw",
+      "category": "Others"
+    },
+    "52712": {
+      "name": "shrunken head",
+      "category": "Others"
+    },
+    "52713": {
+      "name": "ancient scales",
+      "category": "Others"
+    },
+    "52714": {
+      "name": "soul trap",
+      "category": "Others"
+    },
+    "52715": {
+      "name": "skull tendril",
+      "category": "Others"
+    },
+    "52716": {
+      "name": "ancient eye stalk",
+      "category": "Others"
+    },
+    "52717": {
+      "name": "bone spikes",
+      "category": "Others"
+    },
+    "52718": {
+      "name": "deadly fangs",
+      "category": "Others"
+    },
+    "52719": {
+      "name": "crystallized death",
+      "category": "Others"
+    },
+    "52720": {
+      "name": "cluster of crystallized death",
+      "category": "Others"
+    },
+    "52725": {
+      "name": "ancient bonelord santa",
+      "category": "Others"
+    },
+    "52726": {
+      "name": "icy scales",
+      "category": "Others"
+    },
+    "52727": {
+      "name": "icy horns",
+      "category": "Others"
+    },
+    "52728": {
+      "name": "frozen crapace",
+      "category": "Others"
+    },
+    "52729": {
+      "name": "frozen claw",
+      "category": "Others"
+    },
+    "52732": {
+      "name": "guardian ring",
+      "category": "Rings"
+    },
+    "52743": {
+      "name": "salvaged silver parts",
+      "category": "Others"
+    },
+    "52744": {
+      "name": "personal letter of Michael the Stalwart I",
+      "category": "Others"
+    },
+    "52745": {
+      "name": "bottle of Raubritter Lager",
+      "category": "Others"
+    },
+    "52746": {
+      "name": "twisted marionette",
+      "category": "Others"
+    },
+    "52747": {
+      "name": "broken staff of mind control",
+      "category": "Others"
+    },
+    "52748": {
+      "name": "battle tactics",
+      "category": "Others"
+    },
+    "52758": {
+      "name": "salvaged bronze parts",
+      "category": "Others"
+    },
+    "52759": {
+      "name": "the mariner's compass from the Antoinette",
+      "category": "Others"
+    },
+    "52781": {
+      "name": "stag shield refinement plans",
+      "category": "Others"
+    },
+    "52783": {
+      "name": "falcon circlet",
+      "category": "Others"
+    },
+    "52785": {
+      "name": "cool bottle of Raubritter Lager",
+      "category": "Others"
+    },
+    "52788": {
+      "name": "meal from the beak of a night harpy",
+      "category": "Others"
+    },
+    "52789": {
+      "name": "bottle of enhanced Raubritter Lager",
+      "category": "Others"
+    },
+    "52800": {
+      "name": "raubritter skirmisher soul core",
+      "category": "Soul Core"
+    },
+    "52801": {
+      "name": "raubritter marksman soul core",
+      "category": "Soul Core"
+    },
+    "52802": {
+      "name": "raubritter chastener soul core",
+      "category": "Soul Core"
+    },
+    "52807": {
+      "name": "cyclursus soul core",
+      "category": "Soul Core"
+    },
+    "52808": {
+      "name": "crypt fiend soul core",
+      "category": "Soul Core"
+    },
+    "52809": {
+      "name": "walking dread soul core",
+      "category": "Soul Core"
+    },
+    "52810": {
+      "name": "crypt construct soul core",
+      "category": "Soul Core"
+    },
+    "52811": {
+      "name": "haunted hunter soul core",
+      "category": "Soul Core"
+    },
+    "52812": {
+      "name": "creepy crawler soul core",
+      "category": "Soul Core"
+    },
+    "52813": {
+      "name": "night harpy soul core",
+      "category": "Soul Core"
+    },
+    "52814": {
+      "name": "roaming dread soul core",
+      "category": "Soul Core"
+    },
+    "52815": {
+      "name": "crypt mage soul core",
+      "category": "Soul Core"
+    },
+    "52816": {
+      "name": "personal letter of Clavius I",
+      "category": "Others"
+    },
+    "52817": {
+      "name": "personal letter of Clavius II",
+      "category": "Others"
+    },
+    "52818": {
+      "name": "personal letter of Clavius III",
+      "category": "Others"
+    },
+    "52819": {
+      "name": "personal letter of Adlerauge I",
+      "category": "Others"
+    },
+    "52820": {
+      "name": "personal letter of Adlerauge II",
+      "category": "Others"
+    },
+    "52821": {
+      "name": "personal letter of Adlerauge III",
+      "category": "Others"
+    },
+    "52822": {
+      "name": "personal letter of Michael the Stalwart II",
+      "category": "Others"
+    },
+    "52823": {
+      "name": "personal letter of Michael the Stalwart III",
+      "category": "Others"
+    },
+    "52824": {
+      "name": "the broken sword of Eldoran Etzel",
+      "category": "Others"
+    },
+    "52828": {
+      "name": "brass-shod chest",
+      "category": "Others"
+    },
+    "52830": {
+      "name": "lit candlestick",
+      "category": "Others"
+    },
+    "52864": {
+      "name": "test proficiency catalyst",
+      "category": "Others"
+    },
+    "52865": {
+      "name": "stag soul core",
+      "category": "Soul Core"
+    },
+    "52866": {
+      "name": "imperial soul core",
+      "category": "Soul Core"
+    },
+    "52873": {
+      "name": "inert dragon head",
+      "category": "Others"
+    },
+    "52874": {
+      "name": "jade dragon head",
+      "category": "Others"
+    },
+    "52964": {
+      "name": "charred mask",
+      "category": "Helmets"
+    },
+    "53002": {
+      "name": "gold tooth",
+      "category": "Products"
+    },
+    "53003": {
+      "name": "lizard tail",
+      "category": "Products"
+    },
+    "53004": {
+      "name": "infernoid ember",
+      "category": "Products"
+    },
+    "53005": {
+      "name": "sailor's burn cure",
+      "category": "Products"
+    },
+    "53073": {
+      "name": "bunch of turnips",
+      "category": "Others"
+    },
+    "53074": {
+      "name": "adventurer backpack",
+      "category": "Containers"
+    },
+    "53142": {
+      "name": "pirate navigator soul core",
+      "category": "Soul Core"
+    },
+    "53143": {
+      "name": "pirate gunner soul core",
+      "category": "Soul Core"
+    },
+    "53144": {
+      "name": "pirate cook soul core",
+      "category": "Soul Core"
+    },
+    "53145": {
+      "name": "pirate quartermaster soul core",
+      "category": "Soul Core"
+    },
+    "53146": {
+      "name": "sea captain soul core",
+      "category": "Soul Core"
+    },
+    "53147": {
+      "name": "lizard henchman soul core",
+      "category": "Soul Core"
+    },
+    "53148": {
+      "name": "lizard magician soul core",
+      "category": "Soul Core"
+    },
+    "53149": {
+      "name": "lizard swordmaster soul core",
+      "category": "Soul Core"
+    },
+    "53150": {
+      "name": "lizard executioner soul core",
+      "category": "Soul Core"
+    },
+    "53151": {
+      "name": "lizard commander soul core",
+      "category": "Soul Core"
+    },
+    "53152": {
+      "name": "infernoid blob soul core",
+      "category": "Soul Core"
+    },
+    "53153": {
+      "name": "infernoid hound soul core",
+      "category": "Soul Core"
+    },
+    "53154": {
+      "name": "infernoid soul soul core",
+      "category": "Soul Core"
+    },
+    "53155": {
+      "name": "infernoid spiritual soul core",
+      "category": "Soul Core"
+    },
+    "53158": {
+      "name": "old treasure map",
+      "category": "Others"
+    },
+    "53161": {
+      "name": "Item 53161",
+      "category": "Others"
+    },
+    "53162": {
+      "name": "superior mana potion",
+      "category": "Potions"
+    },
+    "53163": {
+      "name": "distilled superior mana potion",
+      "category": "Potions"
+    },
+    "53164": {
+      "name": "distilled ultimate mana potion",
+      "category": "Potions"
+    },
+    "53167": {
+      "name": "sail pass",
+      "category": "Others"
+    },
+    "53168": {
+      "name": "shatterstorm arrow",
+      "category": "Ammunition"
+    },
+    "53169": {
+      "name": "firestorm arrow",
+      "category": "Ammunition"
+    },
+    "53170": {
+      "name": "terrastorm arrow",
+      "category": "Ammunition"
+    },
+    "53171": {
+      "name": "froststorm arrow",
+      "category": "Ammunition"
+    },
+    "53172": {
+      "name": "thunderstorm arrow",
+      "category": "Ammunition"
+    },
+    "53633": {
+      "name": "beaver of wisdom (replica)",
+      "category": "Others"
+    },
+    "53634": {
+      "name": "war backpack (replica)",
+      "category": "Others"
+    },
+    "53635": {
+      "name": "bonelord tome (replica)",
+      "category": "Others"
+    },
+    "53636": {
+      "name": "wicked witch (replica)",
+      "category": "Others"
+    },
+    "53637": {
+      "name": "tibiapedia (replica)",
+      "category": "Others"
+    },
+    "54266": {
+      "name": "lesser proficiency catalyst",
+      "category": "Valuables"
     }
   },
   "categories": [
@@ -26865,6 +27445,7 @@ const APP_DATA = {
     "Products",
     "Distance",
     "Exercise",
+    "Fist",
     "Food",
     "Helmets",
     "Household",
