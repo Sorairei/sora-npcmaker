@@ -74,6 +74,7 @@ This release expands the editor's catalogs, preview accuracy, and commercial NPC
 - Added checks for suspicious price deviations, duplicate shop entries, and infinite self-trade profit loops.
 - Added lazy-loaded item thumbnails to template inventories and subtype-aware `count` generation for relevant shop entries.
 - Added performance safeguards that defer the compact shop dataset until requested and paginate large inventories without removing items from Lua export.
+- Added a locally bundled, softly masked fantasy merchant illustration to the NPC Shop Tools panel without changing its compact dimensions.
 - Expanded the dependency-free regression suite to 27 passing tests.
 
 ## How it works
