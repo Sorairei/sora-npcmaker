@@ -197,7 +197,66 @@ function parseReferencePrices(filename, appData, exclusions) {
   return Array.from(merged.values());
 }
 
-function buildDataset(npcDirectory, appData, exclusions, referenceEntries = []) {
+function buildExternalLootTemplate(npcFilename, pricesFilename, appData, exclusions) {
+  if (!npcFilename || !pricesFilename || !fs.existsSync(npcFilename) || !fs.existsSync(pricesFilename)) return null;
+  const npcSource = fs.readFileSync(npcFilename, 'utf8');
+  const pricesSource = fs.readFileSync(pricesFilename, 'utf8');
+  const outfitSource = extractTable(npcSource, 'npcConfig.outfit');
+  const lootSource = extractTable(pricesSource, 'LootShopConfigTable');
+  const supplySource = extractTable(pricesSource, 'SupplyShopConfigTable');
+  if (!outfitSource || !lootSource) return null;
+
+  const excludedIds = new Set((exclusions.ids || []).map(String));
+  const namePatterns = (exclusions.namePatterns || []).map((pattern) => new RegExp(pattern, 'i'));
+  const messagePatterns = (exclusions.messagePatterns || []).map((pattern) => new RegExp(pattern, 'i'));
+  const safeMessage = (message) => messagePatterns.some((pattern) => pattern.test(message)) ? '' : message;
+  const supplyBuyPrices = new Map();
+  for (const entry of parseShopEntries(supplySource || '')) {
+    if (!entry.buy) continue;
+    const previous = supplyBuyPrices.get(entry.id);
+    supplyBuyPrices.set(entry.id, previous ? Math.min(previous, entry.buy) : entry.buy);
+  }
+
+  const merged = new Map();
+  for (const entry of parseShopEntries(lootSource)) {
+    if (!appData.items[entry.id] || excludedIds.has(entry.id) || namePatterns.some((pattern) => pattern.test(entry.name))) continue;
+    const key = entry.id + ':' + entry.count;
+    const previous = merged.get(key);
+    const normalized = {
+      ...entry,
+      name: appData.items[entry.id].name,
+      buy: supplyBuyPrices.get(entry.id) || 0
+    };
+    if (!previous) merged.set(key, normalized);
+    else {
+      if (normalized.buy) previous.buy = previous.buy ? Math.min(previous.buy, normalized.buy) : normalized.buy;
+      if (normalized.sell) previous.sell = Math.max(previous.sell, normalized.sell);
+    }
+  }
+  const entries = Array.from(merged.values()).sort((left, right) => Number(left.id) - Number(right.id));
+  if (!entries.length) return null;
+  const name = readString(npcSource, /local internalNpcName\s*=\s*"((?:\\.|[^"\\])*)"/) || 'The Lootmonger';
+  return {
+    id: 'the-lootmonger',
+    name,
+    type: 'Loot',
+    outfit: [
+      readNumber(outfitSource, 'lookType', 128),
+      readNumber(outfitSource, 'lookHead', 0),
+      readNumber(outfitSource, 'lookBody', 0),
+      readNumber(outfitSource, 'lookLegs', 0),
+      readNumber(outfitSource, 'lookFeet', 0),
+      readNumber(outfitSource, 'lookAddons', 0),
+      readNumber(outfitSource, 'lookMount', 0)
+    ],
+    greet: 'Ah, a customer! Be greeted, |PLAYERNAME|! I buy all kinds of loot. Would you like to {trade}?',
+    farewell: safeMessage(readString(npcSource, /setMessage\(MESSAGE_FAREWELL,\s*"((?:\\.|[^"\\])*)"/)),
+    walkaway: safeMessage(readString(npcSource, /setMessage\(MESSAGE_WALKAWAY,\s*"((?:\\.|[^"\\])*)"/)),
+    items: entries.map((entry) => [Number(entry.id), entry.buy, entry.sell, entry.count])
+  };
+}
+
+function buildDataset(npcDirectory, appData, exclusions, referenceEntries = [], additionalTemplates = []) {
   const candidates = [];
   let excludedCurrencies = 0;
   let excludedItems = 0;
@@ -207,6 +266,7 @@ function buildDataset(npcDirectory, appData, exclusions, referenceEntries = []) 
     if (result?.template) candidates.push(result.template);
     excludedItems += result?.excludedItems || 0;
   }
+  candidates.push(...additionalTemplates.filter(Boolean));
 
   const byName = new Map();
   for (const template of candidates) {
@@ -256,7 +316,9 @@ function main() {
   const appData = readAppData(options.data);
   const exclusions = JSON.parse(fs.readFileSync(options.exclusions, 'utf8'));
   const referenceEntries = parseReferencePrices(options.prices, appData, exclusions);
-  const dataset = buildDataset(options.npcDir, appData, exclusions, referenceEntries);
+  const lootmongerFilename = listLuaFiles(options.npcDir).find((filename) => path.basename(filename).toLowerCase() === 'the_lootmonger.lua');
+  const lootmongerTemplate = buildExternalLootTemplate(lootmongerFilename, options.prices, appData, exclusions);
+  const dataset = buildDataset(options.npcDir, appData, exclusions, referenceEntries, [lootmongerTemplate]);
   const output = `// Generated gold-only NPC shop templates.\nwindow.SHOP_TEMPLATE_DATA=${JSON.stringify(dataset)};\n`;
   fs.writeFileSync(options.output, output);
   console.log(JSON.stringify({ ...dataset.meta, bytes: Buffer.byteLength(output) }, null, 2));
@@ -264,4 +326,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { buildDataset, extractTable, parseNpcTemplate, parseReferencePrices, parseShopEntries };
+module.exports = { buildDataset, buildExternalLootTemplate, extractTable, parseNpcTemplate, parseReferencePrices, parseShopEntries };

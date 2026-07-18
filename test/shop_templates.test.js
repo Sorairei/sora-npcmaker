@@ -4,7 +4,7 @@ const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 
-const { buildDataset, parseNpcTemplate, parseReferencePrices } = require('../tools/import_shop_templates');
+const { buildDataset, buildExternalLootTemplate, parseNpcTemplate, parseReferencePrices } = require('../tools/import_shop_templates');
 
 const appData = {
   items: {
@@ -112,4 +112,29 @@ test('uses the primary RL price table while retaining missing NPC reference side
   assert.deepEqual(primary, [{ id: '3350', name: 'bow', buy: 400, sell: 0, count: 0 }]);
   assert.deepEqual(dataset.references['3350'], [400, 120]);
   assert.equal(dataset.meta.primaryPriceItems, 1);
+});
+
+test('builds The Lootmonger from a shared shop table without executing Lua', () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'shop-template-'));
+  const npcFilename = path.join(directory, 'the_lootmonger.lua');
+  const pricesFilename = path.join(directory, 'shops.lua');
+  fs.writeFileSync(npcFilename, npcSource().replace('Test Merchant', 'The Lootmonger'));
+  fs.writeFileSync(pricesFilename, `
+SupplyShopConfigTable = {
+  weapons = { { itemName = "bow", clientId = 3350, buy = 400 } }
+}
+LootShopConfigTable = {
+  loot = {
+    { itemName = "bow", clientId = 3350, sell = 100 },
+    { itemName = "rope", clientId = 3003, sell = 15 },
+    { itemName = "quest token", clientId = 9000, sell = 500 }
+  }
+}`);
+
+  const template = buildExternalLootTemplate(npcFilename, pricesFilename, appData, exclusions);
+
+  assert.equal(template.name, 'The Lootmonger');
+  assert.equal(template.type, 'Loot');
+  assert.equal(template.greet, 'Ah, a customer! Be greeted, |PLAYERNAME|! I buy all kinds of loot. Would you like to {trade}?');
+  assert.deepEqual(template.items, [[3003, 0, 15, 0], [3350, 400, 100, 0]]);
 });
