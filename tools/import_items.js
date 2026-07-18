@@ -7,17 +7,38 @@ const { execFileSync } = require('node:child_process');
 const PRIMARY_TYPE_CATEGORIES = {
   ammunition: 'Ammunition',
   amulets: 'Amulets',
+  'amulets and necklaces': 'Amulets',
   armors: 'Armors',
+  'attack runes': 'Runes',
   'axe weapons': 'Axe',
   books: 'Books',
   boots: 'Boots',
   'club weapons': 'Club',
   containers: 'Containers',
   'creature products': 'Products',
+  decoration: 'Household',
   'distance weapons': 'Distance',
+  'documents and papers': 'Books',
+  'dolls and bears': 'Household',
+  'exercise weapons': 'Exercise',
   food: 'Food',
+  'floor decorations': 'Household',
+  flowers: 'Household',
+  furniture: 'Household',
+  'game tokens': 'Valuables',
+  'healing runes': 'Runes',
   helmets: 'Helmets',
+  keys: 'Tools',
+  'kitchen tools': 'Tools',
   legs: 'Legs',
+  'light sources': 'Household',
+  liquids: 'Potions',
+  metals: 'Products',
+  'musical instruments': 'Household',
+  'natural products': 'Products',
+  'painting equipment': 'Tools',
+  'party items': 'Household',
+  quivers: 'Containers',
   'fist weapons': 'Fist',
   rings: 'Rings',
   rods: 'Rods',
@@ -25,20 +46,29 @@ const PRIMARY_TYPE_CATEGORIES = {
   shields: 'Shields',
   'soul cores': 'Soul Core',
   spellbooks: 'Spellbooks',
+  'support runes': 'Runes',
   'sword weapons': 'Sword',
+  'taming items': 'Tools',
   tools: 'Tools',
+  'tools (objects)': 'Tools',
+  'training weapons': 'Exercise',
+  trophies: 'Household',
   valuables: 'Valuables',
+  'wall hangings': 'Household',
   wands: 'Wands'
 };
 
 const WEAPON_TYPE_CATEGORIES = {
   ammunition: 'Ammunition',
+  ammo: 'Ammunition',
   axe: 'Axe',
   club: 'Club',
   distance: 'Distance',
   fist: 'Fist',
-  sword: 'Sword',
-  wand: 'Wands'
+  missile: 'Distance',
+  shield: 'Shields',
+  spellbook: 'Spellbooks',
+  sword: 'Sword'
 };
 
 function decodeXml(value) {
@@ -101,15 +131,94 @@ function parseItemsXml(filename) {
   return items;
 }
 
-function categoryFor(item) {
+function parseOtbTree(bytes) {
+  let offset = 4; // Four-byte OTB file signature.
+
+  function readNode() {
+    if (bytes[offset++] !== 0xfe) throw new Error(`Invalid OTB node at byte ${offset - 1}.`);
+    const type = bytes[offset++];
+    const data = [];
+    const children = [];
+
+    while (offset < bytes.length) {
+      const value = bytes[offset++];
+      if (value === 0xfd) {
+        if (offset >= bytes.length) throw new Error('Truncated OTB escape sequence.');
+        data.push(bytes[offset++]);
+      } else if (value === 0xfe) {
+        offset -= 1;
+        children.push(readNode());
+      } else if (value === 0xff) {
+        return { type, data: Buffer.from(data), children };
+      } else {
+        data.push(value);
+      }
+    }
+    throw new Error('Unterminated OTB node.');
+  }
+
+  const root = readNode();
+  if (offset !== bytes.length) throw new Error('Unexpected bytes after the OTB root node.');
+  return root;
+}
+
+function parseItemsOtb(filename) {
+  const root = parseOtbTree(fs.readFileSync(filename));
+  const items = new Map();
+
+  for (const node of root.children) {
+    if (node.data.length < 4) continue;
+    const flags = node.data.readUInt32LE(0);
+    const attributes = {};
+    let offset = 4;
+    while (offset + 3 <= node.data.length) {
+      const type = node.data[offset++];
+      const length = node.data.readUInt16LE(offset);
+      offset += 2;
+      if (offset + length > node.data.length) throw new Error('Truncated OTB item attribute.');
+      const value = node.data.subarray(offset, offset + length);
+      offset += length;
+      if (type === 0x10 && length === 2) attributes.serverId = value.readUInt16LE(0);
+      else if (type === 0x11 && length === 2) attributes.clientId = value.readUInt16LE(0);
+    }
+
+    if (!attributes.serverId) continue;
+    items.set(String(attributes.serverId), {
+      serverId: attributes.serverId,
+      clientId: attributes.clientId || 0,
+      group: node.type,
+      flags,
+      usable: Boolean(flags & (1 << 4)),
+      pickupable: Boolean(flags & (1 << 5)),
+      movable: Boolean(flags & (1 << 6)),
+      stackable: Boolean(flags & (1 << 7)),
+      deprecated: node.type === 14
+    });
+  }
+  return items;
+}
+
+function categoryEvidenceFor(item) {
   const attributes = item.attributes || {};
   const primaryType = (attributes.primarytype || '').trim().toLowerCase();
   if (PRIMARY_TYPE_CATEGORIES[primaryType]) return PRIMARY_TYPE_CATEGORIES[primaryType];
 
   const weaponType = (attributes.weapontype || '').trim().toLowerCase();
+  if (weaponType === 'wand') {
+    if (/\brod\b/i.test(item.name)) return 'Rods';
+    if (/\bwand\b/i.test(item.name)) return 'Wands';
+    return null;
+  }
   if (WEAPON_TYPE_CATEGORIES[weaponType]) return WEAPON_TYPE_CATEGORIES[weaponType];
 
   if ((attributes.slottype || '').toLowerCase() === 'head') return 'Helmets';
+  return null;
+}
+
+function categoryFor(item) {
+  const evidence = categoryEvidenceFor(item);
+  if (evidence) return evidence;
+
   if (/\bsoul core$/i.test(item.name)) return 'Soul Core';
   if (/\bpotion\b/i.test(item.name)) return 'Potions';
   if (/\bbook\b/i.test(item.name)) return 'Books';
@@ -125,7 +234,8 @@ function isRelevant(item) {
 function parseArguments(argv) {
   const options = {
     xml: [], data: 'data.js', items: 'items', overrides: null, dryRun: false,
-    gitChanged: false, gitUntracked: false, orderFromRef: null, replaceSelected: false
+    gitChanged: false, gitUntracked: false, orderFromRef: null, replaceSelected: false,
+    auditExisting: false, otb: null, pruneNonPickupable: false
   };
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
@@ -138,6 +248,9 @@ function parseArguments(argv) {
     else if (argument === '--git-untracked') options.gitUntracked = true;
     else if (argument === '--order-from-ref') options.orderFromRef = argv[++index];
     else if (argument === '--replace-selected') options.replaceSelected = true;
+    else if (argument === '--audit-existing') options.auditExisting = true;
+    else if (argument === '--otb') options.otb = argv[++index];
+    else if (argument === '--prune-non-pickupable') options.pruneNonPickupable = true;
     else throw new Error(`Unknown argument: ${argument}`);
   }
   if (!options.xml.length) throw new Error('At least one --xml file is required.');
@@ -172,6 +285,7 @@ function main() {
   const overrides = options.overrides
     ? JSON.parse(fs.readFileSync(options.overrides, 'utf8'))
     : {};
+  const otbItems = options.otb ? parseItemsOtb(options.otb) : null;
   let spriteIds = fs.readdirSync(options.items)
     .map((filename) => /^(\d+)\.gif$/i.exec(filename))
     .filter(Boolean)
@@ -203,6 +317,36 @@ function main() {
   const added = [];
   const unresolved = [];
   const excluded = [];
+  const audited = [];
+  const pruned = [];
+  const otbCoverage = otbItems ? {
+    total: otbItems.size,
+    catalog: Object.keys(section.items).filter((id) => otbItems.has(id)).length,
+    sprites: spriteIds.filter((id) => otbItems.has(id)).length
+  } : null;
+
+  if (options.auditExisting) {
+    for (const [id, catalogItem] of Object.entries(section.items)) {
+      const xmlItem = xmlItems.get(id);
+      if (!xmlItem) continue;
+      const category = categoryEvidenceFor(xmlItem);
+      if (!category || category === catalogItem.category) continue;
+      audited.push({ id, name: xmlItem.name, from: catalogItem.category, to: category });
+      catalogItem.category = category;
+    }
+  }
+
+  if (options.pruneNonPickupable) {
+    if (!otbItems) throw new Error('--prune-non-pickupable requires --otb.');
+    for (const [id, catalogItem] of Object.entries(section.items)) {
+      const otbItem = otbItems.get(id);
+      if (!otbItem || otbItem.pickupable) continue;
+      pruned.push({ id, name: catalogItem.name, reason: 'not pickupable in items.otb' });
+      delete section.items[id];
+    }
+    const prunedIds = new Set(pruned.map((item) => item.id));
+    itemOrder = itemOrder.filter((id) => !prunedIds.has(id));
+  }
 
   if (options.replaceSelected) {
     const selected = new Set(spriteIds);
@@ -242,9 +386,25 @@ function main() {
 
   const counts = {};
   for (const item of added) counts[item.category] = (counts[item.category] || 0) + 1;
-  console.log(JSON.stringify({ added: added.length, counts, excluded, unresolved }, null, 2));
+  const auditCounts = {};
+  for (const item of audited) {
+    const change = `${item.from} -> ${item.to}`;
+    auditCounts[change] = (auditCounts[change] || 0) + 1;
+  }
+  console.log(JSON.stringify({
+    added: added.length,
+    counts,
+    audited: audited.length,
+    auditCounts,
+    otbCoverage,
+    pruned,
+    excluded,
+    unresolved
+  }, null, 2));
 }
 
 if (require.main === module) main();
 
-module.exports = { categoryFor, isRelevant, parseItemsXml, readItemsObject };
+module.exports = {
+  categoryEvidenceFor, categoryFor, isRelevant, parseItemsOtb, parseItemsXml, readItemsObject
+};

@@ -165,7 +165,7 @@ The dependency-free importer matches new `items/*.gif` filenames to one or more
 Open Tibia XML catalogs and updates `data.js` without touching existing entries:
 
 ```bash
-node tools/import_items.js --xml path/to/items.xml --xml path/to/newer-items.xml --overrides tools/item_overrides.json --git-untracked
+node tools/import_items.js --xml path/to/items.xml --xml path/to/newer-items.xml --otb path/to/items.otb --overrides tools/item_overrides.json --git-untracked
 ```
 
 Later XML files take priority over earlier ones. Categories are derived first
@@ -173,6 +173,12 @@ from `primarytype`, then from `weaponType`, with conservative fallbacks for
 slots and well-known item names. Unsupported items go to `Others`, while
 decaying corpse states are excluded. Add confirmed names or category exceptions
 to `tools/item_overrides.json`; use `--dry-run` to preview counts without writing.
+Pass `--audit-existing` to re-check existing catalog categories against explicit
+XML attributes. Canonical `primarytype` values take precedence, with
+`weaponType` used as a fallback for older XML entries that omit `primarytype`.
+An optional `--otb` source validates server/client IDs and structural item flags.
+Use `--prune-non-pickupable` with it to remove static map objects from the NPC
+catalog.
 
 ## Validation
 

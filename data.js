@@ -22,7 +22,7 @@ const APP_DATA = {
     },
     "10028": {
       "name": "soul contract",
-      "category": "Others"
+      "category": "Books"
     },
     "10159": {
       "name": "skull of a caveman",
@@ -34,7 +34,7 @@ const APP_DATA = {
     },
     "10184": {
       "name": "tactical map",
-      "category": "Others"
+      "category": "Books"
     },
     "10189": {
       "name": "flask of extra greasy oil",
@@ -42,7 +42,7 @@ const APP_DATA = {
     },
     "10196": {
       "name": "orc tooth",
-      "category": "Others"
+      "category": "Products"
     },
     "10198": {
       "name": "tribal crest",
@@ -70,15 +70,15 @@ const APP_DATA = {
     },
     "10207": {
       "name": "snowman package",
-      "category": "Others"
+      "category": "Household"
     },
     "10209": {
       "name": "lizard weapon rack kit",
-      "category": "Others"
+      "category": "Household"
     },
     "10216": {
       "name": "dragon statue kit",
-      "category": "Others"
+      "category": "Household"
     },
     "10217": {
       "name": "Tome of Knowledge",
@@ -94,11 +94,11 @@ const APP_DATA = {
     },
     "10227": {
       "name": "nightmare doll",
-      "category": "Others"
+      "category": "Household"
     },
     "10244": {
       "name": "bonebeast trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "10247": {
       "name": "weapons crate",
@@ -114,7 +114,7 @@ const APP_DATA = {
     },
     "10274": {
       "name": "skunk tail",
-      "category": "Others"
+      "category": "Products"
     },
     "10275": {
       "name": "carrion worm fang",
@@ -146,7 +146,7 @@ const APP_DATA = {
     },
     "10282": {
       "name": "hydra head",
-      "category": "Others"
+      "category": "Products"
     },
     "10283": {
       "name": "half-digested piece of meat",
@@ -154,15 +154,15 @@ const APP_DATA = {
     },
     "10288": {
       "name": "dragon throne kit",
-      "category": "Others"
+      "category": "Household"
     },
     "10289": {
       "name": "red lantern",
-      "category": "Others"
+      "category": "Products"
     },
     "10290": {
       "name": "mini mummy",
-      "category": "Others"
+      "category": "Household"
     },
     "10291": {
       "name": "rotten piece of cloth",
@@ -170,7 +170,7 @@ const APP_DATA = {
     },
     "10292": {
       "name": "silky fur",
-      "category": "Others"
+      "category": "Products"
     },
     "10293": {
       "name": "striped fur",
@@ -178,7 +178,7 @@ const APP_DATA = {
     },
     "10294": {
       "name": "stuffed toad",
-      "category": "Others"
+      "category": "Household"
     },
     "10295": {
       "name": "winter wolf fur",
@@ -194,7 +194,7 @@ const APP_DATA = {
     },
     "10298": {
       "name": "metal spike",
-      "category": "Others"
+      "category": "Products"
     },
     "10299": {
       "name": "badger fur",
@@ -210,7 +210,7 @@ const APP_DATA = {
     },
     "10302": {
       "name": "compass",
-      "category": "Others"
+      "category": "Products"
     },
     "10303": {
       "name": "dark rosary",
@@ -218,7 +218,7 @@ const APP_DATA = {
     },
     "10304": {
       "name": "hellspawn tail",
-      "category": "Others"
+      "category": "Products"
     },
     "10305": {
       "name": "lump of earth",
@@ -234,7 +234,7 @@ const APP_DATA = {
     },
     "10308": {
       "name": "mutated flesh",
-      "category": "Others"
+      "category": "Products"
     },
     "10309": {
       "name": "strand of medusa hair",
@@ -242,15 +242,15 @@ const APP_DATA = {
     },
     "10310": {
       "name": "shiny stone",
-      "category": "Others"
+      "category": "Products"
     },
     "10311": {
       "name": "sabretooth",
-      "category": "Others"
+      "category": "Products"
     },
     "10312": {
       "name": "scythe leg",
-      "category": "Tools"
+      "category": "Products"
     },
     "10313": {
       "name": "winged tail",
@@ -258,11 +258,11 @@ const APP_DATA = {
     },
     "10314": {
       "name": "nettle blossom",
-      "category": "Others"
+      "category": "Products"
     },
     "10315": {
       "name": "sulphurous stone",
-      "category": "Others"
+      "category": "Products"
     },
     "10316": {
       "name": "unholy bone",
@@ -286,7 +286,7 @@ const APP_DATA = {
     },
     "10321": {
       "name": "mammoth tusk",
-      "category": "Others"
+      "category": "Products"
     },
     "10323": {
       "name": "guardian boots",
@@ -318,11 +318,11 @@ const APP_DATA = {
     },
     "10338": {
       "name": "santa teddy",
-      "category": "Others"
+      "category": "Household"
     },
     "10339": {
       "name": "snowman doll",
-      "category": "Others"
+      "category": "Household"
     },
     "10341": {
       "name": "phoenix charm",
@@ -350,7 +350,7 @@ const APP_DATA = {
     },
     "10347": {
       "name": "dragon tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "10384": {
       "name": "Zaoan armor",
@@ -366,7 +366,7 @@ const APP_DATA = {
     },
     "10387": {
       "name": "Zaoan legs",
-      "category": "Others"
+      "category": "Legs"
     },
     "10388": {
       "name": "drakinata",
@@ -374,7 +374,7 @@ const APP_DATA = {
     },
     "10389": {
       "name": "traditional sai",
-      "category": "Others"
+      "category": "Fist"
     },
     "10390": {
       "name": "Zaoan sword",
@@ -382,7 +382,7 @@ const APP_DATA = {
     },
     "10391": {
       "name": "drachaku",
-      "category": "Others"
+      "category": "Fist"
     },
     "10392": {
       "name": "twin hooks",
@@ -394,7 +394,7 @@ const APP_DATA = {
     },
     "10398": {
       "name": "draken trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "10404": {
       "name": "bone shoulderplate",
@@ -410,11 +410,11 @@ const APP_DATA = {
     },
     "10407": {
       "name": "shaggy tail",
-      "category": "Others"
+      "category": "Products"
     },
     "10408": {
       "name": "spiked iron ball",
-      "category": "Others"
+      "category": "Products"
     },
     "10409": {
       "name": "corrupted flag",
@@ -442,15 +442,15 @@ const APP_DATA = {
     },
     "10415": {
       "name": "high guard flag",
-      "category": "Others"
+      "category": "Products"
     },
     "10416": {
       "name": "high guard shoulderplates",
-      "category": "Others"
+      "category": "Products"
     },
     "10417": {
       "name": "legionnaire flags",
-      "category": "Others"
+      "category": "Products"
     },
     "10418": {
       "name": "broken halberd",
@@ -458,31 +458,31 @@ const APP_DATA = {
     },
     "10419": {
       "name": "lizard trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "10420": {
       "name": "petrified scream",
-      "category": "Others"
+      "category": "Products"
     },
     "10421": {
       "name": "disgusting trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "10422": {
       "name": "clay lump",
-      "category": "Others"
+      "category": "Household"
     },
     "10423": {
       "name": "rough clay statue",
-      "category": "Others"
+      "category": "Household"
     },
     "10424": {
       "name": "clay statue",
-      "category": "Others"
+      "category": "Household"
     },
     "10425": {
       "name": "pretty clay statue",
-      "category": "Others"
+      "category": "Household"
     },
     "10426": {
       "name": "piece of marble rock",
@@ -490,15 +490,15 @@ const APP_DATA = {
     },
     "10427": {
       "name": "rough marble statue",
-      "category": "Others"
+      "category": "Household"
     },
     "10428": {
       "name": "marble statue",
-      "category": "Others"
+      "category": "Household"
     },
     "10429": {
       "name": "beautiful marble statue",
-      "category": "Others"
+      "category": "Household"
     },
     "10438": {
       "name": "spellweaver's robe",
@@ -534,11 +534,11 @@ const APP_DATA = {
     },
     "10455": {
       "name": "lancer beetle shell",
-      "category": "Others"
+      "category": "Products"
     },
     "10456": {
       "name": "sandcrawler shell",
-      "category": "Others"
+      "category": "Products"
     },
     "10457": {
       "name": "beetle necklace",
@@ -558,11 +558,11 @@ const APP_DATA = {
     },
     "10798": {
       "name": "ferumbras doll",
-      "category": "Others"
+      "category": "Household"
     },
     "10799": {
       "name": "ferumbras doll",
-      "category": "Others"
+      "category": "Household"
     },
     "10800": {
       "name": "orc's jaw shredder",
@@ -670,7 +670,7 @@ const APP_DATA = {
     },
     "11444": {
       "name": "protective charm",
-      "category": "Others"
+      "category": "Products"
     },
     "11445": {
       "name": "bamboo stick",
@@ -694,7 +694,7 @@ const APP_DATA = {
     },
     "11450": {
       "name": "small notebook",
-      "category": "Books"
+      "category": "Products"
     },
     "11451": {
       "name": "broken crossbow",
@@ -702,19 +702,19 @@ const APP_DATA = {
     },
     "11452": {
       "name": "broken shamanic staff",
-      "category": "Club"
+      "category": "Products"
     },
     "11453": {
       "name": "broken helmet",
-      "category": "Others"
+      "category": "Products"
     },
     "11454": {
       "name": "luminous orb",
-      "category": "Others"
+      "category": "Products"
     },
     "11455": {
       "name": "cultish symbol",
-      "category": "Others"
+      "category": "Products"
     },
     "11456": {
       "name": "dirty turban",
@@ -754,7 +754,7 @@ const APP_DATA = {
     },
     "11465": {
       "name": "elven astral observer",
-      "category": "Others"
+      "category": "Products"
     },
     "11466": {
       "name": "flask of embalming fluid",
@@ -774,7 +774,7 @@ const APP_DATA = {
     },
     "11470": {
       "name": "jewelled belt",
-      "category": "Others"
+      "category": "Products"
     },
     "11471": {
       "name": "kongra's shoulderpad",
@@ -782,43 +782,43 @@ const APP_DATA = {
     },
     "11472": {
       "name": "minotaur horn",
-      "category": "Others"
+      "category": "Products"
     },
     "11473": {
       "name": "purple robe",
-      "category": "Others"
+      "category": "Products"
     },
     "11474": {
       "name": "miraculum",
-      "category": "Others"
+      "category": "Products"
     },
     "11475": {
       "name": "necromantic robe",
-      "category": "Others"
+      "category": "Products"
     },
     "11476": {
       "name": "nettle spit",
-      "category": "Others"
+      "category": "Products"
     },
     "11477": {
       "name": "orcish gear",
-      "category": "Others"
+      "category": "Products"
     },
     "11478": {
       "name": "shamanic hood",
-      "category": "Others"
+      "category": "Products"
     },
     "11479": {
       "name": "orc leather",
-      "category": "Others"
+      "category": "Products"
     },
     "11480": {
       "name": "skull belt",
-      "category": "Others"
+      "category": "Products"
     },
     "11481": {
       "name": "pelvis bone",
-      "category": "Others"
+      "category": "Products"
     },
     "11482": {
       "name": "piece of warrior armor",
@@ -834,39 +834,39 @@ const APP_DATA = {
     },
     "11485": {
       "name": "poison spider shell",
-      "category": "Others"
+      "category": "Products"
     },
     "11486": {
       "name": "noble turban",
-      "category": "Others"
+      "category": "Products"
     },
     "11487": {
       "name": "quara tentacle",
-      "category": "Others"
+      "category": "Products"
     },
     "11488": {
       "name": "quara eye",
-      "category": "Others"
+      "category": "Products"
     },
     "11489": {
       "name": "mantassin tail",
-      "category": "Others"
+      "category": "Products"
     },
     "11490": {
       "name": "quara pincers",
-      "category": "Others"
+      "category": "Products"
     },
     "11491": {
       "name": "quara bone",
-      "category": "Others"
+      "category": "Products"
     },
     "11492": {
       "name": "rope belt",
-      "category": "Tools"
+      "category": "Products"
     },
     "11493": {
       "name": "safety pin",
-      "category": "Others"
+      "category": "Products"
     },
     "11510": {
       "name": "scroll of heroic deeds",
@@ -882,7 +882,7 @@ const APP_DATA = {
     },
     "11513": {
       "name": "small pitchfork",
-      "category": "Others"
+      "category": "Products"
     },
     "11514": {
       "name": "colourful feather",
@@ -910,7 +910,7 @@ const APP_DATA = {
     },
     "11544": {
       "name": "faded last will",
-      "category": "Others"
+      "category": "Books"
     },
     "11545": {
       "name": "exquisite silk",
@@ -946,7 +946,7 @@ const APP_DATA = {
     },
     "11584": {
       "name": "coconut shrimp bake",
-      "category": "Others"
+      "category": "Food"
     },
     "11585": {
       "name": "helmet of the deep",
@@ -958,11 +958,11 @@ const APP_DATA = {
     },
     "11587": {
       "name": "demonic candy ball",
-      "category": "Others"
+      "category": "Food"
     },
     "11588": {
       "name": "sweet mangonaise elixir",
-      "category": "Others"
+      "category": "Potions"
     },
     "11603": {
       "name": "silver rune emblem",
@@ -1170,7 +1170,7 @@ const APP_DATA = {
     },
     "11658": {
       "name": "draken sulphur",
-      "category": "Others"
+      "category": "Products"
     },
     "11659": {
       "name": "draken wristbands",
@@ -1206,11 +1206,11 @@ const APP_DATA = {
     },
     "11679": {
       "name": "souleater trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "11680": {
       "name": "lizard essence",
-      "category": "Others"
+      "category": "Products"
     },
     "11681": {
       "name": "ectoplasmic sushi",
@@ -1266,11 +1266,11 @@ const APP_DATA = {
     },
     "11694": {
       "name": "snake god trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "11695": {
       "name": "black jade cobra",
-      "category": "Others"
+      "category": "Household"
     },
     "11698": {
       "name": "loot bag",
@@ -1318,11 +1318,11 @@ const APP_DATA = {
     },
     "12039": {
       "name": "panther head",
-      "category": "Others"
+      "category": "Products"
     },
     "12040": {
       "name": "panther paw",
-      "category": "Others"
+      "category": "Products"
     },
     "12041": {
       "name": "frozen heart",
@@ -1334,19 +1334,19 @@ const APP_DATA = {
     },
     "12043": {
       "name": "draken doll",
-      "category": "Others"
+      "category": "Household"
     },
     "12044": {
       "name": "draken doll",
-      "category": "Others"
+      "category": "Household"
     },
     "12045": {
       "name": "music box",
-      "category": "Containers"
+      "category": "Tools"
     },
     "12046": {
       "name": "music box",
-      "category": "Containers"
+      "category": "Tools"
     },
     "12057": {
       "name": "reward box",
@@ -1354,7 +1354,7 @@ const APP_DATA = {
     },
     "12077": {
       "name": "slime gobbler",
-      "category": "Others"
+      "category": "Tools"
     },
     "121": {
       "name": "whoopee cushion",
@@ -1442,23 +1442,23 @@ const APP_DATA = {
     },
     "12178": {
       "name": "demon infant",
-      "category": "Others"
+      "category": "Household"
     },
     "12179": {
       "name": "demon infant",
-      "category": "Others"
+      "category": "Household"
     },
     "12180": {
       "name": "demon infant",
-      "category": "Others"
+      "category": "Household"
     },
     "12181": {
       "name": "demon infant",
-      "category": "Others"
+      "category": "Household"
     },
     "12182": {
       "name": "demon infant",
-      "category": "Others"
+      "category": "Household"
     },
     "12186": {
       "name": "net",
@@ -1542,7 +1542,7 @@ const APP_DATA = {
     },
     "12246": {
       "name": "verocious bat",
-      "category": "Others"
+      "category": "Household"
     },
     "12247": {
       "name": "stone",
@@ -1562,7 +1562,7 @@ const APP_DATA = {
     },
     "12260": {
       "name": "hunting horn",
-      "category": "Others"
+      "category": "Tools"
     },
     "12275": {
       "name": "sugar",
@@ -1602,7 +1602,7 @@ const APP_DATA = {
     },
     "123": {
       "name": "toy mouse",
-      "category": "Others"
+      "category": "Household"
     },
     "12300": {
       "name": "stone",
@@ -1610,23 +1610,23 @@ const APP_DATA = {
     },
     "12304": {
       "name": "maxilla maximus",
-      "category": "Others"
+      "category": "Tools"
     },
     "12305": {
       "name": "tin key",
-      "category": "Others"
+      "category": "Tools"
     },
     "12306": {
       "name": "leather whip",
-      "category": "Others"
+      "category": "Tools"
     },
     "12307": {
       "name": "harness",
-      "category": "Others"
+      "category": "Tools"
     },
     "12308": {
       "name": "reins",
-      "category": "Others"
+      "category": "Tools"
     },
     "12309": {
       "name": "draptor scales",
@@ -1650,11 +1650,11 @@ const APP_DATA = {
     },
     "12314": {
       "name": "hollow stampor hoof",
-      "category": "Others"
+      "category": "Products"
     },
     "12315": {
       "name": "maxilla",
-      "category": "Others"
+      "category": "Products"
     },
     "12316": {
       "name": "cavebear skull",
@@ -1666,11 +1666,11 @@ const APP_DATA = {
     },
     "12318": {
       "name": "giant shrimp",
-      "category": "Others"
+      "category": "Tools"
     },
     "12320": {
       "name": "sweet smelling bait",
-      "category": "Others"
+      "category": "Tools"
     },
     "12369": {
       "name": "captured wolf",
@@ -1686,15 +1686,15 @@ const APP_DATA = {
     },
     "12478": {
       "name": "delicate vase",
-      "category": "Others"
+      "category": "Household"
     },
     "12482": {
       "name": "hieroglyph banner",
-      "category": "Others"
+      "category": "Household"
     },
     "12483": {
       "name": "pharaoh banner",
-      "category": "Others"
+      "category": "Household"
     },
     "125": {
       "name": "special flask",
@@ -1702,7 +1702,7 @@ const APP_DATA = {
     },
     "12509": {
       "name": "scorpion sceptre",
-      "category": "Others"
+      "category": "Tools"
     },
     "12510": {
       "name": "hammer of mighty cheating",
@@ -1714,11 +1714,11 @@ const APP_DATA = {
     },
     "12519": {
       "name": "slug drug",
-      "category": "Others"
+      "category": "Tools"
     },
     "12540": {
       "name": "armageddon plans",
-      "category": "Others"
+      "category": "Books"
     },
     "12541": {
       "name": "demonic finger",
@@ -1746,7 +1746,7 @@ const APP_DATA = {
     },
     "12547": {
       "name": "diapason",
-      "category": "Others"
+      "category": "Tools"
     },
     "12548": {
       "name": "bag of apple slices",
@@ -1754,11 +1754,11 @@ const APP_DATA = {
     },
     "12549": {
       "name": "bamboo leaves",
-      "category": "Others"
+      "category": "Tools"
     },
     "12550": {
       "name": "golden fir cone",
-      "category": "Valuables"
+      "category": "Tools"
     },
     "12551": {
       "name": "ominous piece of cloth",
@@ -1786,7 +1786,7 @@ const APP_DATA = {
     },
     "12557": {
       "name": "shimmer swimmer",
-      "category": "Others"
+      "category": "Tools"
     },
     "12570": {
       "name": "fan doll of Queen Eloise",
@@ -1802,35 +1802,35 @@ const APP_DATA = {
     },
     "12575": {
       "name": "Whinona",
-      "category": "Others"
+      "category": "Household"
     },
     "12576": {
       "name": "Meandi",
-      "category": "Others"
+      "category": "Household"
     },
     "12577": {
       "name": "Impward",
-      "category": "Others"
+      "category": "Household"
     },
     "12578": {
       "name": "Evilina",
-      "category": "Others"
+      "category": "Household"
     },
     "12579": {
       "name": "Whinona",
-      "category": "Others"
+      "category": "Household"
     },
     "12580": {
       "name": "Meandi",
-      "category": "Others"
+      "category": "Household"
     },
     "12581": {
       "name": "Impward",
-      "category": "Others"
+      "category": "Household"
     },
     "12582": {
       "name": "Evilina",
-      "category": "Others"
+      "category": "Household"
     },
     "12599": {
       "name": "mage's cap",
@@ -1846,11 +1846,11 @@ const APP_DATA = {
     },
     "12601": {
       "name": "slime mould",
-      "category": "Others"
+      "category": "Products"
     },
     "12602": {
       "name": "small whistle",
-      "category": "Others"
+      "category": "Household"
     },
     "12603": {
       "name": "wand of dimensions",
@@ -1858,15 +1858,15 @@ const APP_DATA = {
     },
     "12617": {
       "name": "torn teddy",
-      "category": "Others"
+      "category": "Household"
     },
     "12669": {
       "name": "star ring",
-      "category": "Distance"
+      "category": "Rings"
     },
     "12670": {
       "name": "star ring",
-      "category": "Distance"
+      "category": "Rings"
     },
     "12671": {
       "name": "sack of herbs",
@@ -1894,7 +1894,7 @@ const APP_DATA = {
     },
     "127": {
       "name": "magical inkwell",
-      "category": "Others"
+      "category": "Tools"
     },
     "12722": {
       "name": "bucket of bog water",
@@ -1922,11 +1922,11 @@ const APP_DATA = {
     },
     "12735": {
       "name": "shimmer glower",
-      "category": "Others"
+      "category": "Household"
     },
     "12736": {
       "name": "babel swimmer",
-      "category": "Others"
+      "category": "Valuables"
     },
     "12737": {
       "name": "broken ring of ending",
@@ -1966,7 +1966,7 @@ const APP_DATA = {
     },
     "12789": {
       "name": "rolling pin",
-      "category": "Others"
+      "category": "Tools"
     },
     "12794": {
       "name": "recharging tarantula trap",
@@ -1974,7 +1974,7 @@ const APP_DATA = {
     },
     "128": {
       "name": "signed contract",
-      "category": "Others"
+      "category": "Books"
     },
     "12801": {
       "name": "golden can of oil",
@@ -1982,7 +1982,7 @@ const APP_DATA = {
     },
     "12802": {
       "name": "sugar oat",
-      "category": "Others"
+      "category": "Tools"
     },
     "12803": {
       "name": "elemental spikes",
@@ -2002,7 +2002,7 @@ const APP_DATA = {
     },
     "12807": {
       "name": "shimmer ball",
-      "category": "Others"
+      "category": "Valuables"
     },
     "12809": {
       "name": "epic wisdom",
@@ -2034,15 +2034,15 @@ const APP_DATA = {
     },
     "129": {
       "name": "contract",
-      "category": "Others"
+      "category": "Books"
     },
     "12904": {
       "name": "dread doll",
-      "category": "Others"
+      "category": "Household"
     },
     "12905": {
       "name": "dread doll",
-      "category": "Others"
+      "category": "Household"
     },
     "130": {
       "name": "exploding cookie",
@@ -2118,7 +2118,7 @@ const APP_DATA = {
     },
     "13995": {
       "name": "depth galea",
-      "category": "Others"
+      "category": "Helmets"
     },
     "13996": {
       "name": "depth ocrea",
@@ -2210,7 +2210,7 @@ const APP_DATA = {
     },
     "14023": {
       "name": "Obujos' Shell",
-      "category": "Others"
+      "category": "Products"
     },
     "14025": {
       "name": "party lampions",
@@ -2222,11 +2222,11 @@ const APP_DATA = {
     },
     "14027": {
       "name": "party wall tinsel",
-      "category": "Others"
+      "category": "Household"
     },
     "14028": {
       "name": "party wall snake",
-      "category": "Others"
+      "category": "Household"
     },
     "14029": {
       "name": "flower pot",
@@ -2314,7 +2314,7 @@ const APP_DATA = {
     },
     "14077": {
       "name": "kollos shell",
-      "category": "Others"
+      "category": "Products"
     },
     "14078": {
       "name": "spitter nose",
@@ -2374,11 +2374,11 @@ const APP_DATA = {
     },
     "14142": {
       "name": "foxtail",
-      "category": "Others"
+      "category": "Tools"
     },
     "14143": {
       "name": "four-leaf clover",
-      "category": "Others"
+      "category": "Tools"
     },
     "14153": {
       "name": "basket",
@@ -2398,7 +2398,7 @@ const APP_DATA = {
     },
     "14172": {
       "name": "gooey mass",
-      "category": "Others"
+      "category": "Valuables"
     },
     "14173": {
       "name": "seashell book",
@@ -2434,7 +2434,7 @@ const APP_DATA = {
     },
     "14225": {
       "name": "dung ball",
-      "category": "Others"
+      "category": "Products"
     },
     "14241": {
       "name": "true heart of the sea",
@@ -2614,7 +2614,7 @@ const APP_DATA = {
     },
     "14741": {
       "name": "easel kit",
-      "category": "Others"
+      "category": "Tools"
     },
     "14751": {
       "name": "pirate's surprise",
@@ -2626,7 +2626,7 @@ const APP_DATA = {
     },
     "14756": {
       "name": "cake cabinet kit",
-      "category": "Others"
+      "category": "Household"
     },
     "14758": {
       "name": "premium scroll",
@@ -2634,7 +2634,7 @@ const APP_DATA = {
     },
     "14759": {
       "name": "surprise nest",
-      "category": "Others"
+      "category": "Household"
     },
     "14760": {
       "name": "mathmaster shield",
@@ -2678,7 +2678,7 @@ const APP_DATA = {
     },
     "15276": {
       "name": "miniature house",
-      "category": "Others"
+      "category": "Valuables"
     },
     "15696": {
       "name": "gnomish extraction crystal",
@@ -2690,7 +2690,7 @@ const APP_DATA = {
     },
     "15698": {
       "name": "gnomish supply package",
-      "category": "Others"
+      "category": "Valuables"
     },
     "15699": {
       "name": "some mushroom fertilizer",
@@ -2706,11 +2706,11 @@ const APP_DATA = {
     },
     "15794": {
       "name": "fresh mushroom beer",
-      "category": "Others"
+      "category": "Potions"
     },
     "15795": {
       "name": "stale mushroom beer",
-      "category": "Others"
+      "category": "Potions"
     },
     "15801": {
       "name": "lonely crystal",
@@ -2782,11 +2782,11 @@ const APP_DATA = {
     },
     "16094": {
       "name": "crystal lamp",
-      "category": "Others"
+      "category": "Household"
     },
     "16095": {
       "name": "lit crystal lamp",
-      "category": "Others"
+      "category": "Household"
     },
     "16096": {
       "name": "wand of defiance",
@@ -2794,11 +2794,11 @@ const APP_DATA = {
     },
     "16097": {
       "name": "glowing mushroom",
-      "category": "Others"
+      "category": "Household"
     },
     "16098": {
       "name": "lit glowing mushroom",
-      "category": "Others"
+      "category": "Household"
     },
     "16099": {
       "name": "mushroom backpack",
@@ -2810,11 +2810,11 @@ const APP_DATA = {
     },
     "16101": {
       "name": "muck remover",
-      "category": "Others"
+      "category": "Potions"
     },
     "16102": {
       "name": "mucus plug",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16103": {
       "name": "mushroom pie",
@@ -2882,55 +2882,55 @@ const APP_DATA = {
     },
     "16119": {
       "name": "blue crystal shard",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16120": {
       "name": "violet crystal shard",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16121": {
       "name": "green crystal shard",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16122": {
       "name": "green crystal splinter",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16123": {
       "name": "brown crystal splinter",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16124": {
       "name": "blue crystal splinter",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16125": {
       "name": "cyan crystal fragment",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16126": {
       "name": "red crystal fragment",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16127": {
       "name": "green crystal fragment",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16128": {
       "name": "minor crystalline token",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16129": {
       "name": "major crystalline token",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16130": {
       "name": "magma clump",
-      "category": "Others"
+      "category": "Products"
     },
     "16131": {
       "name": "blazing bone",
-      "category": "Others"
+      "category": "Products"
     },
     "16132": {
       "name": "eye of a weeper",
@@ -2938,7 +2938,7 @@ const APP_DATA = {
     },
     "16133": {
       "name": "pulverized ore",
-      "category": "Others"
+      "category": "Products"
     },
     "16134": {
       "name": "cliff strider claw",
@@ -2958,15 +2958,15 @@ const APP_DATA = {
     },
     "16138": {
       "name": "crystalline spikes",
-      "category": "Others"
+      "category": "Products"
     },
     "16139": {
       "name": "humongous chunk",
-      "category": "Others"
+      "category": "Products"
     },
     "16140": {
       "name": "hideous chunk",
-      "category": "Others"
+      "category": "Products"
     },
     "16141": {
       "name": "prismatic bolt",
@@ -2982,15 +2982,15 @@ const APP_DATA = {
     },
     "16153": {
       "name": "iron loadstone",
-      "category": "Others"
+      "category": "Tools"
     },
     "16154": {
       "name": "glow wine",
-      "category": "Others"
+      "category": "Tools"
     },
     "16155": {
       "name": "decorative ribbon",
-      "category": "Others"
+      "category": "Tools"
     },
     "16160": {
       "name": "crystalline sword",
@@ -3014,11 +3014,11 @@ const APP_DATA = {
     },
     "16165": {
       "name": "pet pig",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16166": {
       "name": "pet pig",
-      "category": "Others"
+      "category": "Valuables"
     },
     "16167": {
       "name": "teleport crystal",
@@ -3090,11 +3090,11 @@ const APP_DATA = {
     },
     "16244": {
       "name": "music box",
-      "category": "Containers"
+      "category": "Tools"
     },
     "16251": {
       "name": "golem wrench",
-      "category": "Others"
+      "category": "Tools"
     },
     "16252": {
       "name": "gnomish voucher type MB",
@@ -3198,11 +3198,11 @@ const APP_DATA = {
     },
     "17461": {
       "name": "marsh stalker beak",
-      "category": "Others"
+      "category": "Products"
     },
     "17462": {
       "name": "marsh stalker feather",
-      "category": "Others"
+      "category": "Products"
     },
     "17463": {
       "name": "damselfly eye",
@@ -3306,11 +3306,11 @@ const APP_DATA = {
     },
     "17817": {
       "name": "cheese cutter",
-      "category": "Others"
+      "category": "Products"
     },
     "17818": {
       "name": "cheesy figurine",
-      "category": "Others"
+      "category": "Products"
     },
     "17819": {
       "name": "earflap",
@@ -3342,7 +3342,7 @@ const APP_DATA = {
     },
     "17825": {
       "name": "rat god doll",
-      "category": "Others"
+      "category": "Household"
     },
     "17826": {
       "name": "lost basher's spike",
@@ -3354,7 +3354,7 @@ const APP_DATA = {
     },
     "17828": {
       "name": "pair of iron fists",
-      "category": "Others"
+      "category": "Fist"
     },
     "17829": {
       "name": "buckle",
@@ -3366,7 +3366,7 @@ const APP_DATA = {
     },
     "17831": {
       "name": "bone fetish",
-      "category": "Others"
+      "category": "Products"
     },
     "17846": {
       "name": "leather harness",
@@ -3382,11 +3382,11 @@ const APP_DATA = {
     },
     "17849": {
       "name": "skull shatterer",
-      "category": "Others"
+      "category": "Products"
     },
     "17850": {
       "name": "holy ash",
-      "category": "Others"
+      "category": "Products"
     },
     "17851": {
       "name": "broken throwing axe",
@@ -3398,15 +3398,15 @@ const APP_DATA = {
     },
     "17853": {
       "name": "lost bracers",
-      "category": "Others"
+      "category": "Products"
     },
     "17854": {
       "name": "mad froth",
-      "category": "Others"
+      "category": "Products"
     },
     "17855": {
       "name": "red hair dye",
-      "category": "Others"
+      "category": "Products"
     },
     "17856": {
       "name": "basalt fetish",
@@ -3418,7 +3418,7 @@ const APP_DATA = {
     },
     "17858": {
       "name": "leech",
-      "category": "Others"
+      "category": "Tools"
     },
     "17859": {
       "name": "spiky club",
@@ -3430,79 +3430,79 @@ const APP_DATA = {
     },
     "17972": {
       "name": "canopy bed kit",
-      "category": "Others"
+      "category": "Household"
     },
     "17974": {
       "name": "venorean cabinet kit",
-      "category": "Others"
+      "category": "Household"
     },
     "17975": {
       "name": "venorean wardrobe kit",
-      "category": "Others"
+      "category": "Household"
     },
     "17977": {
       "name": "venorean drawer kit",
-      "category": "Others"
+      "category": "Household"
     },
     "18327": {
       "name": "jade Zaoan queen",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18328": {
       "name": "jade Zaoan king",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18329": {
       "name": "jade Zaoan bishop",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18330": {
       "name": "jade Zaoan knight",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18331": {
       "name": "jade Zaoan rook",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18332": {
       "name": "jade Zaoan pawn",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18333": {
       "name": "obsidian Zaoan queen",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18334": {
       "name": "obsidian Zaoan king",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18335": {
       "name": "obsidian Zaoan bishop",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18336": {
       "name": "obsidian Zaoan knight",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18337": {
       "name": "obsidian Zaoan rook",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18338": {
       "name": "obsidian Zaoan pawn",
-      "category": "Others"
+      "category": "Valuables"
     },
     "18339": {
       "name": "Zaoan chess box",
-      "category": "Containers"
+      "category": "Valuables"
     },
     "18343": {
       "name": "bookworm doll",
-      "category": "Books"
+      "category": "Household"
     },
     "18344": {
       "name": "bookworm doll",
-      "category": "Books"
+      "category": "Household"
     },
     "18924": {
       "name": "tooth file",
@@ -3510,11 +3510,11 @@ const APP_DATA = {
     },
     "18925": {
       "name": "lancet",
-      "category": "Others"
+      "category": "Products"
     },
     "18926": {
       "name": "horoscope",
-      "category": "Others"
+      "category": "Products"
     },
     "18927": {
       "name": "vampire's cape chain",
@@ -3526,7 +3526,7 @@ const APP_DATA = {
     },
     "18929": {
       "name": "incantation notes",
-      "category": "Others"
+      "category": "Products"
     },
     "18930": {
       "name": "pieces of magic chalk",
@@ -3542,7 +3542,7 @@ const APP_DATA = {
     },
     "18933": {
       "name": "incantation fragment",
-      "category": "Others"
+      "category": "Books"
     },
     "18934": {
       "name": "incantation scroll",
@@ -3566,7 +3566,7 @@ const APP_DATA = {
     },
     "18993": {
       "name": "rorc feather",
-      "category": "Others"
+      "category": "Products"
     },
     "18994": {
       "name": "elven hoof",
@@ -3578,7 +3578,7 @@ const APP_DATA = {
     },
     "18996": {
       "name": "rorc egg",
-      "category": "Others"
+      "category": "Products"
     },
     "18997": {
       "name": "hatched rorc egg",
@@ -3618,7 +3618,7 @@ const APP_DATA = {
     },
     "19083": {
       "name": "silver raid token",
-      "category": "Others"
+      "category": "Valuables"
     },
     "19084": {
       "name": "small dragon tear",
@@ -3698,11 +3698,11 @@ const APP_DATA = {
     },
     "19136": {
       "name": "nail case",
-      "category": "Others"
+      "category": "Tools"
     },
     "19146": {
       "name": "torn incantation fragment",
-      "category": "Others"
+      "category": "Books"
     },
     "19148": {
       "name": "torn magic cape",
@@ -3714,7 +3714,7 @@ const APP_DATA = {
     },
     "19150": {
       "name": "norseman doll",
-      "category": "Others"
+      "category": "Household"
     },
     "19151": {
       "name": "abacus",
@@ -3742,7 +3742,7 @@ const APP_DATA = {
     },
     "19158": {
       "name": "crumpled paper",
-      "category": "Others"
+      "category": "Books"
     },
     "19159": {
       "name": "pannier backpack",
@@ -3818,11 +3818,11 @@ const APP_DATA = {
     },
     "19359": {
       "name": "horn",
-      "category": "Others"
+      "category": "Tools"
     },
     "19361": {
       "name": "sun mirror",
-      "category": "Others"
+      "category": "Household"
     },
     "19362": {
       "name": "icicle bow",
@@ -3834,7 +3834,7 @@ const APP_DATA = {
     },
     "19365": {
       "name": "trapped lightning",
-      "category": "Others"
+      "category": "Household"
     },
     "19366": {
       "name": "icy culottes",
@@ -3930,7 +3930,7 @@ const APP_DATA = {
     },
     "20063": {
       "name": "dream matter",
-      "category": "Others"
+      "category": "Products"
     },
     "20064": {
       "name": "crude umbral blade",
@@ -4106,19 +4106,19 @@ const APP_DATA = {
     },
     "20199": {
       "name": "frazzle skin",
-      "category": "Others"
+      "category": "Products"
     },
     "20200": {
       "name": "silencer claws",
-      "category": "Others"
+      "category": "Products"
     },
     "20201": {
       "name": "silencer resonating chamber",
-      "category": "Others"
+      "category": "Products"
     },
     "20203": {
       "name": "trapped bad dream monster",
-      "category": "Others"
+      "category": "Products"
     },
     "20204": {
       "name": "bowl of terror sweat",
@@ -4130,7 +4130,7 @@ const APP_DATA = {
     },
     "20206": {
       "name": "hemp rope",
-      "category": "Tools"
+      "category": "Products"
     },
     "20207": {
       "name": "pool of chitinous glue",
@@ -4150,7 +4150,7 @@ const APP_DATA = {
     },
     "20264": {
       "name": "unrealized dream",
-      "category": "Others"
+      "category": "Valuables"
     },
     "20270": {
       "name": "silver prison key",
@@ -4170,7 +4170,7 @@ const APP_DATA = {
     },
     "20274": {
       "name": "nightmare horn",
-      "category": "Others"
+      "category": "Tools"
     },
     "20275": {
       "name": "dream warden claw",
@@ -4178,27 +4178,27 @@ const APP_DATA = {
     },
     "20276": {
       "name": "dream warden mask",
-      "category": "Others"
+      "category": "Products"
     },
     "20277": {
       "name": "psychedelic tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "20278": {
       "name": "demonic tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "20279": {
       "name": "eye pod",
-      "category": "Others"
+      "category": "Household"
     },
     "20280": {
       "name": "nightmare beacon",
-      "category": "Others"
+      "category": "Household"
     },
     "20281": {
       "name": "nightmare beacon",
-      "category": "Others"
+      "category": "Household"
     },
     "20282": {
       "name": "nightmare hook",
@@ -4206,11 +4206,11 @@ const APP_DATA = {
     },
     "20308": {
       "name": "frazzlemaw santa",
-      "category": "Others"
+      "category": "Household"
     },
     "20309": {
       "name": "leaf golem santa",
-      "category": "Others"
+      "category": "Household"
     },
     "20310": {
       "name": "christmas cookie tray",
@@ -4218,23 +4218,23 @@ const APP_DATA = {
     },
     "20311": {
       "name": "snow globe",
-      "category": "Others"
+      "category": "Valuables"
     },
     "20312": {
       "name": "snow globe",
-      "category": "Others"
+      "category": "Valuables"
     },
     "20313": {
       "name": "santa music box",
-      "category": "Containers"
+      "category": "Valuables"
     },
     "20314": {
       "name": "santa music box",
-      "category": "Containers"
+      "category": "Valuables"
     },
     "20315": {
       "name": "snow flake tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "20341": {
       "name": "light rapier",
@@ -4250,15 +4250,15 @@ const APP_DATA = {
     },
     "20350": {
       "name": "cake tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "20355": {
       "name": "melting horn",
-      "category": "Others"
+      "category": "Tools"
     },
     "20356": {
       "name": "fireproof horn",
-      "category": "Others"
+      "category": "Tools"
     },
     "20357": {
       "name": "tinder box",
@@ -4346,7 +4346,7 @@ const APP_DATA = {
     },
     "21170": {
       "name": "gearwheel chain",
-      "category": "Others"
+      "category": "Amulets"
     },
     "21171": {
       "name": "metal bat",
@@ -4402,7 +4402,7 @@ const APP_DATA = {
     },
     "21186": {
       "name": "control unit",
-      "category": "Others"
+      "category": "Tools"
     },
     "21187": {
       "name": "cup of cowcoa",
@@ -4422,35 +4422,35 @@ const APP_DATA = {
     },
     "21193": {
       "name": "metal jaw",
-      "category": "Others"
+      "category": "Products"
     },
     "21194": {
       "name": "slime heart",
-      "category": "Others"
+      "category": "Products"
     },
     "21195": {
       "name": "poisoned fang",
-      "category": "Others"
+      "category": "Products"
     },
     "21196": {
       "name": "necromantic rust",
-      "category": "Others"
+      "category": "Products"
     },
     "21197": {
       "name": "slimy leaf tentacle",
-      "category": "Others"
+      "category": "Products"
     },
     "21198": {
       "name": "metal toe",
-      "category": "Others"
+      "category": "Products"
     },
     "21199": {
       "name": "giant pacifier",
-      "category": "Others"
+      "category": "Products"
     },
     "21200": {
       "name": "moohtant horn",
-      "category": "Others"
+      "category": "Products"
     },
     "21201": {
       "name": "execowtioner mask",
@@ -4462,11 +4462,11 @@ const APP_DATA = {
     },
     "21203": {
       "name": "glooth bag",
-      "category": "Containers"
+      "category": "Valuables"
     },
     "21204": {
       "name": "cowbell",
-      "category": "Others"
+      "category": "Products"
     },
     "21208": {
       "name": "strange probing device",
@@ -4502,7 +4502,7 @@ const APP_DATA = {
     },
     "21217": {
       "name": "green light",
-      "category": "Others"
+      "category": "Household"
     },
     "21218": {
       "name": "Lisa's doll",
@@ -4526,7 +4526,7 @@ const APP_DATA = {
     },
     "21301": {
       "name": "crude primitive printout",
-      "category": "Others"
+      "category": "Books"
     },
     "21333": {
       "name": "belongings of a deceased",
@@ -4650,7 +4650,7 @@ const APP_DATA = {
     },
     "21554": {
       "name": "small crystal bell",
-      "category": "Others"
+      "category": "Household"
     },
     "21745": {
       "name": "Brandon's wedding ring",
@@ -4662,7 +4662,7 @@ const APP_DATA = {
     },
     "21747": {
       "name": "seacrest pearl",
-      "category": "Others"
+      "category": "Products"
     },
     "21752": {
       "name": "broken orb of Light Undying",
@@ -4722,11 +4722,11 @@ const APP_DATA = {
     },
     "21800": {
       "name": "seacrest scale",
-      "category": "Others"
+      "category": "Products"
     },
     "21801": {
       "name": "seacrest hair",
-      "category": "Others"
+      "category": "Products"
     },
     "21803": {
       "name": "bottle of gloo",
@@ -4882,11 +4882,11 @@ const APP_DATA = {
     },
     "21947": {
       "name": "midnight panther doll",
-      "category": "Others"
+      "category": "Household"
     },
     "21948": {
       "name": "midnight panther doll",
-      "category": "Others"
+      "category": "Household"
     },
     "21950": {
       "name": "witches' cap spot",
@@ -4894,11 +4894,11 @@ const APP_DATA = {
     },
     "21952": {
       "name": "maxxen santa",
-      "category": "Others"
+      "category": "Household"
     },
     "21953": {
       "name": "truelove teddy",
-      "category": "Others"
+      "category": "Household"
     },
     "21954": {
       "name": "crimson rose",
@@ -4910,19 +4910,19 @@ const APP_DATA = {
     },
     "21962": {
       "name": "assassin doll",
-      "category": "Others"
+      "category": "Household"
     },
     "21963": {
       "name": "assassin doll",
-      "category": "Others"
+      "category": "Household"
     },
     "21974": {
       "name": "golden lotus brooch",
-      "category": "Valuables"
+      "category": "Products"
     },
     "21975": {
       "name": "peacock feather fan",
-      "category": "Others"
+      "category": "Products"
     },
     "21981": {
       "name": "oriental shoes",
@@ -4930,7 +4930,7 @@ const APP_DATA = {
     },
     "21982": {
       "name": "nightmare teddy",
-      "category": "Others"
+      "category": "Household"
     },
     "22007": {
       "name": "gloom wolf fur",
@@ -5026,7 +5026,7 @@ const APP_DATA = {
     },
     "22074": {
       "name": "closed silvered trap",
-      "category": "Others"
+      "category": "Tools"
     },
     "22082": {
       "name": "purple nightshade blossoms",
@@ -5034,7 +5034,7 @@ const APP_DATA = {
     },
     "22083": {
       "name": "moonlight crystals",
-      "category": "Others"
+      "category": "Valuables"
     },
     "22084": {
       "name": "wolf backpack",
@@ -5050,7 +5050,7 @@ const APP_DATA = {
     },
     "22087": {
       "name": "wereboar loincloth",
-      "category": "Others"
+      "category": "Legs"
     },
     "22088": {
       "name": "enchanted werewolf helmet",
@@ -5058,15 +5058,15 @@ const APP_DATA = {
     },
     "22101": {
       "name": "werebadger trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "22102": {
       "name": "wereboar trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "22103": {
       "name": "werebear trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "22104": {
       "name": "trophy of Feroxa",
@@ -5102,11 +5102,11 @@ const APP_DATA = {
     },
     "22120": {
       "name": "little adventurer doll",
-      "category": "Others"
+      "category": "Household"
     },
     "22121": {
       "name": "little adventurer doll",
-      "category": "Others"
+      "category": "Household"
     },
     "22127": {
       "name": "enchanted werewolf helmet",
@@ -5178,11 +5178,11 @@ const APP_DATA = {
     },
     "22183": {
       "name": "ogre scepta",
-      "category": "Others"
+      "category": "Rods"
     },
     "22184": {
       "name": "shamanic talisman",
-      "category": "Others"
+      "category": "Products"
     },
     "22185": {
       "name": "prickly pear",
@@ -5190,7 +5190,7 @@ const APP_DATA = {
     },
     "22186": {
       "name": "raw meat",
-      "category": "Others"
+      "category": "Products"
     },
     "22187": {
       "name": "roasted meat",
@@ -5198,19 +5198,19 @@ const APP_DATA = {
     },
     "22188": {
       "name": "ogre ear stud",
-      "category": "Others"
+      "category": "Products"
     },
     "22189": {
       "name": "ogre nose ring",
-      "category": "Rings"
+      "category": "Products"
     },
     "22190": {
       "name": "painted gourd rattle",
-      "category": "Others"
+      "category": "Shields"
     },
     "22191": {
       "name": "skull fetish",
-      "category": "Others"
+      "category": "Products"
     },
     "22192": {
       "name": "shamanic mask",
@@ -5218,11 +5218,11 @@ const APP_DATA = {
     },
     "22193": {
       "name": "onyx chip",
-      "category": "Others"
+      "category": "Valuables"
     },
     "22194": {
       "name": "opal",
-      "category": "Others"
+      "category": "Valuables"
     },
     "22195": {
       "name": "onyx pendant",
@@ -5234,7 +5234,7 @@ const APP_DATA = {
     },
     "22516": {
       "name": "silver token",
-      "category": "Others"
+      "category": "Valuables"
     },
     "22518": {
       "name": "Fireheart cuirass",
@@ -5322,11 +5322,11 @@ const APP_DATA = {
     },
     "22650": {
       "name": "rattling gourd",
-      "category": "Others"
+      "category": "Shields"
     },
     "22651": {
       "name": "gourd",
-      "category": "Others"
+      "category": "Shields"
     },
     "22652": {
       "name": "red paint",
@@ -5386,7 +5386,7 @@ const APP_DATA = {
     },
     "22682": {
       "name": "goblin bone key",
-      "category": "Others"
+      "category": "Tools"
     },
     "22692": {
       "name": "carafe of water binding",
@@ -5442,7 +5442,7 @@ const APP_DATA = {
     },
     "22720": {
       "name": "iron token",
-      "category": "Others"
+      "category": "Valuables"
     },
     "22721": {
       "name": "gold token",
@@ -5458,11 +5458,11 @@ const APP_DATA = {
     },
     "22724": {
       "name": "titanium token",
-      "category": "Others"
+      "category": "Valuables"
     },
     "22725": {
       "name": "rift lamp",
-      "category": "Others"
+      "category": "Household"
     },
     "22726": {
       "name": "rift shield",
@@ -5482,23 +5482,23 @@ const APP_DATA = {
     },
     "22730": {
       "name": "some grimeleech wings",
-      "category": "Others"
+      "category": "Products"
     },
     "22731": {
       "name": "rift tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "22734": {
       "name": "rift lamp",
-      "category": "Others"
+      "category": "Household"
     },
     "22735": {
       "name": "lit rift lamp",
-      "category": "Others"
+      "category": "Household"
     },
     "22737": {
       "name": "folded rift carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "22739": {
       "name": "mysterious metal egg",
@@ -5542,7 +5542,7 @@ const APP_DATA = {
     },
     "22763": {
       "name": "shaggy ogre bag",
-      "category": "Containers"
+      "category": "Valuables"
     },
     "22764": {
       "name": "Ferumbras' staff",
@@ -5566,11 +5566,11 @@ const APP_DATA = {
     },
     "22769": {
       "name": "Ferumbras' mana keg",
-      "category": "Others"
+      "category": "Valuables"
     },
     "22770": {
       "name": "Ferumbras' mana keg",
-      "category": "Products"
+      "category": "Valuables"
     },
     "22771": {
       "name": "scroll of ascension",
@@ -5590,7 +5590,7 @@ const APP_DATA = {
     },
     "22775": {
       "name": "Ferumbras' teddy",
-      "category": "Others"
+      "category": "Household"
     },
     "228": {
       "name": "fine vase",
@@ -5598,11 +5598,11 @@ const APP_DATA = {
     },
     "22863": {
       "name": "test voodoo doll",
-      "category": "Others"
+      "category": "Household"
     },
     "22865": {
       "name": "mysterious scroll",
-      "category": "Books"
+      "category": "Valuables"
     },
     "22866": {
       "name": "rift bow",
@@ -5614,7 +5614,7 @@ const APP_DATA = {
     },
     "22868": {
       "name": "golden goblet",
-      "category": "Valuables"
+      "category": "Household"
     },
     "22870": {
       "name": "throwing star of Sula",
@@ -5622,7 +5622,7 @@ const APP_DATA = {
     },
     "22879": {
       "name": "ferumbras' teddy santa",
-      "category": "Others"
+      "category": "Household"
     },
     "22889": {
       "name": "shield of destiny",
@@ -6134,31 +6134,31 @@ const APP_DATA = {
     },
     "23398": {
       "name": "decoration kit",
-      "category": "Others"
+      "category": "Household"
     },
     "23456": {
       "name": "used red chair kit",
-      "category": "Others"
+      "category": "Household"
     },
     "23457": {
       "name": "used globe kit",
-      "category": "Others"
+      "category": "Household"
     },
     "23458": {
       "name": "used telescope kit",
-      "category": "Others"
+      "category": "Household"
     },
     "23459": {
       "name": "used rocking horse kit",
-      "category": "Others"
+      "category": "Household"
     },
     "23460": {
       "name": "large used amphora kit",
-      "category": "Others"
+      "category": "Household"
     },
     "23473": {
       "name": "furniture kit",
-      "category": "Others"
+      "category": "Household"
     },
     "23474": {
       "name": "tiara of power",
@@ -6178,55 +6178,55 @@ const APP_DATA = {
     },
     "23487": {
       "name": "arena badge",
-      "category": "Others"
+      "category": "Valuables"
     },
     "23488": {
       "name": "surprise cube",
-      "category": "Others"
+      "category": "Valuables"
     },
     "23489": {
       "name": "brown pit demon",
-      "category": "Others"
+      "category": "Household"
     },
     "23490": {
       "name": "green pit demon",
-      "category": "Others"
+      "category": "Household"
     },
     "23491": {
       "name": "blue pit demon",
-      "category": "Others"
+      "category": "Household"
     },
     "23492": {
       "name": "black pit demon",
-      "category": "Others"
+      "category": "Household"
     },
     "23493": {
       "name": "red pit demon",
-      "category": "Others"
+      "category": "Household"
     },
     "23494": {
       "name": "mysterious thing",
-      "category": "Others"
+      "category": "Household"
     },
     "23495": {
       "name": "mysterious thing",
-      "category": "Others"
+      "category": "Household"
     },
     "23496": {
       "name": "mysterious thing",
-      "category": "Others"
+      "category": "Household"
     },
     "23497": {
       "name": "mysterious thing",
-      "category": "Others"
+      "category": "Household"
     },
     "23498": {
       "name": "mysterious thing",
-      "category": "Others"
+      "category": "Household"
     },
     "23499": {
       "name": "mysterious thing",
-      "category": "Others"
+      "category": "Household"
     },
     "235": {
       "name": "bag",
@@ -6234,7 +6234,7 @@ const APP_DATA = {
     },
     "23500": {
       "name": "mysterious thing",
-      "category": "Others"
+      "category": "Household"
     },
     "23501": {
       "name": "condensed energy",
@@ -6258,7 +6258,7 @@ const APP_DATA = {
     },
     "23506": {
       "name": "plasma pearls",
-      "category": "Others"
+      "category": "Products"
     },
     "23507": {
       "name": "crystallized anger",
@@ -6266,19 +6266,19 @@ const APP_DATA = {
     },
     "23508": {
       "name": "energy vein",
-      "category": "Others"
+      "category": "Products"
     },
     "23509": {
       "name": "mysterious remains",
-      "category": "Others"
+      "category": "Products"
     },
     "23510": {
       "name": "odd organ",
-      "category": "Others"
+      "category": "Products"
     },
     "23511": {
       "name": "curious matter",
-      "category": "Others"
+      "category": "Products"
     },
     "23512": {
       "name": "spying eye",
@@ -6298,15 +6298,15 @@ const APP_DATA = {
     },
     "23516": {
       "name": "instable proto matter",
-      "category": "Others"
+      "category": "Products"
     },
     "23517": {
       "name": "solid rage",
-      "category": "Others"
+      "category": "Valuables"
     },
     "23518": {
       "name": "spark sphere",
-      "category": "Others"
+      "category": "Products"
     },
     "23519": {
       "name": "frozen lightning",
@@ -6314,7 +6314,7 @@ const APP_DATA = {
     },
     "23520": {
       "name": "plasmatic lightning",
-      "category": "Others"
+      "category": "Products"
     },
     "23521": {
       "name": "crystal bone",
@@ -6330,7 +6330,7 @@ const APP_DATA = {
     },
     "23524": {
       "name": "small energy ball",
-      "category": "Others"
+      "category": "Products"
     },
     "23525": {
       "name": "energetic backpack",
@@ -6378,15 +6378,15 @@ const APP_DATA = {
     },
     "23536": {
       "name": "folded void carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "23538": {
       "name": "vibrant egg",
-      "category": "Others"
+      "category": "Tools"
     },
     "23541": {
       "name": "blue sphere",
-      "category": "Others"
+      "category": "Household"
     },
     "23542": {
       "name": "collar of blue plasma",
@@ -6786,7 +6786,7 @@ const APP_DATA = {
     },
     "23677": {
       "name": "music box",
-      "category": "Containers"
+      "category": "Tools"
     },
     "23678": {
       "name": "encyclopedia",
@@ -6802,7 +6802,7 @@ const APP_DATA = {
     },
     "23681": {
       "name": "golden newspaper",
-      "category": "Valuables"
+      "category": "Books"
     },
     "23682": {
       "name": "bag of oriental spices",
@@ -6814,19 +6814,19 @@ const APP_DATA = {
     },
     "23684": {
       "name": "crackling egg",
-      "category": "Others"
+      "category": "Tools"
     },
     "23685": {
       "name": "menacing egg",
-      "category": "Others"
+      "category": "Tools"
     },
     "23686": {
       "name": "devourer core",
-      "category": "Products"
+      "category": "Household"
     },
     "23687": {
       "name": "burnt out devourer core",
-      "category": "Products"
+      "category": "Household"
     },
     "237": {
       "name": "strong mana potion",
@@ -6838,7 +6838,7 @@ const APP_DATA = {
     },
     "23722": {
       "name": "gold converter",
-      "category": "Valuables"
+      "category": "Tools"
     },
     "23729": {
       "name": "lost time",
@@ -6858,11 +6858,11 @@ const APP_DATA = {
     },
     "23734": {
       "name": "ghostsilver lantern",
-      "category": "Others"
+      "category": "Household"
     },
     "23738": {
       "name": "ghostsilver lantern",
-      "category": "Others"
+      "category": "Household"
     },
     "238": {
       "name": "great mana potion",
@@ -6934,7 +6934,7 @@ const APP_DATA = {
     },
     "2397": {
       "name": "yellow pillow",
-      "category": "Others"
+      "category": "Household"
     },
     "2398": {
       "name": "round blue pillow",
@@ -6982,11 +6982,11 @@ const APP_DATA = {
     },
     "24385": {
       "name": "cracked alabaster vase",
-      "category": "Others"
+      "category": "Products"
     },
     "24386": {
       "name": "rhino horn carving",
-      "category": "Others"
+      "category": "Products"
     },
     "24387": {
       "name": "tarnished rhino figurine",
@@ -6994,11 +6994,11 @@ const APP_DATA = {
     },
     "24388": {
       "name": "rhino hide",
-      "category": "Others"
+      "category": "Products"
     },
     "24389": {
       "name": "rhino horn",
-      "category": "Others"
+      "category": "Products"
     },
     "24390": {
       "name": "ancient coin",
@@ -7006,7 +7006,7 @@ const APP_DATA = {
     },
     "24391": {
       "name": "coral brooch",
-      "category": "Others"
+      "category": "Valuables"
     },
     "24392": {
       "name": "gemmed figurine",
@@ -7018,7 +7018,7 @@ const APP_DATA = {
     },
     "24394": {
       "name": "orclops santa",
-      "category": "Others"
+      "category": "Household"
     },
     "24395": {
       "name": "birthday backpack",
@@ -7058,7 +7058,7 @@ const APP_DATA = {
     },
     "24439": {
       "name": "shell",
-      "category": "Others"
+      "category": "Products"
     },
     "2469": {
       "name": "box",
@@ -7066,7 +7066,7 @@ const APP_DATA = {
     },
     "2471": {
       "name": "crate",
-      "category": "Household"
+      "category": "Containers"
     },
     "2472": {
       "name": "chest",
@@ -7074,7 +7074,7 @@ const APP_DATA = {
     },
     "2473": {
       "name": "box",
-      "category": "Household"
+      "category": "Containers"
     },
     "2478": {
       "name": "treasure chest",
@@ -7090,7 +7090,7 @@ const APP_DATA = {
     },
     "2482": {
       "name": "chest",
-      "category": "Household"
+      "category": "Containers"
     },
     "24861": {
       "name": "treasure chest",
@@ -7118,7 +7118,7 @@ const APP_DATA = {
     },
     "24938": {
       "name": "dragon tongue",
-      "category": "Others"
+      "category": "Products"
     },
     "24939": {
       "name": "scale of Gelidrazah",
@@ -7154,7 +7154,7 @@ const APP_DATA = {
     },
     "24947": {
       "name": "old map",
-      "category": "Others"
+      "category": "Books"
     },
     "24948": {
       "name": "bottle of Tibian Wine",
@@ -7166,11 +7166,11 @@ const APP_DATA = {
     },
     "24950": {
       "name": "framed birthday card",
-      "category": "Others"
+      "category": "Household"
     },
     "24951": {
       "name": "gilded birthday cup",
-      "category": "Others"
+      "category": "Household"
     },
     "24954": {
       "name": "part of a rune",
@@ -7198,19 +7198,19 @@ const APP_DATA = {
     },
     "24960": {
       "name": "astral shaper rune",
-      "category": "Runes"
+      "category": "Tools"
     },
     "24961": {
       "name": "tiger eye",
-      "category": "Others"
+      "category": "Valuables"
     },
     "24962": {
       "name": "prismatic quartz",
-      "category": "Others"
+      "category": "Valuables"
     },
     "24963": {
       "name": "wasted time",
-      "category": "Others"
+      "category": "Household"
     },
     "24964": {
       "name": "imbuing crystal",
@@ -7222,7 +7222,7 @@ const APP_DATA = {
     },
     "24966": {
       "name": "forbidden fruit",
-      "category": "Products"
+      "category": "Food"
     },
     "24967": {
       "name": "dragon crown",
@@ -7234,7 +7234,7 @@ const APP_DATA = {
     },
     "24969": {
       "name": "ancient watch",
-      "category": "Others"
+      "category": "Products"
     },
     "24970": {
       "name": "frozen time",
@@ -7250,11 +7250,11 @@ const APP_DATA = {
     },
     "24973": {
       "name": "shadow mask",
-      "category": "Others"
+      "category": "Products"
     },
     "24974": {
       "name": "shadow paint",
-      "category": "Others"
+      "category": "Products"
     },
     "24975": {
       "name": "astral source",
@@ -7274,11 +7274,11 @@ const APP_DATA = {
     },
     "25059": {
       "name": "inert astral shaper rune",
-      "category": "Runes"
+      "category": "Tools"
     },
     "25062": {
       "name": "Pinata Dragon",
-      "category": "Others"
+      "category": "Household"
     },
     "25088": {
       "name": "porcelain mask",
@@ -7342,7 +7342,7 @@ const APP_DATA = {
     },
     "25302": {
       "name": "present",
-      "category": "Others"
+      "category": "Containers"
     },
     "25303": {
       "name": "milk tooth",
@@ -7370,15 +7370,15 @@ const APP_DATA = {
     },
     "25632": {
       "name": "loremaster doll",
-      "category": "Others"
+      "category": "Household"
     },
     "25633": {
       "name": "loremaster doll",
-      "category": "Others"
+      "category": "Household"
     },
     "25634": {
       "name": "loremaster doll",
-      "category": "Others"
+      "category": "Household"
     },
     "25689": {
       "name": "golden brush",
@@ -7394,11 +7394,11 @@ const APP_DATA = {
     },
     "25693": {
       "name": "shimmering beetles",
-      "category": "Rings"
+      "category": "Products"
     },
     "25694": {
       "name": "fairy wings",
-      "category": "Others"
+      "category": "Products"
     },
     "25695": {
       "name": "dandelion seeds",
@@ -7426,7 +7426,7 @@ const APP_DATA = {
     },
     "25701": {
       "name": "single human eye",
-      "category": "Others"
+      "category": "Products"
     },
     "25702": {
       "name": "little bowl of myrrh",
@@ -7434,7 +7434,7 @@ const APP_DATA = {
     },
     "25718": {
       "name": "temple teleport scroll",
-      "category": "Books"
+      "category": "Tools"
     },
     "25719": {
       "name": "temporary gold converter",
@@ -7470,7 +7470,7 @@ const APP_DATA = {
     },
     "25737": {
       "name": "rainbow quartz",
-      "category": "Distance"
+      "category": "Valuables"
     },
     "25742": {
       "name": "fig leaf",
@@ -7530,39 +7530,39 @@ const APP_DATA = {
     },
     "25903": {
       "name": "health keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25904": {
       "name": "strong health keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25905": {
       "name": "great health keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25906": {
       "name": "ultimate health keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25907": {
       "name": "supreme health keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25908": {
       "name": "mana keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25909": {
       "name": "strong mana keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25910": {
       "name": "great mana keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25911": {
       "name": "ultimate mana keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25912": {
       "name": "supreme mana keg",
@@ -7574,7 +7574,7 @@ const APP_DATA = {
     },
     "25914": {
       "name": "ultimate spirit keg",
-      "category": "Others"
+      "category": "Potions"
     },
     "25915": {
       "name": "fiery spike sword replica",
@@ -7626,7 +7626,7 @@ const APP_DATA = {
     },
     "25927": {
       "name": "fiery basher replica",
-      "category": "Others"
+      "category": "Club"
     },
     "25928": {
       "name": "fiery orcish maul replica",
@@ -7686,7 +7686,7 @@ const APP_DATA = {
     },
     "25942": {
       "name": "icy cranial basher replica",
-      "category": "Others"
+      "category": "Club"
     },
     "25943": {
       "name": "icy orcish maul replica",
@@ -7746,7 +7746,7 @@ const APP_DATA = {
     },
     "25957": {
       "name": "earth basher replica",
-      "category": "Others"
+      "category": "Club"
     },
     "25958": {
       "name": "earth orcish maul replica",
@@ -7806,7 +7806,7 @@ const APP_DATA = {
     },
     "25972": {
       "name": "energy basher replica",
-      "category": "Others"
+      "category": "Club"
     },
     "25973": {
       "name": "energy orcish maul replica",
@@ -7830,7 +7830,7 @@ const APP_DATA = {
     },
     "25979": {
       "name": "draken doll",
-      "category": "Others"
+      "category": "Household"
     },
     "25980": {
       "name": "emblem",
@@ -8242,11 +8242,11 @@ const APP_DATA = {
     },
     "2632": {
       "name": "wall mirror",
-      "category": "Others"
+      "category": "Household"
     },
     "2635": {
       "name": "wall mirror",
-      "category": "Others"
+      "category": "Household"
     },
     "2638": {
       "name": "wall mirror",
@@ -8294,7 +8294,7 @@ const APP_DATA = {
     },
     "2664": {
       "name": "cuckoo clock",
-      "category": "Others"
+      "category": "Household"
     },
     "2667": {
       "name": "white tapestry",
@@ -8342,23 +8342,23 @@ const APP_DATA = {
     },
     "27267": {
       "name": "forged glowing key",
-      "category": "Others"
+      "category": "Tools"
     },
     "27268": {
       "name": "forged glowing key",
-      "category": "Others"
+      "category": "Tools"
     },
     "27269": {
       "name": "forged key",
-      "category": "Others"
+      "category": "Tools"
     },
     "27270": {
       "name": "metal file",
-      "category": "Others"
+      "category": "Tools"
     },
     "27301": {
       "name": "rare earth",
-      "category": "Others"
+      "category": "Products"
     },
     "27307": {
       "name": "gnome trignometre",
@@ -8510,7 +8510,7 @@ const APP_DATA = {
     },
     "27591": {
       "name": "santa fox",
-      "category": "Others"
+      "category": "Household"
     },
     "27592": {
       "name": "deepworm spikes",
@@ -8566,7 +8566,7 @@ const APP_DATA = {
     },
     "27605": {
       "name": "candle stump",
-      "category": "Others"
+      "category": "Tools"
     },
     "27606": {
       "name": "stonerefiner's skull",
@@ -8582,7 +8582,7 @@ const APP_DATA = {
     },
     "27618": {
       "name": "pristine worm head",
-      "category": "Others"
+      "category": "Products"
     },
     "27619": {
       "name": "giant tentacle",
@@ -8594,7 +8594,7 @@ const APP_DATA = {
     },
     "27621": {
       "name": "huge shell",
-      "category": "Others"
+      "category": "Products"
     },
     "27622": {
       "name": "chitinous mouth",
@@ -8602,11 +8602,11 @@ const APP_DATA = {
     },
     "27623": {
       "name": "slimy leg",
-      "category": "Others"
+      "category": "Products"
     },
     "27624": {
       "name": "longing eyes",
-      "category": "Others"
+      "category": "Products"
     },
     "27625": {
       "name": "harpoon of a giant snail",
@@ -8618,7 +8618,7 @@ const APP_DATA = {
     },
     "27627": {
       "name": "huge spiky snail shell",
-      "category": "Others"
+      "category": "Products"
     },
     "27647": {
       "name": "gnome helmet",
@@ -8642,11 +8642,11 @@ const APP_DATA = {
     },
     "27653": {
       "name": "suspicious device",
-      "category": "Others"
+      "category": "Amulets"
     },
     "27654": {
       "name": "surprise jar",
-      "category": "Others"
+      "category": "Valuables"
     },
     "27655": {
       "name": "plan for a makeshift armour",
@@ -8662,7 +8662,7 @@ const APP_DATA = {
     },
     "27706": {
       "name": "werefox trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "27713": {
       "name": "heavy crystal fragment",
@@ -8682,7 +8682,7 @@ const APP_DATA = {
     },
     "2778": {
       "name": "rocking chair kit",
-      "category": "Others"
+      "category": "Household"
     },
     "2779": {
       "name": "sofa chair kit",
@@ -8702,7 +8702,7 @@ const APP_DATA = {
     },
     "2783": {
       "name": "round table kit",
-      "category": "Others"
+      "category": "Household"
     },
     "2784": {
       "name": "square table kit",
@@ -8710,11 +8710,11 @@ const APP_DATA = {
     },
     "27845": {
       "name": "Citizen Doll",
-      "category": "Others"
+      "category": "Household"
     },
     "27846": {
       "name": "Citizen Doll",
-      "category": "Others"
+      "category": "Household"
     },
     "27847": {
       "name": "bony rod",
@@ -8754,7 +8754,7 @@ const APP_DATA = {
     },
     "2789": {
       "name": "drawer kit",
-      "category": "Others"
+      "category": "Household"
     },
     "2790": {
       "name": "dresser kit",
@@ -8798,7 +8798,7 @@ const APP_DATA = {
     },
     "2794": {
       "name": "trunk kit",
-      "category": "Others"
+      "category": "Household"
     },
     "2795": {
       "name": "bamboo drawer kit",
@@ -8810,7 +8810,7 @@ const APP_DATA = {
     },
     "2797": {
       "name": "globe kit",
-      "category": "Others"
+      "category": "Household"
     },
     "2798": {
       "name": "table lamp kit",
@@ -8822,7 +8822,7 @@ const APP_DATA = {
     },
     "2800": {
       "name": "rocking horse kit",
-      "category": "Others"
+      "category": "Household"
     },
     "2801": {
       "name": "pendulum clock kit",
@@ -8858,15 +8858,15 @@ const APP_DATA = {
     },
     "2809": {
       "name": "trunk chair kit",
-      "category": "Others"
+      "category": "Household"
     },
     "281": {
       "name": "giant shimmering pearl",
-      "category": "Rings"
+      "category": "Valuables"
     },
     "2810": {
       "name": "trunk table kit",
-      "category": "Others"
+      "category": "Household"
     },
     "2811": {
       "name": "indoor plant kit",
@@ -8874,11 +8874,11 @@ const APP_DATA = {
     },
     "2812": {
       "name": "christmas tree package",
-      "category": "Others"
+      "category": "Household"
     },
     "2813": {
       "name": "blank paper",
-      "category": "Others"
+      "category": "Books"
     },
     "2814": {
       "name": "parchment",
@@ -8906,7 +8906,7 @@ const APP_DATA = {
     },
     "282": {
       "name": "giant shimmering pearl",
-      "category": "Rings"
+      "category": "Valuables"
     },
     "2820": {
       "name": "sheet of paper",
@@ -8918,11 +8918,11 @@ const APP_DATA = {
     },
     "2822": {
       "name": "map",
-      "category": "Others"
+      "category": "Household"
     },
     "2823": {
       "name": "map",
-      "category": "Others"
+      "category": "Household"
     },
     "2824": {
       "name": "book",
@@ -9034,7 +9034,7 @@ const APP_DATA = {
     },
     "28464": {
       "name": "test weapon for knights ",
-      "category": "Others"
+      "category": "Sword"
     },
     "28465": {
       "name": "bow of destruction test",
@@ -9042,7 +9042,7 @@ const APP_DATA = {
     },
     "28466": {
       "name": "sorcerer test weapon TEST",
-      "category": "Others"
+      "category": "Wands"
     },
     "28468": {
       "name": "bucket filled with chalk",
@@ -9074,7 +9074,7 @@ const APP_DATA = {
     },
     "2848": {
       "name": "purple tome",
-      "category": "Others"
+      "category": "Books"
     },
     "28483": {
       "name": "torn book",
@@ -9082,15 +9082,15 @@ const APP_DATA = {
     },
     "28484": {
       "name": "blueberry cupcake",
-      "category": "Others"
+      "category": "Food"
     },
     "28485": {
       "name": "strawberry cupcake",
-      "category": "Others"
+      "category": "Food"
     },
     "28486": {
       "name": "lemon cupcake",
-      "category": "Others"
+      "category": "Food"
     },
     "28488": {
       "name": "parchment of dark knowledge",
@@ -9146,19 +9146,19 @@ const APP_DATA = {
     },
     "28518": {
       "name": "old letter",
-      "category": "Others"
+      "category": "Books"
     },
     "2852": {
       "name": "red tome",
-      "category": "Others"
+      "category": "Books"
     },
     "28525": {
       "name": "magic gold converter",
-      "category": "Valuables"
+      "category": "Tools"
     },
     "28526": {
       "name": "magic gold converter",
-      "category": "Valuables"
+      "category": "Tools"
     },
     "2853": {
       "name": "bag",
@@ -9186,27 +9186,27 @@ const APP_DATA = {
     },
     "28540": {
       "name": "training sword",
-      "category": "Others"
+      "category": "Exercise"
     },
     "28541": {
       "name": "training axe",
-      "category": "Axe"
+      "category": "Exercise"
     },
     "28542": {
       "name": "training club",
-      "category": "Club"
+      "category": "Exercise"
     },
     "28543": {
       "name": "training bow",
-      "category": "Distance"
+      "category": "Exercise"
     },
     "28544": {
       "name": "training rod",
-      "category": "Rods"
+      "category": "Exercise"
     },
     "28545": {
       "name": "training wand",
-      "category": "Wands"
+      "category": "Exercise"
     },
     "2855": {
       "name": "basket",
@@ -9238,19 +9238,19 @@ const APP_DATA = {
     },
     "2856": {
       "name": "present",
-      "category": "Others"
+      "category": "Containers"
     },
     "28566": {
       "name": "silken bookmark",
-      "category": "Books"
+      "category": "Products"
     },
     "28567": {
       "name": "quill",
-      "category": "Others"
+      "category": "Products"
     },
     "28568": {
       "name": "inkwell",
-      "category": "Others"
+      "category": "Tools"
     },
     "28569": {
       "name": "book page",
@@ -9334,7 +9334,7 @@ const APP_DATA = {
     },
     "28707": {
       "name": "hawser",
-      "category": "Others"
+      "category": "Tools"
     },
     "28708": {
       "name": "bony rod",
@@ -9450,7 +9450,7 @@ const APP_DATA = {
     },
     "28791": {
       "name": "library ticket",
-      "category": "Others"
+      "category": "Tools"
     },
     "28792": {
       "name": "sturdy book",
@@ -9462,11 +9462,11 @@ const APP_DATA = {
     },
     "2880": {
       "name": "mug",
-      "category": "Others"
+      "category": "Tools"
     },
     "2881": {
       "name": "cup",
-      "category": "Others"
+      "category": "Tools"
     },
     "28818": {
       "name": "parchment of interest",
@@ -9474,7 +9474,7 @@ const APP_DATA = {
     },
     "2882": {
       "name": "jug",
-      "category": "Others"
+      "category": "Tools"
     },
     "28821": {
       "name": "patch of fine cloth",
@@ -9498,7 +9498,7 @@ const APP_DATA = {
     },
     "28826": {
       "name": "deepling fork",
-      "category": "Others"
+      "category": "Rods"
     },
     "28829": {
       "name": "rotten demonbone",
@@ -9506,7 +9506,7 @@ const APP_DATA = {
     },
     "2883": {
       "name": "cup",
-      "category": "Others"
+      "category": "Tools"
     },
     "28830": {
       "name": "energized demonbone",
@@ -9522,7 +9522,7 @@ const APP_DATA = {
     },
     "2884": {
       "name": "cup",
-      "category": "Others"
+      "category": "Tools"
     },
     "2885": {
       "name": "brown flask",
@@ -9538,7 +9538,7 @@ const APP_DATA = {
     },
     "28865": {
       "name": "the spatial warp almanac",
-      "category": "Others"
+      "category": "Books"
     },
     "28887": {
       "name": "journal shield",
@@ -9550,19 +9550,19 @@ const APP_DATA = {
     },
     "28895": {
       "name": "bookworm doll",
-      "category": "Books"
+      "category": "Household"
     },
     "28896": {
       "name": "golden falcon",
-      "category": "Valuables"
+      "category": "Household"
     },
     "28897": {
       "name": "assassin doll",
-      "category": "Others"
+      "category": "Household"
     },
     "28908": {
       "name": "secret map",
-      "category": "Others"
+      "category": "Books"
     },
     "28915": {
       "name": "adamant shield",
@@ -9598,7 +9598,7 @@ const APP_DATA = {
     },
     "2902": {
       "name": "bowl",
-      "category": "Distance"
+      "category": "Tools"
     },
     "2903": {
       "name": "golden mug",
@@ -9606,19 +9606,19 @@ const APP_DATA = {
     },
     "2905": {
       "name": "plate",
-      "category": "Others"
+      "category": "Tools"
     },
     "2906": {
       "name": "watch",
-      "category": "Others"
+      "category": "Tools"
     },
     "2911": {
       "name": "candelabrum",
-      "category": "Others"
+      "category": "Household"
     },
     "2912": {
       "name": "lit candelabrum",
-      "category": "Others"
+      "category": "Household"
     },
     "2913": {
       "name": "used candelabrum",
@@ -9626,7 +9626,7 @@ const APP_DATA = {
     },
     "2914": {
       "name": "lamp",
-      "category": "Others"
+      "category": "Household"
     },
     "2915": {
       "name": "lit lamp",
@@ -9638,7 +9638,7 @@ const APP_DATA = {
     },
     "2917": {
       "name": "candlestick",
-      "category": "Others"
+      "category": "Household"
     },
     "2918": {
       "name": "lit candlestick",
@@ -9650,35 +9650,35 @@ const APP_DATA = {
     },
     "2920": {
       "name": "torch",
-      "category": "Others"
+      "category": "Household"
     },
     "2921": {
       "name": "lit torch",
-      "category": "Others"
+      "category": "Household"
     },
     "2922": {
       "name": "torch",
-      "category": "Others"
+      "category": "Household"
     },
     "2923": {
       "name": "lit torch",
-      "category": "Others"
+      "category": "Household"
     },
     "2924": {
       "name": "torch",
-      "category": "Others"
+      "category": "Household"
     },
     "2925": {
       "name": "lit torch",
-      "category": "Others"
+      "category": "Household"
     },
     "2926": {
       "name": "burnt down torch",
-      "category": "Others"
+      "category": "Household"
     },
     "2927": {
       "name": "lit candelabrum",
-      "category": "Others"
+      "category": "Household"
     },
     "29276": {
       "name": "dream catcher",
@@ -9722,7 +9722,7 @@ const APP_DATA = {
     },
     "29304": {
       "name": "silver key",
-      "category": "Others"
+      "category": "Tools"
     },
     "29307": {
       "name": "bucket with some ectoplasm",
@@ -9742,11 +9742,11 @@ const APP_DATA = {
     },
     "2932": {
       "name": "oil lamp",
-      "category": "Others"
+      "category": "Household"
     },
     "2933": {
       "name": "small oil lamp",
-      "category": "Others"
+      "category": "Products"
     },
     "29344": {
       "name": "red ectoplasmic residue",
@@ -9754,19 +9754,19 @@ const APP_DATA = {
     },
     "29345": {
       "name": "blue glass plate",
-      "category": "Others"
+      "category": "Valuables"
     },
     "29346": {
       "name": "green glass plate",
-      "category": "Others"
+      "category": "Valuables"
     },
     "29347": {
       "name": "violet glass plate",
-      "category": "Others"
+      "category": "Valuables"
     },
     "29348": {
       "name": "poison gland",
-      "category": "Others"
+      "category": "Products"
     },
     "29351": {
       "name": "strangely ornamented key",
@@ -9778,39 +9778,39 @@ const APP_DATA = {
     },
     "29408": {
       "name": "roasted wyvern wings",
-      "category": "Others"
+      "category": "Food"
     },
     "29409": {
       "name": "carrot pie",
-      "category": "Others"
+      "category": "Food"
     },
     "29410": {
       "name": "tropical marinated tiger",
-      "category": "Others"
+      "category": "Food"
     },
     "29411": {
       "name": "delicatessen salad",
-      "category": "Others"
+      "category": "Food"
     },
     "29412": {
       "name": "chilli con carniphila",
-      "category": "Others"
+      "category": "Food"
     },
     "29413": {
       "name": "svargrond salmon filet",
-      "category": "Others"
+      "category": "Food"
     },
     "29414": {
       "name": "carrion casserole",
-      "category": "Others"
+      "category": "Food"
     },
     "29415": {
       "name": "consecrated beef",
-      "category": "Containers"
+      "category": "Food"
     },
     "29416": {
       "name": "overcooked noodles",
-      "category": "Others"
+      "category": "Food"
     },
     "29417": {
       "name": "living vine bow",
@@ -9826,7 +9826,7 @@ const APP_DATA = {
     },
     "29420": {
       "name": "shoulder plate",
-      "category": "Others"
+      "category": "Spellbooks"
     },
     "29421": {
       "name": "summerblade",
@@ -9846,7 +9846,7 @@ const APP_DATA = {
     },
     "29425": {
       "name": "energized limb",
-      "category": "Others"
+      "category": "Rods"
     },
     "29426": {
       "name": "brain in a jar",
@@ -9870,103 +9870,103 @@ const APP_DATA = {
     },
     "29431": {
       "name": "spirit guide",
-      "category": "Shields"
+      "category": "Spellbooks"
     },
     "29432": {
       "name": "hireling lamp",
-      "category": "Others"
+      "category": "Tools"
     },
     "2948": {
       "name": "wooden flute",
-      "category": "Others"
+      "category": "Household"
     },
     "2949": {
       "name": "lyre",
-      "category": "Others"
+      "category": "Household"
     },
     "2950": {
       "name": "lute",
-      "category": "Others"
+      "category": "Household"
     },
     "2951": {
       "name": "bongo drum",
-      "category": "Others"
+      "category": "Household"
     },
     "2952": {
       "name": "drum",
-      "category": "Others"
+      "category": "Household"
     },
     "2953": {
       "name": "panpipes",
-      "category": "Others"
+      "category": "Household"
     },
     "2954": {
       "name": "simple fanfare",
-      "category": "Others"
+      "category": "Household"
     },
     "2955": {
       "name": "fanfare",
-      "category": "Others"
+      "category": "Household"
     },
     "2956": {
       "name": "royal fanfare",
-      "category": "Others"
+      "category": "Household"
     },
     "2957": {
       "name": "post horn",
-      "category": "Others"
+      "category": "Household"
     },
     "2958": {
       "name": "war horn",
-      "category": "Others"
+      "category": "Household"
     },
     "2965": {
       "name": "didgeridoo",
-      "category": "Others"
+      "category": "Household"
     },
     "2966": {
       "name": "war drum",
-      "category": "Others"
+      "category": "Household"
     },
     "2967": {
       "name": "magical key",
-      "category": "Others"
+      "category": "Tools"
     },
     "2968": {
       "name": "wooden key",
-      "category": "Others"
+      "category": "Tools"
     },
     "2969": {
       "name": "silver key",
-      "category": "Others"
+      "category": "Tools"
     },
     "2970": {
       "name": "copper key",
-      "category": "Others"
+      "category": "Tools"
     },
     "2971": {
       "name": "crystal key",
-      "category": "Others"
+      "category": "Tools"
     },
     "2972": {
       "name": "golden key",
-      "category": "Valuables"
+      "category": "Tools"
     },
     "2973": {
       "name": "bone key",
-      "category": "Others"
+      "category": "Tools"
     },
     "2974": {
       "name": "water pipe",
-      "category": "Others"
+      "category": "Household"
     },
     "2977": {
       "name": "pumpkinhead",
-      "category": "Others"
+      "category": "Household"
     },
     "2978": {
       "name": "pumpkinhead",
-      "category": "Others"
+      "category": "Household"
     },
     "2980": {
       "name": "water pipe",
@@ -9994,11 +9994,11 @@ const APP_DATA = {
     },
     "2989": {
       "name": "wooden doll",
-      "category": "Others"
+      "category": "Household"
     },
     "2991": {
       "name": "doll",
-      "category": "Others"
+      "category": "Household"
     },
     "2992": {
       "name": "snowball",
@@ -10006,15 +10006,15 @@ const APP_DATA = {
     },
     "2993": {
       "name": "teddy bear",
-      "category": "Others"
+      "category": "Household"
     },
     "2994": {
       "name": "model ship",
-      "category": "Others"
+      "category": "Household"
     },
     "29942": {
       "name": "Maxxenius head",
-      "category": "Others"
+      "category": "Products"
     },
     "29943": {
       "name": "Alptramun's toothbrush",
@@ -10034,19 +10034,19 @@ const APP_DATA = {
     },
     "29947": {
       "name": "nightmare beast santa",
-      "category": "Others"
+      "category": "Household"
     },
     "29948": {
       "name": "hireling sex change rune",
-      "category": "Runes"
+      "category": "Tools"
     },
     "29949": {
       "name": "hireling sex change rune",
-      "category": "Runes"
+      "category": "Tools"
     },
     "2995": {
       "name": "piggy bank",
-      "category": "Others"
+      "category": "Household"
     },
     "29950": {
       "name": "acid resistant fishing rod",
@@ -10110,11 +10110,11 @@ const APP_DATA = {
     },
     "3001": {
       "name": "bear doll",
-      "category": "Others"
+      "category": "Household"
     },
     "3002": {
       "name": "voodoo doll",
-      "category": "Others"
+      "category": "Household"
     },
     "3003": {
       "name": "rope",
@@ -10126,27 +10126,27 @@ const APP_DATA = {
     },
     "3005": {
       "name": "elven brooch",
-      "category": "Others"
+      "category": "Household"
     },
     "30053": {
       "name": "dragon figurine",
-      "category": "Others"
+      "category": "Valuables"
     },
     "30054": {
       "name": "unicorn figurine",
-      "category": "Others"
+      "category": "Valuables"
     },
     "30055": {
       "name": "crunor idol",
-      "category": "Others"
+      "category": "Valuables"
     },
     "30056": {
       "name": "ornate locket",
-      "category": "Others"
+      "category": "Valuables"
     },
     "30058": {
       "name": "ice flower",
-      "category": "Others"
+      "category": "Household"
     },
     "30059": {
       "name": "giant ruby",
@@ -10190,7 +10190,7 @@ const APP_DATA = {
     },
     "30087": {
       "name": "Plagueroot offshoot",
-      "category": "Others"
+      "category": "Products"
     },
     "30088": {
       "name": "Malofur's lunchbox",
@@ -10210,7 +10210,7 @@ const APP_DATA = {
     },
     "3012": {
       "name": "wolf tooth chain",
-      "category": "Others"
+      "category": "Amulets"
     },
     "3013": {
       "name": "golden amulet",
@@ -10250,15 +10250,15 @@ const APP_DATA = {
     },
     "3017": {
       "name": "silver brooch",
-      "category": "Others"
+      "category": "Valuables"
     },
     "30170": {
       "name": "turquoise tendril lantern",
-      "category": "Others"
+      "category": "Tools"
     },
     "30171": {
       "name": "purple tendril lantern",
-      "category": "Others"
+      "category": "Tools"
     },
     "3018": {
       "name": "scarab amulet",
@@ -10286,11 +10286,11 @@ const APP_DATA = {
     },
     "30185": {
       "name": "broken bell",
-      "category": "Others"
+      "category": "Tools"
     },
     "30186": {
       "name": "percht horns",
-      "category": "Others"
+      "category": "Products"
     },
     "30187": {
       "name": "versicolour fireworks powder",
@@ -10298,11 +10298,11 @@ const APP_DATA = {
     },
     "30188": {
       "name": "red fireworks powder",
-      "category": "Others"
+      "category": "Household"
     },
     "30189": {
       "name": "yellow fireworks powder",
-      "category": "Others"
+      "category": "Household"
     },
     "3019": {
       "name": "demonbone amulet",
@@ -10310,15 +10310,15 @@ const APP_DATA = {
     },
     "30190": {
       "name": "green fireworks powder",
-      "category": "Others"
+      "category": "Household"
     },
     "30191": {
       "name": "blue fireworks powder",
-      "category": "Others"
+      "category": "Household"
     },
     "30192": {
       "name": "percht skull",
-      "category": "Others"
+      "category": "Products"
     },
     "30193": {
       "name": "frozen carrot",
@@ -10326,7 +10326,7 @@ const APP_DATA = {
     },
     "30194": {
       "name": "soft hammer",
-      "category": "Club"
+      "category": "Tools"
     },
     "30195": {
       "name": "golden bell",
@@ -10346,15 +10346,15 @@ const APP_DATA = {
     },
     "3020": {
       "name": "some golden fruits",
-      "category": "Others"
+      "category": "Household"
     },
     "30200": {
       "name": "birthday card",
-      "category": "Others"
+      "category": "Household"
     },
     "30201": {
       "name": "birthday cup",
-      "category": "Others"
+      "category": "Household"
     },
     "30202": {
       "name": "winterberry liquor",
@@ -10382,7 +10382,7 @@ const APP_DATA = {
     },
     "30209": {
       "name": "red fireworks rocket",
-      "category": "Others"
+      "category": "Household"
     },
     "3021": {
       "name": "sapphire amulet",
@@ -10390,19 +10390,19 @@ const APP_DATA = {
     },
     "30210": {
       "name": "yellow fireworks rocket",
-      "category": "Others"
+      "category": "Household"
     },
     "30211": {
       "name": "green fireworks rocket",
-      "category": "Others"
+      "category": "Household"
     },
     "30212": {
       "name": "blue fireworks rocket",
-      "category": "Others"
+      "category": "Household"
     },
     "30213": {
       "name": "colourful fireworks rocket",
-      "category": "Others"
+      "category": "Household"
     },
     "30214": {
       "name": "percht-warding torch",
@@ -10418,7 +10418,7 @@ const APP_DATA = {
     },
     "3023": {
       "name": "holy scarab",
-      "category": "Others"
+      "category": "Valuables"
     },
     "3024": {
       "name": "holy falcon",
@@ -10430,15 +10430,15 @@ const APP_DATA = {
     },
     "30255": {
       "name": "orange fireworks rocket",
-      "category": "Others"
+      "category": "Household"
     },
     "30256": {
       "name": "purple fireworks rocket",
-      "category": "Others"
+      "category": "Household"
     },
     "30257": {
       "name": "turquoise fireworks rocket",
-      "category": "Others"
+      "category": "Household"
     },
     "30258": {
       "name": "Fireworks in shape of '0'",
@@ -10450,7 +10450,7 @@ const APP_DATA = {
     },
     "3026": {
       "name": "white pearl",
-      "category": "Others"
+      "category": "Valuables"
     },
     "30260": {
       "name": "Fireworks in shape of '2'",
@@ -10486,23 +10486,23 @@ const APP_DATA = {
     },
     "30268": {
       "name": "orange fireworks powder",
-      "category": "Others"
+      "category": "Household"
     },
     "30269": {
       "name": "purple fireworks powder",
-      "category": "Others"
+      "category": "Household"
     },
     "3027": {
       "name": "black pearl",
-      "category": "Others"
+      "category": "Valuables"
     },
     "30270": {
       "name": "turquoise fireworks powder",
-      "category": "Others"
+      "category": "Household"
     },
     "30271": {
       "name": "grainy fireworks powder",
-      "category": "Others"
+      "category": "Household"
     },
     "30275": {
       "name": "crown of the percht queen",
@@ -10538,7 +10538,7 @@ const APP_DATA = {
     },
     "30282": {
       "name": "percht broom",
-      "category": "Others"
+      "category": "Products"
     },
     "30283": {
       "name": "ice hatchet",
@@ -10546,11 +10546,11 @@ const APP_DATA = {
     },
     "30284": {
       "name": "percht handkerchief",
-      "category": "Others"
+      "category": "Products"
     },
     "30285": {
       "name": "golden cotton reel",
-      "category": "Valuables"
+      "category": "Products"
     },
     "3029": {
       "name": "small sapphire",
@@ -10566,7 +10566,7 @@ const APP_DATA = {
     },
     "30315": {
       "name": "pinata",
-      "category": "Others"
+      "category": "Household"
     },
     "30316": {
       "name": "surprise bag",
@@ -10574,15 +10574,15 @@ const APP_DATA = {
     },
     "30317": {
       "name": "Ferumbras puppet",
-      "category": "Others"
+      "category": "Household"
     },
     "30318": {
       "name": "horseshoe",
-      "category": "Tools"
+      "category": "Products"
     },
     "30319": {
       "name": "golden horseshoe",
-      "category": "Tools"
+      "category": "Valuables"
     },
     "3032": {
       "name": "small emerald",
@@ -10590,7 +10590,7 @@ const APP_DATA = {
     },
     "30320": {
       "name": "lucky pig",
-      "category": "Others"
+      "category": "Products"
     },
     "30321": {
       "name": "fly agaric",
@@ -10598,7 +10598,7 @@ const APP_DATA = {
     },
     "30322": {
       "name": "small ladybug",
-      "category": "Others"
+      "category": "Products"
     },
     "30323": {
       "name": "rainbow necklace",
@@ -10610,7 +10610,7 @@ const APP_DATA = {
     },
     "30325": {
       "name": "dark bell",
-      "category": "Others"
+      "category": "Products"
     },
     "3033": {
       "name": "small amethyst",
@@ -10650,27 +10650,27 @@ const APP_DATA = {
     },
     "30362": {
       "name": "Badbara",
-      "category": "Others"
+      "category": "Household"
     },
     "30363": {
       "name": "Tearesa",
-      "category": "Others"
+      "category": "Household"
     },
     "30364": {
       "name": "Cryana",
-      "category": "Others"
+      "category": "Household"
     },
     "30365": {
       "name": "Badbara",
-      "category": "Others"
+      "category": "Household"
     },
     "30366": {
       "name": "Tearesa",
-      "category": "Others"
+      "category": "Household"
     },
     "30367": {
       "name": "Cryana",
-      "category": "Others"
+      "category": "Household"
     },
     "3037": {
       "name": "yellow gem",
@@ -10678,15 +10678,15 @@ const APP_DATA = {
     },
     "30371": {
       "name": "black raven kit",
-      "category": "Others"
+      "category": "Household"
     },
     "30372": {
       "name": "grey raven kit",
-      "category": "Others"
+      "category": "Household"
     },
     "30373": {
       "name": "white raven kit",
-      "category": "Others"
+      "category": "Household"
     },
     "3038": {
       "name": "green gem",
@@ -10766,11 +10766,11 @@ const APP_DATA = {
     },
     "3046": {
       "name": "magic light wand",
-      "category": "Wands"
+      "category": "Household"
     },
     "3047": {
       "name": "magic light wand",
-      "category": "Wands"
+      "category": "Household"
     },
     "3048": {
       "name": "might ring",
@@ -10822,7 +10822,7 @@ const APP_DATA = {
     },
     "306": {
       "name": "empty flower pot",
-      "category": "Others"
+      "category": "Household"
     },
     "3060": {
       "name": "orb",
@@ -10854,7 +10854,7 @@ const APP_DATA = {
     },
     "3068": {
       "name": "crystal wand",
-      "category": "Wands"
+      "category": "Valuables"
     },
     "3069": {
       "name": "necrotic rod",
@@ -10894,7 +10894,7 @@ const APP_DATA = {
     },
     "3078": {
       "name": "mysterious fetish",
-      "category": "Others"
+      "category": "Household"
     },
     "3079": {
       "name": "boots of haste",
@@ -10946,27 +10946,27 @@ const APP_DATA = {
     },
     "3091": {
       "name": "sword ring",
-      "category": "Others"
+      "category": "Rings"
     },
     "3092": {
       "name": "axe ring",
-      "category": "Axe"
+      "category": "Rings"
     },
     "3093": {
       "name": "club ring",
-      "category": "Club"
+      "category": "Rings"
     },
     "3094": {
       "name": "sword ring",
-      "category": "Others"
+      "category": "Rings"
     },
     "3095": {
       "name": "axe ring",
-      "category": "Axe"
+      "category": "Rings"
     },
     "3096": {
       "name": "club ring",
-      "category": "Club"
+      "category": "Rings"
     },
     "3097": {
       "name": "dwarven ring",
@@ -10998,7 +10998,7 @@ const APP_DATA = {
     },
     "3103": {
       "name": "cornucopia",
-      "category": "Others"
+      "category": "Household"
     },
     "3104": {
       "name": "banana skin",
@@ -11114,7 +11114,7 @@ const APP_DATA = {
     },
     "31264": {
       "name": "wheel oil",
-      "category": "Others"
+      "category": "Tools"
     },
     "31265": {
       "name": "dragon goblet",
@@ -11122,11 +11122,11 @@ const APP_DATA = {
     },
     "31266": {
       "name": "pigeon trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "31267": {
       "name": "loremaster doll",
-      "category": "Others"
+      "category": "Household"
     },
     "31268": {
       "name": "jade amulet",
@@ -11166,7 +11166,7 @@ const APP_DATA = {
     },
     "31323": {
       "name": "sea horse figurine",
-      "category": "Others"
+      "category": "Products"
     },
     "31324": {
       "name": "golden mask",
@@ -11178,11 +11178,11 @@ const APP_DATA = {
     },
     "31327": {
       "name": "ritual scissors",
-      "category": "Others"
+      "category": "Tools"
     },
     "31328": {
       "name": "bark peeler",
-      "category": "Others"
+      "category": "Tools"
     },
     "31329": {
       "name": "honey palm bark",
@@ -11194,7 +11194,7 @@ const APP_DATA = {
     },
     "31331": {
       "name": "empty honey glass",
-      "category": "Others"
+      "category": "Products"
     },
     "31332": {
       "name": "jar of honey",
@@ -11206,7 +11206,7 @@ const APP_DATA = {
     },
     "31334": {
       "name": "hand auger",
-      "category": "Others"
+      "category": "Tools"
     },
     "31335": {
       "name": "vial of cactus milk",
@@ -11222,7 +11222,7 @@ const APP_DATA = {
     },
     "31340": {
       "name": "lizard heart",
-      "category": "Others"
+      "category": "Products"
     },
     "3135": {
       "name": "wooden trash",
@@ -11346,7 +11346,7 @@ const APP_DATA = {
     },
     "31439": {
       "name": "manticore tail",
-      "category": "Others"
+      "category": "Products"
     },
     "3144": {
       "name": "stone rubbish",
@@ -11354,15 +11354,15 @@ const APP_DATA = {
     },
     "31440": {
       "name": "manticore ear",
-      "category": "Others"
+      "category": "Products"
     },
     "31441": {
       "name": "lamassu hoof",
-      "category": "Others"
+      "category": "Products"
     },
     "31442": {
       "name": "lamassu horn",
-      "category": "Others"
+      "category": "Products"
     },
     "31443": {
       "name": "Fafnar symbol",
@@ -11446,7 +11446,7 @@ const APP_DATA = {
     },
     "31558": {
       "name": "red goanna scale",
-      "category": "Others"
+      "category": "Products"
     },
     "31559": {
       "name": "blue goanna scale",
@@ -11458,7 +11458,7 @@ const APP_DATA = {
     },
     "31560": {
       "name": "goanna meat",
-      "category": "Food"
+      "category": "Products"
     },
     "31561": {
       "name": "goanna claw",
@@ -11474,11 +11474,11 @@ const APP_DATA = {
     },
     "31573": {
       "name": "sun medal",
-      "category": "Others"
+      "category": "Valuables"
     },
     "31574": {
       "name": "sunray emblem",
-      "category": "Others"
+      "category": "Valuables"
     },
     "31575": {
       "name": "golden bijou",
@@ -11526,7 +11526,7 @@ const APP_DATA = {
     },
     "31589": {
       "name": "rotten heart",
-      "category": "Others"
+      "category": "Products"
     },
     "3159": {
       "name": "spell rune",
@@ -11542,11 +11542,11 @@ const APP_DATA = {
     },
     "31592": {
       "name": "signet ring",
-      "category": "Rings"
+      "category": "Products"
     },
     "31593": {
       "name": "noble cape",
-      "category": "Others"
+      "category": "Products"
     },
     "31594": {
       "name": "token of love",
@@ -11554,7 +11554,7 @@ const APP_DATA = {
     },
     "31595": {
       "name": "noble amulet",
-      "category": "Amulets"
+      "category": "Products"
     },
     "316": {
       "name": "flower pot",
@@ -11678,7 +11678,7 @@ const APP_DATA = {
     },
     "31678": {
       "name": "cobra crest",
-      "category": "Others"
+      "category": "Products"
     },
     "3168": {
       "name": "spell rune",
@@ -11830,7 +11830,7 @@ const APP_DATA = {
     },
     "31913": {
       "name": "baking tray",
-      "category": "Others"
+      "category": "Tools"
     },
     "31914": {
       "name": "lump of reed flour dough",
@@ -11858,7 +11858,7 @@ const APP_DATA = {
     },
     "31961": {
       "name": "red gingerbread heart",
-      "category": "Others"
+      "category": "Food"
     },
     "31964": {
       "name": "event item",
@@ -11966,11 +11966,11 @@ const APP_DATA = {
     },
     "32010": {
       "name": "meat hammer",
-      "category": "Club"
+      "category": "Products"
     },
     "32011": {
       "name": "milk churn",
-      "category": "Others"
+      "category": "Products"
     },
     "32012": {
       "name": "cow bell",
@@ -12034,11 +12034,11 @@ const APP_DATA = {
     },
     "32066": {
       "name": "green gingerbread heart",
-      "category": "Others"
+      "category": "Food"
     },
     "32067": {
       "name": "blue gingerbread heart",
-      "category": "Others"
+      "category": "Food"
     },
     "32068": {
       "name": "leberkassemmel",
@@ -12058,15 +12058,15 @@ const APP_DATA = {
     },
     "32071": {
       "name": "empty beer mug",
-      "category": "Others"
+      "category": "Tools"
     },
     "32072": {
       "name": "beer mug",
-      "category": "Others"
+      "category": "Tools"
     },
     "32073": {
       "name": "unicorn weisswurst",
-      "category": "Others"
+      "category": "Food"
     },
     "32074": {
       "name": "plushie of gaz'Haragoth",
@@ -12090,15 +12090,15 @@ const APP_DATA = {
     },
     "3209": {
       "name": "voodoo doll",
-      "category": "Others"
+      "category": "Household"
     },
     "32093": {
       "name": "schnitzel meat grinder",
-      "category": "Others"
+      "category": "Tools"
     },
     "32096": {
       "name": "lots",
-      "category": "Others"
+      "category": "Books"
     },
     "32097": {
       "name": "lederhosen",
@@ -12130,27 +12130,27 @@ const APP_DATA = {
     },
     "32102": {
       "name": "traditional stein",
-      "category": "Others"
+      "category": "Shields"
     },
     "32103": {
       "name": "decorative blue sheet",
-      "category": "Others"
+      "category": "Tools"
     },
     "32104": {
       "name": "decorative red sheet",
-      "category": "Others"
+      "category": "Tools"
     },
     "32105": {
       "name": "decorative green sheet",
-      "category": "Others"
+      "category": "Tools"
     },
     "3211": {
       "name": "witchesbroom",
-      "category": "Others"
+      "category": "Tools"
     },
     "32114": {
       "name": "beer tap",
-      "category": "Others"
+      "category": "Tools"
     },
     "3212": {
       "name": "monk's diary",
@@ -12158,7 +12158,7 @@ const APP_DATA = {
     },
     "3213": {
       "name": "annihilation bear",
-      "category": "Others"
+      "category": "Household"
     },
     "3214": {
       "name": "blessed ankh",
@@ -12170,7 +12170,7 @@ const APP_DATA = {
     },
     "3216": {
       "name": "bill",
-      "category": "Others"
+      "category": "Books"
     },
     "3217": {
       "name": "letterbag",
@@ -12178,19 +12178,19 @@ const APP_DATA = {
     },
     "32170": {
       "name": "inscribed red heart",
-      "category": "Others"
+      "category": "Household"
     },
     "32171": {
       "name": "inscribed green heart",
-      "category": "Others"
+      "category": "Household"
     },
     "32172": {
       "name": "inscribed blue heart",
-      "category": "Others"
+      "category": "Household"
     },
     "3218": {
       "name": "present",
-      "category": "Others"
+      "category": "Containers"
     },
     "3219": {
       "name": "Waldo's post horn",
@@ -12214,7 +12214,7 @@ const APP_DATA = {
     },
     "32225": {
       "name": "scalpel",
-      "category": "Others"
+      "category": "Tools"
     },
     "32226": {
       "name": "purifier for lost souls",
@@ -12266,7 +12266,7 @@ const APP_DATA = {
     },
     "3232": {
       "name": "spyreport",
-      "category": "Others"
+      "category": "Books"
     },
     "3233": {
       "name": "tear of daraman",
@@ -12310,7 +12310,7 @@ const APP_DATA = {
     },
     "3242": {
       "name": "stuffed bunny",
-      "category": "Others"
+      "category": "Household"
     },
     "3243": {
       "name": "gemmed lamp",
@@ -12334,7 +12334,7 @@ const APP_DATA = {
     },
     "3249": {
       "name": "frozen starlight",
-      "category": "Distance"
+      "category": "Household"
     },
     "325": {
       "name": "withered plant",
@@ -12382,7 +12382,7 @@ const APP_DATA = {
     },
     "32582": {
       "name": "death knell",
-      "category": "Others"
+      "category": "Tools"
     },
     "32583": {
       "name": "skull coin",
@@ -12406,11 +12406,11 @@ const APP_DATA = {
     },
     "32589": {
       "name": "angel figurine",
-      "category": "Others"
+      "category": "Valuables"
     },
     "32591": {
       "name": "soulforged lantern",
-      "category": "Others"
+      "category": "Household"
     },
     "32593": {
       "name": "grimace",
@@ -12422,7 +12422,7 @@ const APP_DATA = {
     },
     "32595": {
       "name": "jagged sickle",
-      "category": "Tools"
+      "category": "Products"
     },
     "32596": {
       "name": "dark bell",
@@ -12430,7 +12430,7 @@ const APP_DATA = {
     },
     "32597": {
       "name": "ravenous circlet",
-      "category": "Others"
+      "category": "Products"
     },
     "32598": {
       "name": "pale worm's scalp",
@@ -12454,7 +12454,7 @@ const APP_DATA = {
     },
     "32603": {
       "name": "grave flower extract",
-      "category": "Others"
+      "category": "Potions"
     },
     "32616": {
       "name": "phantasmal axe",
@@ -12482,11 +12482,11 @@ const APP_DATA = {
     },
     "32622": {
       "name": "giant amethyst",
-      "category": "Others"
+      "category": "Valuables"
     },
     "32623": {
       "name": "giant topaz",
-      "category": "Others"
+      "category": "Valuables"
     },
     "32624": {
       "name": "amber with a bug",
@@ -12510,7 +12510,7 @@ const APP_DATA = {
     },
     "32630": {
       "name": "spooky hood",
-      "category": "Others"
+      "category": "Helmets"
     },
     "32631": {
       "name": "ghost claw",
@@ -12558,7 +12558,7 @@ const APP_DATA = {
     },
     "32698": {
       "name": "ensouled essence",
-      "category": "Others"
+      "category": "Products"
     },
     "327": {
       "name": "withered plant",
@@ -12574,7 +12574,7 @@ const APP_DATA = {
     },
     "32704": {
       "name": "phantasmal hair",
-      "category": "Others"
+      "category": "Products"
     },
     "32705": {
       "name": "pair of old bracers",
@@ -12586,7 +12586,7 @@ const APP_DATA = {
     },
     "32711": {
       "name": "luminescent crystal pickaxe",
-      "category": "Axe"
+      "category": "Tools"
     },
     "3272": {
       "name": "rapier",
@@ -12610,7 +12610,7 @@ const APP_DATA = {
     },
     "32746": {
       "name": "santa leech",
-      "category": "Others"
+      "category": "Household"
     },
     "3275": {
       "name": "double axe",
@@ -12662,11 +12662,11 @@ const APP_DATA = {
     },
     "32771": {
       "name": "moonstone",
-      "category": "Others"
+      "category": "Valuables"
     },
     "32772": {
       "name": "silver hand mirror",
-      "category": "Others"
+      "category": "Tools"
     },
     "32773": {
       "name": "ivory comb",
@@ -12798,7 +12798,7 @@ const APP_DATA = {
     },
     "3304": {
       "name": "crowbar",
-      "category": "Club"
+      "category": "Tools"
     },
     "3305": {
       "name": "battle hammer",
@@ -12818,7 +12818,7 @@ const APP_DATA = {
     },
     "3308": {
       "name": "machete",
-      "category": "Sword"
+      "category": "Tools"
     },
     "3309": {
       "name": "thunder hammer",
@@ -12918,7 +12918,7 @@ const APP_DATA = {
     },
     "3330": {
       "name": "heavy machete",
-      "category": "Sword"
+      "category": "Tools"
     },
     "33303": {
       "name": "blue marble",
@@ -13202,7 +13202,7 @@ const APP_DATA = {
     },
     "33778": {
       "name": "raw watermelon tourmaline",
-      "category": "Others"
+      "category": "Valuables"
     },
     "33779": {
       "name": "watermelon tourmaline",
@@ -13218,7 +13218,7 @@ const APP_DATA = {
     },
     "33781": {
       "name": "lion figurine",
-      "category": "Others"
+      "category": "Valuables"
     },
     "3379": {
       "name": "doublet",
@@ -13354,7 +13354,7 @@ const APP_DATA = {
     },
     "33930": {
       "name": "salt",
-      "category": "Others"
+      "category": "Food"
     },
     "33931": {
       "name": "cask",
@@ -13386,7 +13386,7 @@ const APP_DATA = {
     },
     "33938": {
       "name": "roots",
-      "category": "Others"
+      "category": "Products"
     },
     "33939": {
       "name": "cask",
@@ -13414,11 +13414,11 @@ const APP_DATA = {
     },
     "33944": {
       "name": "werehyaena talisman",
-      "category": "Others"
+      "category": "Products"
     },
     "33945": {
       "name": "ivory carving",
-      "category": "Others"
+      "category": "Products"
     },
     "33946": {
       "name": "cave rat",
@@ -13486,15 +13486,15 @@ const APP_DATA = {
     },
     "34014": {
       "name": "jaws",
-      "category": "Others"
+      "category": "Products"
     },
     "34016": {
       "name": "lit torch",
-      "category": "Others"
+      "category": "Household"
     },
     "34017": {
       "name": "lit torch",
-      "category": "Others"
+      "category": "Household"
     },
     "34018": {
       "name": "figurine of malice",
@@ -13526,11 +13526,11 @@ const APP_DATA = {
     },
     "34024": {
       "name": "gruesome fan",
-      "category": "Others"
+      "category": "Valuables"
     },
     "34025": {
       "name": "diabolic skull",
-      "category": "Others"
+      "category": "Valuables"
     },
     "3403": {
       "name": "tribal mask",
@@ -13554,15 +13554,15 @@ const APP_DATA = {
     },
     "34072": {
       "name": "spectral horseshoe",
-      "category": "Tools"
+      "category": "Valuables"
     },
     "34073": {
       "name": "spectral saddle",
-      "category": "Others"
+      "category": "Valuables"
     },
     "34074": {
       "name": "spectral horse tack",
-      "category": "Others"
+      "category": "Valuables"
     },
     "34075": {
       "name": "the skull of a beast",
@@ -13606,7 +13606,7 @@ const APP_DATA = {
     },
     "34085": {
       "name": "souleater",
-      "category": "Others"
+      "category": "Axe"
     },
     "34086": {
       "name": "soulcrusher",
@@ -13630,11 +13630,11 @@ const APP_DATA = {
     },
     "34090": {
       "name": "soultainter",
-      "category": "Others"
+      "category": "Wands"
     },
     "34091": {
       "name": "soulhexer",
-      "category": "Others"
+      "category": "Rods"
     },
     "34092": {
       "name": "soulshanks",
@@ -13678,7 +13678,7 @@ const APP_DATA = {
     },
     "34100": {
       "name": "Katex' blood",
-      "category": "Others"
+      "category": "Products"
     },
     "34101": {
       "name": "Utua's poison",
@@ -13694,7 +13694,7 @@ const APP_DATA = {
     },
     "34109": {
       "name": "bag you desire",
-      "category": "Containers"
+      "category": "Valuables"
     },
     "3411": {
       "name": "brass shield",
@@ -13714,7 +13714,7 @@ const APP_DATA = {
     },
     "34139": {
       "name": "infernal heart",
-      "category": "Others"
+      "category": "Products"
     },
     "3414": {
       "name": "mastermind shield",
@@ -13726,7 +13726,7 @@ const APP_DATA = {
     },
     "34141": {
       "name": "mould heart",
-      "category": "Others"
+      "category": "Products"
     },
     "34142": {
       "name": "distorted heart",
@@ -13746,7 +13746,7 @@ const APP_DATA = {
     },
     "34146": {
       "name": "infernal robe",
-      "category": "Others"
+      "category": "Products"
     },
     "34147": {
       "name": "hazardous robe",
@@ -13754,7 +13754,7 @@ const APP_DATA = {
     },
     "34148": {
       "name": "mould robe",
-      "category": "Others"
+      "category": "Products"
     },
     "34149": {
       "name": "distorted robe",
@@ -13806,7 +13806,7 @@ const APP_DATA = {
     },
     "34160": {
       "name": "lion crest",
-      "category": "Others"
+      "category": "Products"
     },
     "34161": {
       "name": "broken longbow",
@@ -13814,11 +13814,11 @@ const APP_DATA = {
     },
     "34162": {
       "name": "lion cloak patch",
-      "category": "Others"
+      "category": "Products"
     },
     "34163": {
       "name": "lion seal",
-      "category": "Others"
+      "category": "Products"
     },
     "34164": {
       "name": "fur shred",
@@ -13830,7 +13830,7 @@ const APP_DATA = {
     },
     "34170": {
       "name": "morbid tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "3418": {
       "name": "bonelord shield",
@@ -13838,7 +13838,7 @@ const APP_DATA = {
     },
     "3419": {
       "name": "crown shield",
-      "category": "Others"
+      "category": "Shields"
     },
     "342": {
       "name": "flower pot",
@@ -13870,7 +13870,7 @@ const APP_DATA = {
     },
     "34219": {
       "name": "werehyaena trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "3422": {
       "name": "great shield",
@@ -14050,11 +14050,11 @@ const APP_DATA = {
     },
     "3451": {
       "name": "pitchfork",
-      "category": "Others"
+      "category": "Tools"
     },
     "3452": {
       "name": "rake",
-      "category": "Others"
+      "category": "Tools"
     },
     "3453": {
       "name": "scythe",
@@ -14062,7 +14062,7 @@ const APP_DATA = {
     },
     "3454": {
       "name": "broom",
-      "category": "Others"
+      "category": "Tools"
     },
     "3455": {
       "name": "hoe",
@@ -14078,7 +14078,7 @@ const APP_DATA = {
     },
     "3459": {
       "name": "wooden hammer",
-      "category": "Club"
+      "category": "Tools"
     },
     "346": {
       "name": "flower pot",
@@ -14086,7 +14086,7 @@ const APP_DATA = {
     },
     "3460": {
       "name": "hammer",
-      "category": "Club"
+      "category": "Tools"
     },
     "3461": {
       "name": "saw",
@@ -14094,15 +14094,15 @@ const APP_DATA = {
     },
     "3462": {
       "name": "small axe",
-      "category": "Axe"
+      "category": "Tools"
     },
     "3463": {
       "name": "mirror",
-      "category": "Others"
+      "category": "Tools"
     },
     "3464": {
       "name": "baking tray",
-      "category": "Others"
+      "category": "Tools"
     },
     "3465": {
       "name": "pot",
@@ -14110,19 +14110,19 @@ const APP_DATA = {
     },
     "3466": {
       "name": "pan",
-      "category": "Others"
+      "category": "Tools"
     },
     "3467": {
       "name": "fork",
-      "category": "Others"
+      "category": "Tools"
     },
     "3468": {
       "name": "spoon",
-      "category": "Others"
+      "category": "Tools"
     },
     "3469": {
       "name": "kitchen knife",
-      "category": "Others"
+      "category": "Tools"
     },
     "347": {
       "name": "scroll",
@@ -14130,31 +14130,31 @@ const APP_DATA = {
     },
     "3470": {
       "name": "wooden spoon",
-      "category": "Others"
+      "category": "Tools"
     },
     "3471": {
       "name": "cleaver",
-      "category": "Axe"
+      "category": "Tools"
     },
     "3472": {
       "name": "oven spatula",
-      "category": "Others"
+      "category": "Tools"
     },
     "3473": {
       "name": "rolling pin",
-      "category": "Others"
+      "category": "Tools"
     },
     "3474": {
       "name": "bowl",
-      "category": "Distance"
+      "category": "Tools"
     },
     "3475": {
       "name": "bowl",
-      "category": "Distance"
+      "category": "Tools"
     },
     "3476": {
       "name": "bowl",
-      "category": "Distance"
+      "category": "Tools"
     },
     "3477": {
       "name": "ewer",
@@ -14170,7 +14170,7 @@ const APP_DATA = {
     },
     "348": {
       "name": "intelligence reports",
-      "category": "Others"
+      "category": "Books"
     },
     "3480": {
       "name": "ewer",
@@ -14178,15 +14178,15 @@ const APP_DATA = {
     },
     "3481": {
       "name": "closed trap",
-      "category": "Others"
+      "category": "Tools"
     },
     "3482": {
       "name": "trap",
-      "category": "Others"
+      "category": "Tools"
     },
     "3483": {
       "name": "fishing rod",
-      "category": "Rods"
+      "category": "Tools"
     },
     "349": {
       "name": "suspicious signet ring",
@@ -14210,19 +14210,19 @@ const APP_DATA = {
     },
     "3505": {
       "name": "letter",
-      "category": "Others"
+      "category": "Books"
     },
     "3506": {
       "name": "stamped letter",
-      "category": "Others"
+      "category": "Books"
     },
     "3507": {
       "name": "label",
-      "category": "Others"
+      "category": "Books"
     },
     "3509": {
       "name": "inkwell",
-      "category": "Others"
+      "category": "Tools"
     },
     "35226": {
       "name": "rascoohan rat revealer",
@@ -14282,7 +14282,7 @@ const APP_DATA = {
     },
     "3533": {
       "name": "black token",
-      "category": "Others"
+      "category": "Valuables"
     },
     "35336": {
       "name": "ballistic boulder",
@@ -14294,7 +14294,7 @@ const APP_DATA = {
     },
     "3534": {
       "name": "white token",
-      "category": "Others"
+      "category": "Valuables"
     },
     "3535": {
       "name": "white pawn",
@@ -14378,7 +14378,7 @@ const APP_DATA = {
     },
     "3551": {
       "name": "sandals",
-      "category": "Others"
+      "category": "Boots"
     },
     "35514": {
       "name": "jungle flail",
@@ -14426,7 +14426,7 @@ const APP_DATA = {
     },
     "35524": {
       "name": "jungle quiver",
-      "category": "Others"
+      "category": "Containers"
     },
     "3553": {
       "name": "bunnyslippers",
@@ -14446,11 +14446,11 @@ const APP_DATA = {
     },
     "35562": {
       "name": "quiver",
-      "category": "Others"
+      "category": "Containers"
     },
     "35563": {
       "name": "magic shield potion",
-      "category": "Shields"
+      "category": "Potions"
     },
     "3557": {
       "name": "plate legs",
@@ -14458,11 +14458,11 @@ const APP_DATA = {
     },
     "35571": {
       "name": "small treasure chest",
-      "category": "Containers"
+      "category": "Products"
     },
     "35572": {
       "name": "pirate coin",
-      "category": "Valuables"
+      "category": "Products"
     },
     "35573": {
       "name": "pirat's tail",
@@ -14470,7 +14470,7 @@ const APP_DATA = {
     },
     "35574": {
       "name": "shark fins",
-      "category": "Others"
+      "category": "Products"
     },
     "35576": {
       "name": "plushie of Tentugly",
@@ -14482,7 +14482,7 @@ const APP_DATA = {
     },
     "35578": {
       "name": "tiara",
-      "category": "Others"
+      "category": "Valuables"
     },
     "35579": {
       "name": "golden dustbin",
@@ -14498,7 +14498,7 @@ const APP_DATA = {
     },
     "35581": {
       "name": "golden cheese wedge",
-      "category": "Others"
+      "category": "Valuables"
     },
     "35588": {
       "name": "grappling hook",
@@ -14506,31 +14506,31 @@ const APP_DATA = {
     },
     "35589": {
       "name": "snowbash figurine",
-      "category": "Others"
+      "category": "Household"
     },
     "3559": {
       "name": "leather legs",
-      "category": "Others"
+      "category": "Legs"
     },
     "35590": {
       "name": "sandscourge figurine",
-      "category": "Others"
+      "category": "Household"
     },
     "35591": {
       "name": "mossmasher figurine",
-      "category": "Others"
+      "category": "Household"
     },
     "35592": {
       "name": "bladespark figurine",
-      "category": "Others"
+      "category": "Household"
     },
     "35595": {
       "name": "soap",
-      "category": "Others"
+      "category": "Valuables"
     },
     "35596": {
       "name": "mouldy powder",
-      "category": "Others"
+      "category": "Products"
     },
     "3560": {
       "name": "bast skirt",
@@ -14590,7 +14590,7 @@ const APP_DATA = {
     },
     "3563": {
       "name": "green tunic",
-      "category": "Others"
+      "category": "Armors"
     },
     "3564": {
       "name": "red tunic",
@@ -14618,11 +14618,11 @@ const APP_DATA = {
     },
     "35692": {
       "name": "raccoon santa",
-      "category": "Others"
+      "category": "Household"
     },
     "35695": {
       "name": "scrubbing brush",
-      "category": "Others"
+      "category": "Valuables"
     },
     "3570": {
       "name": "ball gown",
@@ -14686,11 +14686,11 @@ const APP_DATA = {
     },
     "35848": {
       "name": "blue quiver",
-      "category": "Others"
+      "category": "Containers"
     },
     "35849": {
       "name": "red quiver",
-      "category": "Others"
+      "category": "Containers"
     },
     "3585": {
       "name": "red apple",
@@ -14758,7 +14758,7 @@ const APP_DATA = {
     },
     "3597": {
       "name": "corncob",
-      "category": "Others"
+      "category": "Food"
     },
     "3598": {
       "name": "cookie",
@@ -14778,19 +14778,19 @@ const APP_DATA = {
     },
     "36019": {
       "name": "white lion doll",
-      "category": "Others"
+      "category": "Household"
     },
     "3602": {
       "name": "brown bread",
-      "category": "Others"
+      "category": "Food"
     },
     "36020": {
       "name": "white lion doll",
-      "category": "Others"
+      "category": "Household"
     },
     "3603": {
       "name": "flour",
-      "category": "Others"
+      "category": "Food"
     },
     "3604": {
       "name": "lump of dough",
@@ -14810,35 +14810,35 @@ const APP_DATA = {
     },
     "36478": {
       "name": "banor doll",
-      "category": "Others"
+      "category": "Household"
     },
     "36479": {
       "name": "banor doll",
-      "category": "Others"
+      "category": "Household"
     },
     "36480": {
       "name": "banor doll",
-      "category": "Others"
+      "category": "Household"
     },
     "36481": {
       "name": "banor doll",
-      "category": "Others"
+      "category": "Household"
     },
     "36543": {
       "name": "chisel",
-      "category": "Others"
+      "category": "Tools"
     },
     "36544": {
       "name": "brush",
-      "category": "Others"
+      "category": "Tools"
     },
     "36545": {
       "name": "marble floor",
-      "category": "Others"
+      "category": "Tools"
     },
     "3655": {
       "name": "moon flower",
-      "category": "Others"
+      "category": "Household"
     },
     "3658": {
       "name": "red rose",
@@ -14854,7 +14854,7 @@ const APP_DATA = {
     },
     "36599": {
       "name": "fiery gnomish stonesmasher",
-      "category": "Others"
+      "category": "Tools"
     },
     "3660": {
       "name": "yellow rose",
@@ -14862,7 +14862,7 @@ const APP_DATA = {
     },
     "36600": {
       "name": "gnomish stonesmasher",
-      "category": "Others"
+      "category": "Tools"
     },
     "36601": {
       "name": "sacramental wine",
@@ -14922,7 +14922,7 @@ const APP_DATA = {
     },
     "36666": {
       "name": "eldritch quiver",
-      "category": "Others"
+      "category": "Containers"
     },
     "36667": {
       "name": "eldritch breeches",
@@ -14946,11 +14946,11 @@ const APP_DATA = {
     },
     "36672": {
       "name": "eldritch folio",
-      "category": "Others"
+      "category": "Spellbooks"
     },
     "36673": {
       "name": "eldritch tome",
-      "category": "Others"
+      "category": "Spellbooks"
     },
     "36674": {
       "name": "eldritch rod",
@@ -14994,31 +14994,31 @@ const APP_DATA = {
     },
     "36723": {
       "name": "kooldown-aid",
-      "category": "Others"
+      "category": "Potions"
     },
     "36724": {
       "name": "strike enhancement",
-      "category": "Others"
+      "category": "Potions"
     },
     "36725": {
       "name": "stamina extension",
-      "category": "Others"
+      "category": "Potions"
     },
     "36726": {
       "name": "charm upgrade",
-      "category": "Others"
+      "category": "Potions"
     },
     "36727": {
       "name": "wealth duplex",
-      "category": "Others"
+      "category": "Potions"
     },
     "36728": {
       "name": "bestiary betterment",
-      "category": "Others"
+      "category": "Potions"
     },
     "36729": {
       "name": "fire resilience",
-      "category": "Others"
+      "category": "Potions"
     },
     "3673": {
       "name": "orange star",
@@ -15026,43 +15026,43 @@ const APP_DATA = {
     },
     "36730": {
       "name": "ice resilience",
-      "category": "Others"
+      "category": "Potions"
     },
     "36731": {
       "name": "earth resilience",
-      "category": "Others"
+      "category": "Potions"
     },
     "36732": {
       "name": "energy resilience",
-      "category": "Others"
+      "category": "Potions"
     },
     "36733": {
       "name": "holy resilience",
-      "category": "Others"
+      "category": "Potions"
     },
     "36734": {
       "name": "death resilience",
-      "category": "Others"
+      "category": "Potions"
     },
     "36735": {
       "name": "physical resilience",
-      "category": "Others"
+      "category": "Potions"
     },
     "36736": {
       "name": "fire amplification",
-      "category": "Others"
+      "category": "Potions"
     },
     "36737": {
       "name": "ice amplification",
-      "category": "Others"
+      "category": "Potions"
     },
     "36738": {
       "name": "earth amplification",
-      "category": "Others"
+      "category": "Potions"
     },
     "36739": {
       "name": "energy amplification",
-      "category": "Others"
+      "category": "Potions"
     },
     "3674": {
       "name": "goat grass",
@@ -15070,27 +15070,27 @@ const APP_DATA = {
     },
     "36740": {
       "name": "holy amplification",
-      "category": "Others"
+      "category": "Potions"
     },
     "36741": {
       "name": "death amplification",
-      "category": "Others"
+      "category": "Potions"
     },
     "36742": {
       "name": "physical amplification",
-      "category": "Others"
+      "category": "Potions"
     },
     "36769": {
       "name": "lavaworm spike roots",
-      "category": "Others"
+      "category": "Products"
     },
     "36770": {
       "name": "lavaworm spikes",
-      "category": "Others"
+      "category": "Products"
     },
     "36771": {
       "name": "lavaworm jaws",
-      "category": "Others"
+      "category": "Products"
     },
     "36772": {
       "name": "streaked devourer eyes",
@@ -15146,11 +15146,11 @@ const APP_DATA = {
     },
     "36785": {
       "name": "lavafungus head",
-      "category": "Others"
+      "category": "Products"
     },
     "36786": {
       "name": "lavafungus ring",
-      "category": "Rings"
+      "category": "Products"
     },
     "36787": {
       "name": "cave chimera head",
@@ -15194,19 +15194,19 @@ const APP_DATA = {
     },
     "36805": {
       "name": "carnisylvan finger",
-      "category": "Others"
+      "category": "Products"
     },
     "36806": {
       "name": "carnisylvan bark",
-      "category": "Others"
+      "category": "Products"
     },
     "36807": {
       "name": "human teeth",
-      "category": "Others"
+      "category": "Products"
     },
     "36808": {
       "name": "old royal diary",
-      "category": "Others"
+      "category": "Products"
     },
     "36809": {
       "name": "curl of hair",
@@ -15238,7 +15238,7 @@ const APP_DATA = {
     },
     "36822": {
       "name": "scorpion charm",
-      "category": "Others"
+      "category": "Products"
     },
     "36823": {
       "name": "bashmu feather",
@@ -15246,15 +15246,15 @@ const APP_DATA = {
     },
     "36827": {
       "name": "drome cube",
-      "category": "Others"
+      "category": "Valuables"
     },
     "36835": {
       "name": "eldritch crystal",
-      "category": "Others"
+      "category": "Valuables"
     },
     "36836": {
       "name": "eldritch casket",
-      "category": "Potions"
+      "category": "Valuables"
     },
     "36837": {
       "name": "plushie of lavaworm",
@@ -15262,7 +15262,7 @@ const APP_DATA = {
     },
     "36838": {
       "name": "folded eldritch carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "36875": {
       "name": "golden hand mirror",
@@ -15294,7 +15294,7 @@ const APP_DATA = {
     },
     "36951": {
       "name": "folded artefact carpet I",
-      "category": "Others"
+      "category": "Household"
     },
     "36952": {
       "name": "folded artefact carpet II",
@@ -15310,7 +15310,7 @@ const APP_DATA = {
     },
     "36955": {
       "name": "folded artefact carpet V",
-      "category": "Others"
+      "category": "Household"
     },
     "36956": {
       "name": "folded artefact carpet VI",
@@ -15326,7 +15326,7 @@ const APP_DATA = {
     },
     "36972": {
       "name": "old girtablilu carapace",
-      "category": "Others"
+      "category": "Products"
     },
     "36978": {
       "name": "magic hat",
@@ -15362,11 +15362,11 @@ const APP_DATA = {
     },
     "37002": {
       "name": "tagralt-inlaid scabbard",
-      "category": "Others"
+      "category": "Valuables"
     },
     "37003": {
       "name": "eye-embroidered veil",
-      "category": "Others"
+      "category": "Valuables"
     },
     "37052": {
       "name": "bonelord tome",
@@ -15394,7 +15394,7 @@ const APP_DATA = {
     },
     "37058": {
       "name": "little adventurer doll",
-      "category": "Others"
+      "category": "Household"
     },
     "37059": {
       "name": "lucky clover amulet",
@@ -15610,35 +15610,35 @@ const APP_DATA = {
     },
     "37354": {
       "name": "folded dragon lord carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37357": {
       "name": "folded dragon carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37358": {
       "name": "folded elemental carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "3736": {
       "name": "star herb",
-      "category": "Distance"
+      "category": "Products"
     },
     "37360": {
       "name": "folded Morgaroth carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37362": {
       "name": "folded Ghazbaran carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37364": {
       "name": "folded Orshabaal carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37366": {
       "name": "folded red cake carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "3737": {
       "name": "fern",
@@ -15646,27 +15646,27 @@ const APP_DATA = {
     },
     "37374": {
       "name": "folded orange cake carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37375": {
       "name": "folded yellow cake carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37376": {
       "name": "folded green cake carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37377": {
       "name": "folded sky cake carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37378": {
       "name": "folded blue cake carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37379": {
       "name": "folded purple cake carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "3738": {
       "name": "sling herb",
@@ -15674,11 +15674,11 @@ const APP_DATA = {
     },
     "37380": {
       "name": "folded pink cake carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37382": {
       "name": "folded red Tibia carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "3739": {
       "name": "powder herb",
@@ -15686,31 +15686,31 @@ const APP_DATA = {
     },
     "37390": {
       "name": "folded orange Tibia carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37391": {
       "name": "folded yellow Tibia carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37392": {
       "name": "folded green Tibia carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37393": {
       "name": "folded sky Tibia carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37394": {
       "name": "folded blue Tibia carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37395": {
       "name": "folded purple Tibia carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37396": {
       "name": "folded pink Tibia carpet",
-      "category": "Others"
+      "category": "Household"
     },
     "37397": {
       "name": "wind-up key",
@@ -15782,7 +15782,7 @@ const APP_DATA = {
     },
     "37457": {
       "name": "supernatural box",
-      "category": "Containers"
+      "category": "Household"
     },
     "37458": {
       "name": "sparkling fireworks rocket",
@@ -15798,15 +15798,15 @@ const APP_DATA = {
     },
     "37461": {
       "name": "balloon box",
-      "category": "Containers"
+      "category": "Household"
     },
     "37462": {
       "name": "special carpet box",
-      "category": "Containers"
+      "category": "Household"
     },
     "37463": {
       "name": "luminous box",
-      "category": "Containers"
+      "category": "Household"
     },
     "37465": {
       "name": "box full of presents",
@@ -15814,123 +15814,123 @@ const APP_DATA = {
     },
     "37466": {
       "name": "embroidered box",
-      "category": "Containers"
+      "category": "Household"
     },
     "37467": {
       "name": "carpet box",
-      "category": "Containers"
+      "category": "Household"
     },
     "37468": {
       "name": "special fx box",
-      "category": "Containers"
+      "category": "Household"
     },
     "37469": {
       "name": "special balloon box",
-      "category": "Containers"
+      "category": "Household"
     },
     "37471": {
       "name": "blue balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37472": {
       "name": "green balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37491": {
       "name": "orange balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37496": {
       "name": "pink balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37497": {
       "name": "purple balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37498": {
       "name": "red balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37499": {
       "name": "teal balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37500": {
       "name": "yellow balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37501": {
       "name": "colourful balloons",
-      "category": "Others"
+      "category": "Household"
     },
     "37502": {
       "name": "bonelord balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37503": {
       "name": "cyclops balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37504": {
       "name": "cyclops head balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37505": {
       "name": "dwarf balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37506": {
       "name": "hydra balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37507": {
       "name": "orc balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37508": {
       "name": "orc head balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37509": {
       "name": "Tibianus balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37510": {
       "name": "Eloise balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37511": {
       "name": "rotworm balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37512": {
       "name": "rotworm head balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37513": {
       "name": "yellow 25 years balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37514": {
       "name": "red 25 years balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37515": {
       "name": "teal 25 years balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37516": {
       "name": "green 25 years balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37517": {
       "name": "orange 25 years balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37518": {
       "name": "pink 25 years balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "37530": {
       "name": "bottle of champagne",
@@ -15974,15 +15974,15 @@ const APP_DATA = {
     },
     "37540": {
       "name": "blue wallpaper",
-      "category": "Others"
+      "category": "Household"
     },
     "37541": {
       "name": "green wallpaper",
-      "category": "Others"
+      "category": "Household"
     },
     "37542": {
       "name": "golden wallpaper",
-      "category": "Valuables"
+      "category": "Household"
     },
     "37543": {
       "name": "string of fairy lights",
@@ -16026,23 +16026,23 @@ const APP_DATA = {
     },
     "37567": {
       "name": "blue present kit",
-      "category": "Others"
+      "category": "Household"
     },
     "37568": {
       "name": "red present kit",
-      "category": "Others"
+      "category": "Household"
     },
     "37569": {
       "name": "small blue present kit",
-      "category": "Others"
+      "category": "Household"
     },
     "37570": {
       "name": "yellow present kit",
-      "category": "Others"
+      "category": "Household"
     },
     "37571": {
       "name": "another yellow present kit",
-      "category": "Others"
+      "category": "Household"
     },
     "37572": {
       "name": "vessel of Gaz'haragoth",
@@ -16134,7 +16134,7 @@ const APP_DATA = {
     },
     "37717": {
       "name": "dragon pinata kit",
-      "category": "Others"
+      "category": "Household"
     },
     "37743": {
       "name": "draptor doll",
@@ -16210,7 +16210,7 @@ const APP_DATA = {
     },
     "38706": {
       "name": "observer tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "38843": {
       "name": "silver and a golden hand",
@@ -16226,23 +16226,23 @@ const APP_DATA = {
     },
     "39036": {
       "name": "rainbow opal",
-      "category": "Distance"
+      "category": "Valuables"
     },
     "39037": {
       "name": "cobalt ridge",
-      "category": "Others"
+      "category": "Valuables"
     },
     "39038": {
       "name": "royal almandine",
-      "category": "Others"
+      "category": "Valuables"
     },
     "39039": {
       "name": "cerulean abyss",
-      "category": "Others"
+      "category": "Valuables"
     },
     "39040": {
       "name": "fiery tear",
-      "category": "Others"
+      "category": "Valuables"
     },
     "39132": {
       "name": "moon mint",
@@ -16290,7 +16290,7 @@ const APP_DATA = {
     },
     "39150": {
       "name": "alicorn quiver",
-      "category": "Others"
+      "category": "Containers"
     },
     "39151": {
       "name": "arcanomancer regalia",
@@ -16298,7 +16298,7 @@ const APP_DATA = {
     },
     "39152": {
       "name": "arcanomancer folio",
-      "category": "Others"
+      "category": "Spellbooks"
     },
     "39153": {
       "name": "arboreal crown",
@@ -16306,7 +16306,7 @@ const APP_DATA = {
     },
     "39154": {
       "name": "arboreal tome",
-      "category": "Others"
+      "category": "Spellbooks"
     },
     "39155": {
       "name": "naga sword",
@@ -16330,7 +16330,7 @@ const APP_DATA = {
     },
     "39160": {
       "name": "naga quiver",
-      "category": "Others"
+      "category": "Containers"
     },
     "39161": {
       "name": "feverbloom boots",
@@ -16386,15 +16386,15 @@ const APP_DATA = {
     },
     "39183": {
       "name": "charged arcanomancer sigil",
-      "category": "Others"
+      "category": "Rings"
     },
     "39184": {
       "name": "charged arcanomancer sigil",
-      "category": "Others"
+      "category": "Rings"
     },
     "39185": {
       "name": "arcanomancer sigil",
-      "category": "Others"
+      "category": "Rings"
     },
     "39186": {
       "name": "charged arboreal ring",
@@ -16470,7 +16470,7 @@ const APP_DATA = {
     },
     "39378": {
       "name": "sabretooth fur",
-      "category": "Others"
+      "category": "Products"
     },
     "39379": {
       "name": "emerald tortoise shell",
@@ -16482,15 +16482,15 @@ const APP_DATA = {
     },
     "39381": {
       "name": "nighthunter wing",
-      "category": "Others"
+      "category": "Products"
     },
     "39382": {
       "name": "prehemoth horns",
-      "category": "Others"
+      "category": "Products"
     },
     "39383": {
       "name": "prehemoth claw",
-      "category": "Others"
+      "category": "Products"
     },
     "39384": {
       "name": "stalking seeds",
@@ -16502,23 +16502,23 @@ const APP_DATA = {
     },
     "39386": {
       "name": "mantosaurus jaw",
-      "category": "Others"
+      "category": "Products"
     },
     "39387": {
       "name": "headpecker beak",
-      "category": "Others"
+      "category": "Products"
     },
     "39388": {
       "name": "headpecker feather",
-      "category": "Others"
+      "category": "Products"
     },
     "39389": {
       "name": "ripptor claw",
-      "category": "Others"
+      "category": "Products"
     },
     "39391": {
       "name": "ripptor scales",
-      "category": "Others"
+      "category": "Products"
     },
     "39392": {
       "name": "gorerilla mane",
@@ -16534,7 +16534,7 @@ const APP_DATA = {
     },
     "39395": {
       "name": "mercurial wing",
-      "category": "Others"
+      "category": "Products"
     },
     "39397": {
       "name": "coral powder",
@@ -16554,23 +16554,23 @@ const APP_DATA = {
     },
     "39401": {
       "name": "makara fin",
-      "category": "Others"
+      "category": "Products"
     },
     "39402": {
       "name": "makara tongue",
-      "category": "Others"
+      "category": "Products"
     },
     "39403": {
       "name": "jungle moa feather",
-      "category": "Others"
+      "category": "Products"
     },
     "39404": {
       "name": "jungle moa claw",
-      "category": "Others"
+      "category": "Products"
     },
     "39405": {
       "name": "jungle moa egg",
-      "category": "Others"
+      "category": "Products"
     },
     "39406": {
       "name": "coral branch",
@@ -16582,7 +16582,7 @@ const APP_DATA = {
     },
     "39408": {
       "name": "small tropical fish",
-      "category": "Others"
+      "category": "Products"
     },
     "39409": {
       "name": "two-headed turtle heads",
@@ -16590,23 +16590,23 @@ const APP_DATA = {
     },
     "39410": {
       "name": "hydrophytes",
-      "category": "Others"
+      "category": "Products"
     },
     "39411": {
       "name": "naga armring",
-      "category": "Rings"
+      "category": "Products"
     },
     "39412": {
       "name": "naga earring",
-      "category": "Rings"
+      "category": "Products"
     },
     "39413": {
       "name": "naga archer scales",
-      "category": "Others"
+      "category": "Products"
     },
     "39414": {
       "name": "naga warrior scales",
-      "category": "Others"
+      "category": "Products"
     },
     "39415": {
       "name": "corrupt naga scales",
@@ -16614,15 +16614,15 @@ const APP_DATA = {
     },
     "39416": {
       "name": "rogue naga scales",
-      "category": "Others"
+      "category": "Products"
     },
     "39417": {
       "name": "parder tooth",
-      "category": "Others"
+      "category": "Products"
     },
     "39418": {
       "name": "parder fur",
-      "category": "Others"
+      "category": "Products"
     },
     "39536": {
       "name": "candy lure",
@@ -16630,15 +16630,15 @@ const APP_DATA = {
     },
     "39543": {
       "name": "smoldering eye",
-      "category": "Rings"
+      "category": "Products"
     },
     "39544": {
       "name": "firefighting axe",
-      "category": "Axe"
+      "category": "Valuables"
     },
     "39545": {
       "name": "portable flame",
-      "category": "Others"
+      "category": "Valuables"
     },
     "39546": {
       "name": "primal bag",
@@ -16646,7 +16646,7 @@ const APP_DATA = {
     },
     "39548": {
       "name": "colourful water lily",
-      "category": "Others"
+      "category": "Tools"
     },
     "39568": {
       "name": "naga nest",
@@ -16694,51 +16694,51 @@ const APP_DATA = {
     },
     "39669": {
       "name": "purple 25 years balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "39670": {
       "name": "blue 25 years balloon",
-      "category": "Others"
+      "category": "Household"
     },
     "39671": {
       "name": "balloon no.0",
-      "category": "Others"
+      "category": "Household"
     },
     "39672": {
       "name": "balloon no.1",
-      "category": "Others"
+      "category": "Household"
     },
     "39673": {
       "name": "balloon no.2",
-      "category": "Others"
+      "category": "Household"
     },
     "39674": {
       "name": "balloon no.3",
-      "category": "Others"
+      "category": "Household"
     },
     "39675": {
       "name": "balloon no.4",
-      "category": "Others"
+      "category": "Household"
     },
     "39676": {
       "name": "balloon no.5",
-      "category": "Others"
+      "category": "Household"
     },
     "39677": {
       "name": "balloon no.6",
-      "category": "Others"
+      "category": "Household"
     },
     "39678": {
       "name": "balloon no.7",
-      "category": "Others"
+      "category": "Household"
     },
     "39679": {
       "name": "balloon no.8",
-      "category": "Others"
+      "category": "Household"
     },
     "39680": {
       "name": "balloon no.9",
-      "category": "Others"
+      "category": "Household"
     },
     "39693": {
       "name": "25 years backpack",
@@ -16746,19 +16746,19 @@ const APP_DATA = {
     },
     "39695": {
       "name": "lucky dragon kit",
-      "category": "Others"
+      "category": "Household"
     },
     "39697": {
       "name": "rainbow torch",
-      "category": "Distance"
+      "category": "Household"
     },
     "39698": {
       "name": "lit rainbow torch",
-      "category": "Distance"
+      "category": "Household"
     },
     "39699": {
       "name": "rainbow torch",
-      "category": "Distance"
+      "category": "Household"
     },
     "397": {
       "name": "amazon disguise kit",
@@ -16766,23 +16766,23 @@ const APP_DATA = {
     },
     "39700": {
       "name": "lit rainbow torch",
-      "category": "Distance"
+      "category": "Household"
     },
     "39701": {
       "name": "rainbow torch",
-      "category": "Distance"
+      "category": "Household"
     },
     "39702": {
       "name": "lit rainbow torch",
-      "category": "Distance"
+      "category": "Household"
     },
     "39703": {
       "name": "burnt down rainbow torch",
-      "category": "Distance"
+      "category": "Household"
     },
     "39704": {
       "name": "small reward box",
-      "category": "Containers"
+      "category": "Household"
     },
     "39705": {
       "name": "reward box",
@@ -16798,7 +16798,7 @@ const APP_DATA = {
     },
     "39710": {
       "name": "big reward box",
-      "category": "Containers"
+      "category": "Household"
     },
     "39754": {
       "name": "lilypad backpack",
@@ -16806,7 +16806,7 @@ const APP_DATA = {
     },
     "39755": {
       "name": "naga basin",
-      "category": "Others"
+      "category": "Household"
     },
     "39757": {
       "name": "yeti doll",
@@ -16862,7 +16862,7 @@ const APP_DATA = {
     },
     "402": {
       "name": "secret letter",
-      "category": "Others"
+      "category": "Books"
     },
     "403": {
       "name": "File AH-X17L89",
@@ -16942,7 +16942,7 @@ const APP_DATA = {
     },
     "40530": {
       "name": "broken macuahuitl",
-      "category": "Sword"
+      "category": "Products"
     },
     "40531": {
       "name": "broken Iks faulds",
@@ -16958,11 +16958,11 @@ const APP_DATA = {
     },
     "40534": {
       "name": "broken Iks sandals",
-      "category": "Products"
+      "category": "Boots"
     },
     "40535": {
       "name": "broken Iks spear",
-      "category": "Distance"
+      "category": "Axe"
     },
     "40578": {
       "name": "the living idol of tukh",
@@ -16978,7 +16978,7 @@ const APP_DATA = {
     },
     "40583": {
       "name": "liodile fang",
-      "category": "Others"
+      "category": "Products"
     },
     "40584": {
       "name": "boar man hoof",
@@ -16994,7 +16994,7 @@ const APP_DATA = {
     },
     "40587": {
       "name": "rhindeer antlers",
-      "category": "Others"
+      "category": "Products"
     },
     "40588": {
       "name": "antler-horn helmet",
@@ -17070,7 +17070,7 @@ const APP_DATA = {
     },
     "4100": {
       "name": "gamemaster doll",
-      "category": "Others"
+      "category": "Household"
     },
     "4115": {
       "name": "phoenix statue",
@@ -17186,7 +17186,7 @@ const APP_DATA = {
     },
     "43729": {
       "name": "werecrocodile tongue",
-      "category": "Others"
+      "category": "Products"
     },
     "43730": {
       "name": "weretiger tooth",
@@ -17198,15 +17198,15 @@ const APP_DATA = {
     },
     "43732": {
       "name": "silver moon coin",
-      "category": "Valuables"
+      "category": "Products"
     },
     "43733": {
       "name": "silver foxmouse coin",
-      "category": "Valuables"
+      "category": "Products"
     },
     "43734": {
       "name": "golden sun coin",
-      "category": "Valuables"
+      "category": "Products"
     },
     "43735": {
       "name": "golden tiger coin",
@@ -17214,7 +17214,7 @@ const APP_DATA = {
     },
     "43736": {
       "name": "moon pin",
-      "category": "Others"
+      "category": "Products"
     },
     "43737": {
       "name": "sun brooch",
@@ -17266,7 +17266,7 @@ const APP_DATA = {
     },
     "43849": {
       "name": "rotten roots",
-      "category": "Others"
+      "category": "Products"
     },
     "43850": {
       "name": "dark obsidian splinter",
@@ -17274,7 +17274,7 @@ const APP_DATA = {
     },
     "43851": {
       "name": "darklight matter",
-      "category": "Others"
+      "category": "Products"
     },
     "43852": {
       "name": "darklight basalt chunk",
@@ -17282,15 +17282,15 @@ const APP_DATA = {
     },
     "43853": {
       "name": "darklight core",
-      "category": "Others"
+      "category": "Products"
     },
     "43854": {
       "name": "Item 43854",
-      "category": "Others"
+      "category": "Products"
     },
     "43855": {
       "name": "Item 43855",
-      "category": "Others"
+      "category": "Products"
     },
     "43856": {
       "name": "Item 43856",
@@ -17398,11 +17398,11 @@ const APP_DATA = {
     },
     "43882": {
       "name": "sanguine coil",
-      "category": "Others"
+      "category": "Wands"
     },
     "43883": {
       "name": "grand sanguine coil",
-      "category": "Others"
+      "category": "Wands"
     },
     "43884": {
       "name": "sanguine boots",
@@ -17438,7 +17438,7 @@ const APP_DATA = {
     },
     "43895": {
       "name": "bag you covet",
-      "category": "Containers"
+      "category": "Valuables"
     },
     "43896": {
       "name": "Item 43896",
@@ -17466,15 +17466,15 @@ const APP_DATA = {
     },
     "43915": {
       "name": "weretiger trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "43916": {
       "name": "werecrocodile trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "43917": {
       "name": "werepanther trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "43930": {
       "name": "Item 43930",
@@ -17614,7 +17614,7 @@ const APP_DATA = {
     },
     "44064": {
       "name": "training shield",
-      "category": "Shields"
+      "category": "Exercise"
     },
     "44065": {
       "name": "Exercise Shield",
@@ -17866,15 +17866,15 @@ const APP_DATA = {
     },
     "44743": {
       "name": "Nimmersatt's seal",
-      "category": "Others"
+      "category": "Products"
     },
     "44744": {
       "name": "molten dragon essence",
-      "category": "Others"
+      "category": "Products"
     },
     "44745": {
       "name": "mega dragon heart",
-      "category": "Others"
+      "category": "Products"
     },
     "44746": {
       "name": "dragolisk eye",
@@ -17894,23 +17894,23 @@ const APP_DATA = {
     },
     "44750": {
       "name": "exalted seal",
-      "category": "Products"
+      "category": "Valuables"
     },
     "44751": {
       "name": "gold-scaled sentinel",
-      "category": "Products"
+      "category": "Valuables"
     },
     "44752": {
       "name": "crystallized blood",
-      "category": "Others"
+      "category": "Valuables"
     },
     "44753": {
       "name": "herald's insignia ",
-      "category": "Others"
+      "category": "Valuables"
     },
     "44754": {
       "name": "herald's wings",
-      "category": "Others"
+      "category": "Valuables"
     },
     "44755": {
       "name": "Item 44755",
@@ -17934,11 +17934,11 @@ const APP_DATA = {
     },
     "45639": {
       "name": "cocoa grimoire",
-      "category": "Others"
+      "category": "Spellbooks"
     },
     "45640": {
       "name": "creamy grimoire",
-      "category": "Others"
+      "category": "Spellbooks"
     },
     "45641": {
       "name": "candy necklace",
@@ -17954,7 +17954,7 @@ const APP_DATA = {
     },
     "45644": {
       "name": "candy-coated quiver",
-      "category": "Others"
+      "category": "Containers"
     },
     "45646": {
       "name": "Item 45646",
@@ -17982,27 +17982,27 @@ const APP_DATA = {
     },
     "45652": {
       "name": "preserved pink seed",
-      "category": "Others"
+      "category": "Products"
     },
     "45653": {
       "name": "preserved red seed",
-      "category": "Others"
+      "category": "Products"
     },
     "45654": {
       "name": "preserved light blue seed",
-      "category": "Others"
+      "category": "Products"
     },
     "45655": {
       "name": "preserved violet seed",
-      "category": "Others"
+      "category": "Products"
     },
     "45656": {
       "name": "preserved purple seed",
-      "category": "Others"
+      "category": "Products"
     },
     "45657": {
       "name": "preserved yellow seed",
-      "category": "Others"
+      "category": "Products"
     },
     "46625": {
       "name": "Item 46625",
@@ -20550,7 +20550,7 @@ const APP_DATA = {
     },
     "48116": {
       "name": "gummy rotworm",
-      "category": "Others"
+      "category": "Food"
     },
     "48118": {
       "name": "Item 48118",
@@ -20662,7 +20662,7 @@ const APP_DATA = {
     },
     "48273": {
       "name": "taiyaki ice cream",
-      "category": "Products"
+      "category": "Food"
     },
     "48278": {
       "name": "Item 48278",
@@ -20714,7 +20714,7 @@ const APP_DATA = {
     },
     "4839": {
       "name": "hydra egg",
-      "category": "Others"
+      "category": "Products"
     },
     "4840": {
       "name": "spectral stone",
@@ -20750,7 +20750,7 @@ const APP_DATA = {
     },
     "48424": {
       "name": "pegasus feather",
-      "category": "Others"
+      "category": "Tools"
     },
     "4843": {
       "name": "sheet of tracing paper",
@@ -20794,7 +20794,7 @@ const APP_DATA = {
     },
     "48505": {
       "name": "preserved dark seed",
-      "category": "Others"
+      "category": "Products"
     },
     "48508": {
       "name": "amber souvenir",
@@ -20806,11 +20806,11 @@ const APP_DATA = {
     },
     "48510": {
       "name": "demon root",
-      "category": "Others"
+      "category": "Food"
     },
     "48511": {
       "name": "resin parasite",
-      "category": "Others"
+      "category": "Food"
     },
     "48512": {
       "name": "Item 48512",
@@ -20830,7 +20830,7 @@ const APP_DATA = {
     },
     "48516": {
       "name": "root tentacle",
-      "category": "Others"
+      "category": "Food"
     },
     "48517": {
       "name": "fish eye",
@@ -21670,19 +21670,19 @@ const APP_DATA = {
     },
     "49894": {
       "name": "Item 49894",
-      "category": "Others"
+      "category": "Products"
     },
     "49904": {
       "name": "Item 49904",
-      "category": "Others"
+      "category": "Products"
     },
     "49908": {
       "name": "Item 49908",
-      "category": "Others"
+      "category": "Products"
     },
     "49909": {
       "name": "Item 49909",
-      "category": "Others"
+      "category": "Products"
     },
     "49910": {
       "name": "Item 49910",
@@ -21706,7 +21706,7 @@ const APP_DATA = {
     },
     "50055": {
       "name": "hellhunter eye",
-      "category": "Others"
+      "category": "Products"
     },
     "50056": {
       "name": "brinebrute claw",
@@ -21714,7 +21714,7 @@ const APP_DATA = {
     },
     "50057": {
       "name": "sineater wing",
-      "category": "Others"
+      "category": "Products"
     },
     "50058": {
       "name": "broodrider saddle",
@@ -21742,7 +21742,7 @@ const APP_DATA = {
     },
     "50064": {
       "name": "demon in a green box",
-      "category": "Containers"
+      "category": "Products"
     },
     "50065": {
       "name": "Item 50065",
@@ -21786,7 +21786,7 @@ const APP_DATA = {
     },
     "50124": {
       "name": "arbaziloth santa",
-      "category": "Others"
+      "category": "Household"
     },
     "5014": {
       "name": "mandrake",
@@ -21838,79 +21838,79 @@ const APP_DATA = {
     },
     "50157": {
       "name": "sanguine claws",
-      "category": "Others"
+      "category": "Fist"
     },
     "50158": {
       "name": "grand sanguine claws",
-      "category": "Others"
+      "category": "Fist"
     },
     "50159": {
       "name": "soulkamas",
-      "category": "Others"
+      "category": "Fist"
     },
     "50160": {
       "name": "naga katar",
-      "category": "Others"
+      "category": "Fist"
     },
     "50161": {
       "name": "falcon sai",
-      "category": "Others"
+      "category": "Fist"
     },
     "50162": {
       "name": "lion claws",
-      "category": "Others"
+      "category": "Fist"
     },
     "50163": {
       "name": "crude umbral katar",
-      "category": "Others"
+      "category": "Fist"
     },
     "50164": {
       "name": "umbral katar",
-      "category": "Others"
+      "category": "Fist"
     },
     "50165": {
       "name": "umbral master katar",
-      "category": "Others"
+      "category": "Fist"
     },
     "50166": {
       "name": "light jo staff",
-      "category": "Club"
+      "category": "Fist"
     },
     "50167": {
       "name": "cobra bo",
-      "category": "Others"
+      "category": "Fist"
     },
     "50168": {
       "name": "nunchaku of destruction",
-      "category": "Others"
+      "category": "Fist"
     },
     "50169": {
       "name": "eldritch crescent moon spade",
-      "category": "Others"
+      "category": "Fist"
     },
     "50170": {
       "name": "gilded eldritch crescent moon spade",
-      "category": "Others"
+      "category": "Fist"
     },
     "50171": {
       "name": "jo staff",
-      "category": "Club"
+      "category": "Fist"
     },
     "50176": {
       "name": "depth claws",
-      "category": "Others"
+      "category": "Fist"
     },
     "50181": {
       "name": "pair of monk fists",
-      "category": "Others"
+      "category": "Fist"
     },
     "50182": {
       "name": "nunchaku",
-      "category": "Others"
+      "category": "Fist"
     },
     "50183": {
       "name": "sais",
-      "category": "Others"
+      "category": "Fist"
     },
     "50184": {
       "name": "mutant hide trousers",
@@ -21962,15 +21962,15 @@ const APP_DATA = {
     },
     "5021": {
       "name": "orichalcum pearl",
-      "category": "Others"
+      "category": "Valuables"
     },
     "50233": {
       "name": "Item 50233",
-      "category": "Others"
+      "category": "Household"
     },
     "50239": {
       "name": "amber kusarigama",
-      "category": "Others"
+      "category": "Fist"
     },
     "50240": {
       "name": "soulsoles",
@@ -21978,19 +21978,19 @@ const APP_DATA = {
     },
     "50250": {
       "name": "inferniarch claws",
-      "category": "Others"
+      "category": "Fist"
     },
     "50251": {
       "name": "rending inferniarch claws",
-      "category": "Others"
+      "category": "Fist"
     },
     "50252": {
       "name": "draining inferniarch claws",
-      "category": "Others"
+      "category": "Fist"
     },
     "50253": {
       "name": "siphoning inferniarch claws",
-      "category": "Others"
+      "category": "Fist"
     },
     "50254": {
       "name": "soulgarb",
@@ -22050,19 +22050,19 @@ const APP_DATA = {
     },
     "50270": {
       "name": "bambus jo",
-      "category": "Others"
+      "category": "Fist"
     },
     "50271": {
       "name": "fists of enlightenment",
-      "category": "Others"
+      "category": "Fist"
     },
     "50272": {
       "name": "sai of enlightenment",
-      "category": "Others"
+      "category": "Fist"
     },
     "50273": {
       "name": "nunchaku of enlightenment",
-      "category": "Others"
+      "category": "Fist"
     },
     "50274": {
       "name": "coned hat of enlightenment",
@@ -22106,7 +22106,7 @@ const APP_DATA = {
     },
     "50292": {
       "name": "training wraps",
-      "category": "Others"
+      "category": "Exercise"
     },
     "50293": {
       "name": "Exercise Wraps",
@@ -22130,7 +22130,7 @@ const APP_DATA = {
     },
     "50313": {
       "name": "Item 50313",
-      "category": "Others"
+      "category": "Helmets"
     },
     "50330": {
       "name": "monk's apparition soul core",
@@ -22138,7 +22138,7 @@ const APP_DATA = {
     },
     "50334": {
       "name": "Item 50334",
-      "category": "Others"
+      "category": "Food"
     },
     "50335": {
       "name": "Item 50335",
@@ -22158,19 +22158,19 @@ const APP_DATA = {
     },
     "5080": {
       "name": "panda teddy",
-      "category": "Others"
+      "category": "Household"
     },
     "5086": {
       "name": "monkey statue 'see' kit",
-      "category": "Others"
+      "category": "Household"
     },
     "5087": {
       "name": "monkey statue 'hear' kit",
-      "category": "Others"
+      "category": "Household"
     },
     "5088": {
       "name": "monkey statue 'speak' kit",
-      "category": "Others"
+      "category": "Household"
     },
     "5089": {
       "name": "butterfly conservation kit",
@@ -22178,7 +22178,7 @@ const APP_DATA = {
     },
     "5090": {
       "name": "treasure map",
-      "category": "Others"
+      "category": "Books"
     },
     "5096": {
       "name": "mango",
@@ -22234,7 +22234,7 @@ const APP_DATA = {
     },
     "51119": {
       "name": "Item 51119",
-      "category": "Others"
+      "category": "Fist"
     },
     "51236": {
       "name": "Item 51236",
@@ -22246,23 +22246,23 @@ const APP_DATA = {
     },
     "51260": {
       "name": "Item 51260",
-      "category": "Others"
+      "category": "Helmets"
     },
     "51261": {
       "name": "Item 51261",
-      "category": "Others"
+      "category": "Helmets"
     },
     "51262": {
       "name": "Item 51262",
-      "category": "Others"
+      "category": "Armors"
     },
     "51263": {
       "name": "Item 51263",
-      "category": "Others"
+      "category": "Armors"
     },
     "51264": {
       "name": "Item 51264",
-      "category": "Others"
+      "category": "Armors"
     },
     "51265": {
       "name": "Norcferatu Thornwraps",
@@ -22278,35 +22278,35 @@ const APP_DATA = {
     },
     "51268": {
       "name": "Item 51268",
-      "category": "Others"
+      "category": "Boots"
     },
     "51269": {
       "name": "Item 51269",
-      "category": "Others"
+      "category": "Boots"
     },
     "51270": {
       "name": "Item 51270",
-      "category": "Others"
+      "category": "Household"
     },
     "51271": {
       "name": "Item 51271",
-      "category": "Others"
+      "category": "Household"
     },
     "51272": {
       "name": "Item 51272",
-      "category": "Others"
+      "category": "Household"
     },
     "51273": {
       "name": "Item 51273",
-      "category": "Others"
+      "category": "Household"
     },
     "51274": {
       "name": "Item 51274",
-      "category": "Others"
+      "category": "Household"
     },
     "51275": {
       "name": "Item 51275",
-      "category": "Others"
+      "category": "Amulets"
     },
     "51276": {
       "name": "spirited soil",
@@ -22362,23 +22362,23 @@ const APP_DATA = {
     },
     "51419": {
       "name": "Item 51419",
-      "category": "Others"
+      "category": "Products"
     },
     "51420": {
       "name": "Item 51420",
-      "category": "Others"
+      "category": "Products"
     },
     "51421": {
       "name": "Item 51421",
-      "category": "Others"
+      "category": "Products"
     },
     "51422": {
       "name": "Item 51422",
-      "category": "Others"
+      "category": "Products"
     },
     "51423": {
       "name": "Item 51423",
-      "category": "Others"
+      "category": "Products"
     },
     "51424": {
       "name": "Item 51424",
@@ -22386,15 +22386,15 @@ const APP_DATA = {
     },
     "51425": {
       "name": "Item 51425",
-      "category": "Others"
+      "category": "Products"
     },
     "51426": {
       "name": "Item 51426",
-      "category": "Others"
+      "category": "Products"
     },
     "51427": {
       "name": "Item 51427",
-      "category": "Others"
+      "category": "Products"
     },
     "51428": {
       "name": "Item 51428",
@@ -22422,7 +22422,7 @@ const APP_DATA = {
     },
     "51442": {
       "name": "Item 51442",
-      "category": "Others"
+      "category": "Books"
     },
     "51443": {
       "name": "Item 51443",
@@ -22430,99 +22430,99 @@ const APP_DATA = {
     },
     "51444": {
       "name": "Item 51444",
-      "category": "Others"
+      "category": "Books"
     },
     "51445": {
       "name": "Item 51445",
-      "category": "Others"
+      "category": "Books"
     },
     "51446": {
       "name": "Item 51446",
-      "category": "Others"
+      "category": "Books"
     },
     "51447": {
       "name": "Item 51447",
-      "category": "Others"
+      "category": "Books"
     },
     "51448": {
       "name": "Item 51448",
-      "category": "Others"
+      "category": "Books"
     },
     "51449": {
       "name": "Item 51449",
-      "category": "Others"
+      "category": "Books"
     },
     "51450": {
       "name": "Item 51450",
-      "category": "Others"
+      "category": "Books"
     },
     "51451": {
       "name": "Item 51451",
-      "category": "Others"
+      "category": "Books"
     },
     "51452": {
       "name": "Item 51452",
-      "category": "Others"
+      "category": "Books"
     },
     "51453": {
       "name": "Item 51453",
-      "category": "Others"
+      "category": "Books"
     },
     "51454": {
       "name": "Item 51454",
-      "category": "Others"
+      "category": "Books"
     },
     "51455": {
       "name": "Item 51455",
-      "category": "Others"
+      "category": "Books"
     },
     "51456": {
       "name": "Item 51456",
-      "category": "Others"
+      "category": "Books"
     },
     "51457": {
       "name": "Item 51457",
-      "category": "Others"
+      "category": "Books"
     },
     "51458": {
       "name": "Item 51458",
-      "category": "Others"
+      "category": "Books"
     },
     "51459": {
       "name": "Item 51459",
-      "category": "Others"
+      "category": "Books"
     },
     "51460": {
       "name": "Item 51460",
-      "category": "Others"
+      "category": "Books"
     },
     "51461": {
       "name": "Item 51461",
-      "category": "Others"
+      "category": "Books"
     },
     "51462": {
       "name": "Item 51462",
-      "category": "Others"
+      "category": "Books"
     },
     "51463": {
       "name": "Item 51463",
-      "category": "Others"
+      "category": "Books"
     },
     "51464": {
       "name": "Item 51464",
-      "category": "Others"
+      "category": "Books"
     },
     "51465": {
       "name": "Item 51465",
-      "category": "Others"
+      "category": "Books"
     },
     "51466": {
       "name": "Item 51466",
-      "category": "Others"
+      "category": "Books"
     },
     "51467": {
       "name": "Item 51467",
-      "category": "Others"
+      "category": "Books"
     },
     "51468": {
       "name": "Item 51468",
@@ -22534,19 +22534,19 @@ const APP_DATA = {
     },
     "51471": {
       "name": "Item 51471",
-      "category": "Others"
+      "category": "Products"
     },
     "51472": {
       "name": "Item 51472",
-      "category": "Others"
+      "category": "Products"
     },
     "51473": {
       "name": "Item 51473",
-      "category": "Others"
+      "category": "Products"
     },
     "51474": {
       "name": "Item 51474",
-      "category": "Others"
+      "category": "Products"
     },
     "51475": {
       "name": "Ritual Bone Knife",
@@ -22554,15 +22554,15 @@ const APP_DATA = {
     },
     "51476": {
       "name": "Item 51476",
-      "category": "Others"
+      "category": "Products"
     },
     "51477": {
       "name": "Item 51477",
-      "category": "Others"
+      "category": "Products"
     },
     "51478": {
       "name": "Item 51478",
-      "category": "Others"
+      "category": "Products"
     },
     "51479": {
       "name": "Item 51479",
@@ -22570,7 +22570,7 @@ const APP_DATA = {
     },
     "51480": {
       "name": "Item 51480",
-      "category": "Others"
+      "category": "Products"
     },
     "51481": {
       "name": "Item 51481",
@@ -22578,7 +22578,7 @@ const APP_DATA = {
     },
     "51482": {
       "name": "Item 51482",
-      "category": "Others"
+      "category": "Products"
     },
     "51483": {
       "name": "Item 51483",
@@ -22586,11 +22586,11 @@ const APP_DATA = {
     },
     "51484": {
       "name": "Item 51484",
-      "category": "Others"
+      "category": "Products"
     },
     "51485": {
       "name": "Item 51485",
-      "category": "Others"
+      "category": "Products"
     },
     "51486": {
       "name": "Item 51486",
@@ -22598,7 +22598,7 @@ const APP_DATA = {
     },
     "51487": {
       "name": "Item 51487",
-      "category": "Others"
+      "category": "Products"
     },
     "51510": {
       "name": "Item 51510",
@@ -22626,11 +22626,11 @@ const APP_DATA = {
     },
     "51588": {
       "name": "Item 51588",
-      "category": "Others"
+      "category": "Valuables"
     },
     "51589": {
       "name": "Item 51589",
-      "category": "Others"
+      "category": "Valuables"
     },
     "51623": {
       "name": "Item 51623",
@@ -22726,99 +22726,99 @@ const APP_DATA = {
     },
     "51724": {
       "name": "Item 51724",
-      "category": "Others"
+      "category": "Books"
     },
     "51725": {
       "name": "Item 51725",
-      "category": "Others"
+      "category": "Books"
     },
     "51726": {
       "name": "Item 51726",
-      "category": "Others"
+      "category": "Books"
     },
     "51727": {
       "name": "Item 51727",
-      "category": "Others"
+      "category": "Books"
     },
     "51728": {
       "name": "Item 51728",
-      "category": "Others"
+      "category": "Books"
     },
     "51729": {
       "name": "Item 51729",
-      "category": "Others"
+      "category": "Books"
     },
     "51730": {
       "name": "Item 51730",
-      "category": "Others"
+      "category": "Books"
     },
     "51731": {
       "name": "Item 51731",
-      "category": "Others"
+      "category": "Books"
     },
     "51732": {
       "name": "Item 51732",
-      "category": "Others"
+      "category": "Books"
     },
     "51733": {
       "name": "Item 51733",
-      "category": "Others"
+      "category": "Books"
     },
     "51734": {
       "name": "Item 51734",
-      "category": "Others"
+      "category": "Books"
     },
     "51735": {
       "name": "Item 51735",
-      "category": "Others"
+      "category": "Books"
     },
     "51736": {
       "name": "Item 51736",
-      "category": "Others"
+      "category": "Books"
     },
     "51737": {
       "name": "Item 51737",
-      "category": "Others"
+      "category": "Books"
     },
     "51738": {
       "name": "Item 51738",
-      "category": "Others"
+      "category": "Books"
     },
     "51739": {
       "name": "Item 51739",
-      "category": "Others"
+      "category": "Books"
     },
     "51740": {
       "name": "Item 51740",
-      "category": "Others"
+      "category": "Books"
     },
     "51741": {
       "name": "Item 51741",
-      "category": "Others"
+      "category": "Books"
     },
     "51742": {
       "name": "Item 51742",
-      "category": "Others"
+      "category": "Books"
     },
     "51743": {
       "name": "Item 51743",
-      "category": "Others"
+      "category": "Books"
     },
     "51744": {
       "name": "Item 51744",
-      "category": "Others"
+      "category": "Books"
     },
     "51745": {
       "name": "Item 51745",
-      "category": "Others"
+      "category": "Books"
     },
     "51746": {
       "name": "Item 51746",
-      "category": "Others"
+      "category": "Books"
     },
     "51747": {
       "name": "Item 51747",
-      "category": "Others"
+      "category": "Books"
     },
     "51749": {
       "name": "Item 51749",
@@ -22866,7 +22866,7 @@ const APP_DATA = {
     },
     "5467": {
       "name": "fire bug",
-      "category": "Others"
+      "category": "Tools"
     },
     "5479": {
       "name": "cat's paw",
@@ -22878,7 +22878,7 @@ const APP_DATA = {
     },
     "5615": {
       "name": "pirate tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "5668": {
       "name": "mysterious voodoo skull",
@@ -22894,7 +22894,7 @@ const APP_DATA = {
     },
     "5706": {
       "name": "treasure map",
-      "category": "Others"
+      "category": "Books"
     },
     "5710": {
       "name": "light shovel",
@@ -22910,39 +22910,39 @@ const APP_DATA = {
     },
     "5786": {
       "name": "wooden whistle",
-      "category": "Others"
+      "category": "Household"
     },
     "5791": {
       "name": "stuffed dragon",
-      "category": "Others"
+      "category": "Household"
     },
     "5792": {
       "name": "die",
-      "category": "Others"
+      "category": "Valuables"
     },
     "5793": {
       "name": "die",
-      "category": "Others"
+      "category": "Valuables"
     },
     "5794": {
       "name": "die",
-      "category": "Others"
+      "category": "Valuables"
     },
     "5795": {
       "name": "die",
-      "category": "Others"
+      "category": "Valuables"
     },
     "5796": {
       "name": "die",
-      "category": "Others"
+      "category": "Valuables"
     },
     "5797": {
       "name": "die",
-      "category": "Others"
+      "category": "Valuables"
     },
     "5799": {
       "name": "golden figurine",
-      "category": "Valuables"
+      "category": "Household"
     },
     "5801": {
       "name": "jewelled backpack",
@@ -22958,19 +22958,19 @@ const APP_DATA = {
     },
     "5804": {
       "name": "nose ring",
-      "category": "Rings"
+      "category": "Products"
     },
     "5805": {
       "name": "golden goblet",
-      "category": "Valuables"
+      "category": "Household"
     },
     "5806": {
       "name": "silver goblet",
-      "category": "Others"
+      "category": "Household"
     },
     "5807": {
       "name": "bronze goblet",
-      "category": "Others"
+      "category": "Household"
     },
     "5808": {
       "name": "Orshabaal's brain",
@@ -22978,31 +22978,31 @@ const APP_DATA = {
     },
     "5809": {
       "name": "soul stone",
-      "category": "Others"
+      "category": "Products"
     },
     "5810": {
       "name": "pirate voodoo doll",
-      "category": "Others"
+      "category": "Household"
     },
     "5812": {
       "name": "skull candle",
-      "category": "Others"
+      "category": "Household"
     },
     "5813": {
       "name": "skull candle",
-      "category": "Others"
+      "category": "Household"
     },
     "5865": {
       "name": "juice squeezer",
-      "category": "Others"
+      "category": "Tools"
     },
     "5875": {
       "name": "sniper gloves",
-      "category": "Others"
+      "category": "Products"
     },
     "5876": {
       "name": "lizard leather",
-      "category": "Others"
+      "category": "Products"
     },
     "5877": {
       "name": "green dragon leather",
@@ -23010,7 +23010,7 @@ const APP_DATA = {
     },
     "5878": {
       "name": "minotaur leather",
-      "category": "Others"
+      "category": "Products"
     },
     "5879": {
       "name": "spider silk",
@@ -23018,15 +23018,15 @@ const APP_DATA = {
     },
     "5880": {
       "name": "iron ore",
-      "category": "Others"
+      "category": "Products"
     },
     "5881": {
       "name": "lizard scale",
-      "category": "Others"
+      "category": "Products"
     },
     "5882": {
       "name": "red dragon scale",
-      "category": "Others"
+      "category": "Products"
     },
     "5883": {
       "name": "ape fur",
@@ -23058,7 +23058,7 @@ const APP_DATA = {
     },
     "5890": {
       "name": "chicken feather",
-      "category": "Others"
+      "category": "Products"
     },
     "5891": {
       "name": "enchanted chicken wing",
@@ -23070,11 +23070,11 @@ const APP_DATA = {
     },
     "5893": {
       "name": "perfect behemoth fang",
-      "category": "Others"
+      "category": "Products"
     },
     "5894": {
       "name": "bat wing",
-      "category": "Others"
+      "category": "Products"
     },
     "5895": {
       "name": "fish fin",
@@ -23090,7 +23090,7 @@ const APP_DATA = {
     },
     "5898": {
       "name": "bonelord eye",
-      "category": "Others"
+      "category": "Products"
     },
     "5899": {
       "name": "turtle shell",
@@ -23106,7 +23106,7 @@ const APP_DATA = {
     },
     "5902": {
       "name": "honeycomb",
-      "category": "Others"
+      "category": "Products"
     },
     "5903": {
       "name": "Ferumbras' hat",
@@ -23114,7 +23114,7 @@ const APP_DATA = {
     },
     "5904": {
       "name": "magic sulphur",
-      "category": "Others"
+      "category": "Products"
     },
     "5905": {
       "name": "vampire dust",
@@ -23126,11 +23126,11 @@ const APP_DATA = {
     },
     "5907": {
       "name": "slingshot",
-      "category": "Others"
+      "category": "Tools"
     },
     "5908": {
       "name": "obsidian knife",
-      "category": "Others"
+      "category": "Tools"
     },
     "5909": {
       "name": "white piece of cloth",
@@ -23174,11 +23174,11 @@ const APP_DATA = {
     },
     "5921": {
       "name": "heaven blossom",
-      "category": "Others"
+      "category": "Products"
     },
     "5922": {
       "name": "holy orchid",
-      "category": "Others"
+      "category": "Products"
     },
     "5924": {
       "name": "damaged steel helmet",
@@ -23198,7 +23198,7 @@ const APP_DATA = {
     },
     "5928": {
       "name": "empty goldfish bowl",
-      "category": "Distance"
+      "category": "Household"
     },
     "5929": {
       "name": "goldfish bowl",
@@ -23222,15 +23222,15 @@ const APP_DATA = {
     },
     "5940": {
       "name": "wolf tooth chain",
-      "category": "Others"
+      "category": "Amulets"
     },
     "5941": {
       "name": "wooden stake",
-      "category": "Others"
+      "category": "Tools"
     },
     "5942": {
       "name": "blessed wooden stake",
-      "category": "Others"
+      "category": "Tools"
     },
     "5943": {
       "name": "Morgaroth's heart",
@@ -23238,7 +23238,7 @@ const APP_DATA = {
     },
     "5944": {
       "name": "soul orb",
-      "category": "Others"
+      "category": "Products"
     },
     "5945": {
       "name": "coral comb",
@@ -23254,7 +23254,7 @@ const APP_DATA = {
     },
     "5948": {
       "name": "red dragon leather",
-      "category": "Others"
+      "category": "Products"
     },
     "5949": {
       "name": "beach backpack",
@@ -23282,19 +23282,19 @@ const APP_DATA = {
     },
     "5956": {
       "name": "lottery ticket",
-      "category": "Others"
+      "category": "Books"
     },
     "5957": {
       "name": "lottery ticket",
-      "category": "Others"
+      "category": "Books"
     },
     "5958": {
       "name": "winning lottery ticket",
-      "category": "Others"
+      "category": "Books"
     },
     "6086": {
       "name": "faked label",
-      "category": "Others"
+      "category": "Books"
     },
     "6087": {
       "name": "music sheet",
@@ -23314,11 +23314,11 @@ const APP_DATA = {
     },
     "6091": {
       "name": "very noble-looking watch",
-      "category": "Others"
+      "category": "Tools"
     },
     "6092": {
       "name": "very noble-looking watch",
-      "category": "Others"
+      "category": "Tools"
     },
     "6093": {
       "name": "crystal ring",
@@ -23334,11 +23334,11 @@ const APP_DATA = {
     },
     "6097": {
       "name": "hook",
-      "category": "Others"
+      "category": "Products"
     },
     "6098": {
       "name": "eye patch",
-      "category": "Others"
+      "category": "Products"
     },
     "6099": {
       "name": "Brutus Bloodbeard's hat",
@@ -23406,7 +23406,7 @@ const APP_DATA = {
     },
     "6126": {
       "name": "peg leg",
-      "category": "Others"
+      "category": "Products"
     },
     "6131": {
       "name": "tortoise shield",
@@ -23426,7 +23426,7 @@ const APP_DATA = {
     },
     "6279": {
       "name": "party cake",
-      "category": "Others"
+      "category": "Household"
     },
     "6299": {
       "name": "death ring",
@@ -23486,11 +23486,11 @@ const APP_DATA = {
     },
     "6386": {
       "name": "greeting card",
-      "category": "Others"
+      "category": "Books"
     },
     "6387": {
       "name": "christmas card",
-      "category": "Others"
+      "category": "Books"
     },
     "639": {
       "name": "scroll",
@@ -23542,7 +23542,7 @@ const APP_DATA = {
     },
     "647": {
       "name": "seeds",
-      "category": "Others"
+      "category": "Products"
     },
     "648": {
       "name": "nature magic spellbook",
@@ -23550,19 +23550,19 @@ const APP_DATA = {
     },
     "6488": {
       "name": "christmas branch",
-      "category": "Others"
+      "category": "Household"
     },
     "6489": {
       "name": "christmas branch",
-      "category": "Others"
+      "category": "Household"
     },
     "649": {
       "name": "flower bouquet",
-      "category": "Others"
+      "category": "Household"
     },
     "6491": {
       "name": "bat decoration",
-      "category": "Products"
+      "category": "Household"
     },
     "6496": {
       "name": "christmas present bag",
@@ -23570,7 +23570,7 @@ const APP_DATA = {
     },
     "6498": {
       "name": "certificate",
-      "category": "Others"
+      "category": "Books"
     },
     "6499": {
       "name": "demonic essence",
@@ -23578,7 +23578,7 @@ const APP_DATA = {
     },
     "650": {
       "name": "watering can",
-      "category": "Rings"
+      "category": "Tools"
     },
     "6500": {
       "name": "gingerbreadman",
@@ -23586,19 +23586,19 @@ const APP_DATA = {
     },
     "6501": {
       "name": "christmas wreath",
-      "category": "Others"
+      "category": "Household"
     },
     "6502": {
       "name": "christmas garland",
-      "category": "Others"
+      "category": "Household"
     },
     "6503": {
       "name": "red christmas garland",
-      "category": "Others"
+      "category": "Household"
     },
     "6504": {
       "name": "blue christmas garland",
-      "category": "Others"
+      "category": "Household"
     },
     "6505": {
       "name": "christmas present",
@@ -23606,15 +23606,15 @@ const APP_DATA = {
     },
     "6506": {
       "name": "red christmas bundle",
-      "category": "Others"
+      "category": "Household"
     },
     "6507": {
       "name": "blue christmas bundle",
-      "category": "Others"
+      "category": "Household"
     },
     "6508": {
       "name": "green christmas bundle",
-      "category": "Others"
+      "category": "Household"
     },
     "6509": {
       "name": "christmas present",
@@ -23622,7 +23622,7 @@ const APP_DATA = {
     },
     "651": {
       "name": "spellwand",
-      "category": "Wands"
+      "category": "Household"
     },
     "6510": {
       "name": "christmas present",
@@ -23630,7 +23630,7 @@ const APP_DATA = {
     },
     "6511": {
       "name": "santa doll",
-      "category": "Others"
+      "category": "Household"
     },
     "652": {
       "name": "rotten heart of a tree",
@@ -23638,15 +23638,15 @@ const APP_DATA = {
     },
     "6522": {
       "name": "gingerbread recipe",
-      "category": "Others"
+      "category": "Books"
     },
     "6526": {
       "name": "christmas token",
-      "category": "Products"
+      "category": "Valuables"
     },
     "6527": {
       "name": "avenger",
-      "category": "Others"
+      "category": "Sword"
     },
     "6528": {
       "name": "infernal bolt",
@@ -23774,15 +23774,15 @@ const APP_DATA = {
     },
     "6566": {
       "name": "stuffed dragon",
-      "category": "Others"
+      "category": "Household"
     },
     "6567": {
       "name": "santa doll",
-      "category": "Others"
+      "category": "Household"
     },
     "6568": {
       "name": "panda teddy",
-      "category": "Others"
+      "category": "Household"
     },
     "6569": {
       "name": "candy",
@@ -23798,7 +23798,7 @@ const APP_DATA = {
     },
     "6572": {
       "name": "party trumpet",
-      "category": "Others"
+      "category": "Household"
     },
     "6573": {
       "name": "party trumpet",
@@ -23826,27 +23826,27 @@ const APP_DATA = {
     },
     "6579": {
       "name": "doll",
-      "category": "Others"
+      "category": "Household"
     },
     "660": {
       "name": "fiery spike sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "661": {
       "name": "fiery relic sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "662": {
       "name": "fiery mystic blade",
-      "category": "Others"
+      "category": "Sword"
     },
     "663": {
       "name": "fiery blacksteel sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "664": {
       "name": "fiery dragon slayer",
-      "category": "Others"
+      "category": "Sword"
     },
     "665": {
       "name": "fiery barbarian axe",
@@ -23878,7 +23878,7 @@ const APP_DATA = {
     },
     "672": {
       "name": "fiery cranial basher",
-      "category": "Others"
+      "category": "Club"
     },
     "673": {
       "name": "fiery orcish maul",
@@ -23902,27 +23902,27 @@ const APP_DATA = {
     },
     "678": {
       "name": "small enchanted amethyst",
-      "category": "Others"
+      "category": "Valuables"
     },
     "679": {
       "name": "icy spike sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "680": {
       "name": "icy relic sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "681": {
       "name": "icy mystic blade",
-      "category": "Others"
+      "category": "Sword"
     },
     "682": {
       "name": "icy blacksteel sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "683": {
       "name": "icy dragon slayer",
-      "category": "Others"
+      "category": "Sword"
     },
     "684": {
       "name": "icy barbarian axe",
@@ -23954,7 +23954,7 @@ const APP_DATA = {
     },
     "691": {
       "name": "icy cranial basher",
-      "category": "Others"
+      "category": "Club"
     },
     "692": {
       "name": "icy orcish maul",
@@ -23982,11 +23982,11 @@ const APP_DATA = {
     },
     "7183": {
       "name": "baby seal doll",
-      "category": "Others"
+      "category": "Household"
     },
     "7184": {
       "name": "baby seal doll",
-      "category": "Others"
+      "category": "Household"
     },
     "7242": {
       "name": "resonance crystal",
@@ -23998,7 +23998,7 @@ const APP_DATA = {
     },
     "7244": {
       "name": "jug",
-      "category": "Others"
+      "category": "Tools"
     },
     "7245": {
       "name": "piece of cactus",
@@ -24046,7 +24046,7 @@ const APP_DATA = {
     },
     "7290": {
       "name": "shard",
-      "category": "Others"
+      "category": "Products"
     },
     "7314": {
       "name": "scale from a frozen dragon",
@@ -24090,15 +24090,15 @@ const APP_DATA = {
     },
     "7369": {
       "name": "golden goblet",
-      "category": "Valuables"
+      "category": "Household"
     },
     "7370": {
       "name": "silver goblet",
-      "category": "Others"
+      "category": "Household"
     },
     "7371": {
       "name": "bronze goblet",
-      "category": "Others"
+      "category": "Household"
     },
     "7372": {
       "name": "ice cream cone",
@@ -24174,7 +24174,7 @@ const APP_DATA = {
     },
     "7390": {
       "name": "justice seeker",
-      "category": "Others"
+      "category": "Sword"
     },
     "7391": {
       "name": "thaian sword",
@@ -24186,39 +24186,39 @@ const APP_DATA = {
     },
     "7393": {
       "name": "demon trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "7394": {
       "name": "wolf trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "7395": {
       "name": "orc trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "7396": {
       "name": "behemoth trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "7397": {
       "name": "deer trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "7398": {
       "name": "cyclops trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "7399": {
       "name": "dragon lord trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "7400": {
       "name": "lion trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "7401": {
       "name": "minotaur trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "7402": {
       "name": "dragon slayer",
@@ -24378,11 +24378,11 @@ const APP_DATA = {
     },
     "7441": {
       "name": "ice cube",
-      "category": "Others"
+      "category": "Household"
     },
     "7442": {
       "name": "ice cube",
-      "category": "Others"
+      "category": "Household"
     },
     "7443": {
       "name": "bullseye potion",
@@ -24390,15 +24390,15 @@ const APP_DATA = {
     },
     "7444": {
       "name": "ice cube",
-      "category": "Others"
+      "category": "Household"
     },
     "7445": {
       "name": "ice cube",
-      "category": "Others"
+      "category": "Household"
     },
     "7446": {
       "name": "ice mammoth",
-      "category": "Others"
+      "category": "Household"
     },
     "7447": {
       "name": "small ice statue",
@@ -24466,11 +24466,11 @@ const APP_DATA = {
     },
     "7463": {
       "name": "mammoth fur cape",
-      "category": "Others"
+      "category": "Armors"
     },
     "7464": {
       "name": "mammoth fur shorts",
-      "category": "Others"
+      "category": "Legs"
     },
     "7527": {
       "name": "jewel case",
@@ -24562,27 +24562,27 @@ const APP_DATA = {
     },
     "7786": {
       "name": "orc tusk",
-      "category": "Others"
+      "category": "Products"
     },
     "779": {
       "name": "earth spike sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "780": {
       "name": "earth relic sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "781": {
       "name": "earth mystic blade",
-      "category": "Others"
+      "category": "Sword"
     },
     "782": {
       "name": "earth blacksteel sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "783": {
       "name": "earth dragon slayer",
-      "category": "Others"
+      "category": "Sword"
     },
     "784": {
       "name": "earth barbarian axe",
@@ -24678,7 +24678,7 @@ const APP_DATA = {
     },
     "791": {
       "name": "earth cranial basher",
-      "category": "Others"
+      "category": "Club"
     },
     "792": {
       "name": "earth orcish maul",
@@ -24698,7 +24698,7 @@ const APP_DATA = {
     },
     "7933": {
       "name": "invitation",
-      "category": "Others"
+      "category": "Books"
     },
     "7934": {
       "name": "Theodore Loveless' key",
@@ -24706,7 +24706,7 @@ const APP_DATA = {
     },
     "7935": {
       "name": "compromising letter",
-      "category": "Others"
+      "category": "Books"
     },
     "7936": {
       "name": "fishnapped goldfish",
@@ -24718,7 +24718,7 @@ const APP_DATA = {
     },
     "794": {
       "name": "energy spike sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "7940": {
       "name": "letter to Chantalle",
@@ -24726,19 +24726,19 @@ const APP_DATA = {
     },
     "795": {
       "name": "energy relic sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "796": {
       "name": "energy mystic blade",
-      "category": "Others"
+      "category": "Sword"
     },
     "797": {
       "name": "energy blacksteel sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "798": {
       "name": "energy dragon slayer",
-      "category": "Others"
+      "category": "Sword"
     },
     "7991": {
       "name": "magician's robe",
@@ -24782,7 +24782,7 @@ const APP_DATA = {
     },
     "8016": {
       "name": "jalapeno pepper",
-      "category": "Others"
+      "category": "Food"
     },
     "8017": {
       "name": "beetroot",
@@ -24802,7 +24802,7 @@ const APP_DATA = {
     },
     "8020": {
       "name": "baking tray",
-      "category": "Others"
+      "category": "Tools"
     },
     "8021": {
       "name": "modified crossbow",
@@ -24850,11 +24850,11 @@ const APP_DATA = {
     },
     "8031": {
       "name": "spider fangs",
-      "category": "Others"
+      "category": "Products"
     },
     "8032": {
       "name": "spiderwebs",
-      "category": "Others"
+      "category": "Household"
     },
     "8037": {
       "name": "dark lord's cape",
@@ -25002,31 +25002,31 @@ const APP_DATA = {
     },
     "8076": {
       "name": "spellscroll of prophecies",
-      "category": "Books"
+      "category": "Spellbooks"
     },
     "8077": {
       "name": "rainbow shield",
-      "category": "Distance"
+      "category": "Shields"
     },
     "8078": {
       "name": "fiery rainbow shield",
-      "category": "Distance"
+      "category": "Shields"
     },
     "8079": {
       "name": "icy rainbow shield",
-      "category": "Distance"
+      "category": "Shields"
     },
     "808": {
       "name": "energy cranial basher",
-      "category": "Others"
+      "category": "Club"
     },
     "8080": {
       "name": "sparking rainbow shield",
-      "category": "Distance"
+      "category": "Shields"
     },
     "8081": {
       "name": "terran rainbow shield",
-      "category": "Distance"
+      "category": "Shields"
     },
     "8082": {
       "name": "underworld rod",
@@ -25090,7 +25090,7 @@ const APP_DATA = {
     },
     "8101": {
       "name": "stomper",
-      "category": "Others"
+      "category": "Club"
     },
     "8102": {
       "name": "emerald sword",
@@ -25098,11 +25098,11 @@ const APP_DATA = {
     },
     "8103": {
       "name": "epiphany",
-      "category": "Others"
+      "category": "Sword"
     },
     "8104": {
       "name": "calamity",
-      "category": "Others"
+      "category": "Sword"
     },
     "811": {
       "name": "terra mantle",
@@ -25130,15 +25130,15 @@ const APP_DATA = {
     },
     "8146": {
       "name": "oracle figurine",
-      "category": "Others"
+      "category": "Household"
     },
     "8147": {
       "name": "oracle figurine",
-      "category": "Others"
+      "category": "Household"
     },
     "8148": {
       "name": "golden falcon",
-      "category": "Valuables"
+      "category": "Household"
     },
     "8149": {
       "name": "Tibiacity Encyclopedia",
@@ -25162,11 +25162,11 @@ const APP_DATA = {
     },
     "8153": {
       "name": "golden newspaper",
-      "category": "Valuables"
+      "category": "Books"
     },
     "8154": {
       "name": "norseman doll",
-      "category": "Others"
+      "category": "Household"
     },
     "8155": {
       "name": "heavily bound book",
@@ -25178,7 +25178,7 @@ const APP_DATA = {
     },
     "8157": {
       "name": "norseman doll",
-      "category": "Others"
+      "category": "Household"
     },
     "816": {
       "name": "lightning pendant",
@@ -25194,11 +25194,11 @@ const APP_DATA = {
     },
     "8175": {
       "name": "golden falcon",
-      "category": "Valuables"
+      "category": "Household"
     },
     "8176": {
       "name": "golden newspaper",
-      "category": "Valuables"
+      "category": "Books"
     },
     "8177": {
       "name": "yummy gummy worm",
@@ -25206,11 +25206,11 @@ const APP_DATA = {
     },
     "8178": {
       "name": "toy spider",
-      "category": "Others"
+      "category": "Household"
     },
     "8179": {
       "name": "toy spider",
-      "category": "Others"
+      "category": "Household"
     },
     "818": {
       "name": "magma boots",
@@ -25222,11 +25222,11 @@ const APP_DATA = {
     },
     "8191": {
       "name": "vampire doll",
-      "category": "Others"
+      "category": "Household"
     },
     "8192": {
       "name": "vampire lord token",
-      "category": "Products"
+      "category": "Valuables"
     },
     "8194": {
       "name": "garlic bread",
@@ -25246,7 +25246,7 @@ const APP_DATA = {
     },
     "8198": {
       "name": "baking tray",
-      "category": "Others"
+      "category": "Tools"
     },
     "8199": {
       "name": "garlic cookie",
@@ -25258,7 +25258,7 @@ const APP_DATA = {
     },
     "8200": {
       "name": "Julius' map",
-      "category": "Others"
+      "category": "Books"
     },
     "821": {
       "name": "magma legs",
@@ -25266,7 +25266,7 @@ const APP_DATA = {
     },
     "822": {
       "name": "lightning legs",
-      "category": "Others"
+      "category": "Legs"
     },
     "8225": {
       "name": "blood crystal",
@@ -25274,7 +25274,7 @@ const APP_DATA = {
     },
     "823": {
       "name": "glacier kilt",
-      "category": "Others"
+      "category": "Legs"
     },
     "824": {
       "name": "glacier robe",
@@ -25310,19 +25310,19 @@ const APP_DATA = {
     },
     "831": {
       "name": "green bed kit",
-      "category": "Others"
+      "category": "Household"
     },
     "832": {
       "name": "yellow bed kit",
-      "category": "Others"
+      "category": "Household"
     },
     "833": {
       "name": "red bed kit",
-      "category": "Others"
+      "category": "Household"
     },
     "834": {
       "name": "blue bed kit",
-      "category": "Others"
+      "category": "Household"
     },
     "836": {
       "name": "walnut",
@@ -25330,7 +25330,7 @@ const APP_DATA = {
     },
     "841": {
       "name": "peanut",
-      "category": "Others"
+      "category": "Food"
     },
     "8453": {
       "name": "blood crystal",
@@ -25338,15 +25338,15 @@ const APP_DATA = {
     },
     "8531": {
       "name": "blood goblet",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8532": {
       "name": "blood skull",
-      "category": "Others"
+      "category": "Household"
     },
     "860": {
       "name": "crimson sword",
-      "category": "Others"
+      "category": "Sword"
     },
     "8717": {
       "name": "dust of Boreth",
@@ -25430,7 +25430,7 @@ const APP_DATA = {
     },
     "8764": {
       "name": "research notes",
-      "category": "Others"
+      "category": "Books"
     },
     "8772": {
       "name": "food crate",
@@ -25454,7 +25454,7 @@ const APP_DATA = {
     },
     "8778": {
       "name": "jester doll",
-      "category": "Others"
+      "category": "Household"
     },
     "8779": {
       "name": "head of a jester doll",
@@ -25506,7 +25506,7 @@ const APP_DATA = {
     },
     "8828": {
       "name": "weapon matrix crystal",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8829": {
       "name": "food matrix crystal",
@@ -25514,7 +25514,7 @@ const APP_DATA = {
     },
     "8853": {
       "name": "suspicious surprise bag",
-      "category": "Containers"
+      "category": "Household"
     },
     "8860": {
       "name": "brocade backpack",
@@ -25550,39 +25550,39 @@ const APP_DATA = {
     },
     "8894": {
       "name": "heavily rusted armor",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8895": {
       "name": "rusted armor",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8896": {
       "name": "slightly rusted armor",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8897": {
       "name": "heavily rusted legs",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8898": {
       "name": "rusted legs",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8899": {
       "name": "slightly rusted legs",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8900": {
       "name": "heavily rusted shield",
-      "category": "Shields"
+      "category": "Valuables"
     },
     "8901": {
       "name": "rusted shield",
-      "category": "Shields"
+      "category": "Valuables"
     },
     "8902": {
       "name": "slightly rusted shield",
-      "category": "Shields"
+      "category": "Valuables"
     },
     "8903": {
       "name": "rusty boots",
@@ -25598,15 +25598,15 @@ const APP_DATA = {
     },
     "8906": {
       "name": "heavily rusted helmet",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8907": {
       "name": "rusted helmet",
-      "category": "Others"
+      "category": "Valuables"
     },
     "8908": {
       "name": "slightly rusted helmet",
-      "category": "Others"
+      "category": "Valuables"
     },
     "892": {
       "name": "package of potions",
@@ -25614,11 +25614,11 @@ const APP_DATA = {
     },
     "8923": {
       "name": "velvet tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "893": {
       "name": "waterball",
-      "category": "Others"
+      "category": "Valuables"
     },
     "894": {
       "name": "jester hat",
@@ -25626,11 +25626,11 @@ const APP_DATA = {
     },
     "895": {
       "name": "jester staff",
-      "category": "Club"
+      "category": "Household"
     },
     "896": {
       "name": "Firlefanz",
-      "category": "Others"
+      "category": "Household"
     },
     "897": {
       "name": "mysterious package",
@@ -25658,7 +25658,7 @@ const APP_DATA = {
     },
     "9014": {
       "name": "leaf legs",
-      "category": "Others"
+      "category": "Legs"
     },
     "9015": {
       "name": "flower dress",
@@ -25682,7 +25682,7 @@ const APP_DATA = {
     },
     "902": {
       "name": "marlin trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "9020": {
       "name": "worn firewalker boots",
@@ -25702,15 +25702,15 @@ const APP_DATA = {
     },
     "9034": {
       "name": "dracoyle statue",
-      "category": "Others"
+      "category": "Household"
     },
     "9035": {
       "name": "dracoyle statue",
-      "category": "Others"
+      "category": "Household"
     },
     "9039": {
       "name": "dracoyle statue",
-      "category": "Others"
+      "category": "Household"
     },
     "904": {
       "name": "throwing cake",
@@ -25718,7 +25718,7 @@ const APP_DATA = {
     },
     "9040": {
       "name": "dracoyle statue",
-      "category": "Products"
+      "category": "Household"
     },
     "9041": {
       "name": "vampiric crest",
@@ -25730,11 +25730,11 @@ const APP_DATA = {
     },
     "9045": {
       "name": "royal tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "9046": {
       "name": "silky tapestry",
-      "category": "Others"
+      "category": "Household"
     },
     "9053": {
       "name": "glob of mercury",
@@ -25754,7 +25754,7 @@ const APP_DATA = {
     },
     "9057": {
       "name": "small topaz",
-      "category": "Others"
+      "category": "Valuables"
     },
     "9058": {
       "name": "gold ingot",
@@ -25762,19 +25762,19 @@ const APP_DATA = {
     },
     "9059": {
       "name": "small lamp",
-      "category": "Others"
+      "category": "Household"
     },
     "906": {
       "name": "present",
-      "category": "Household"
+      "category": "Containers"
     },
     "9060": {
       "name": "lit small lamp",
-      "category": "Others"
+      "category": "Household"
     },
     "9061": {
       "name": "crystal table kit",
-      "category": "Others"
+      "category": "Household"
     },
     "9063": {
       "name": "crystal pedestal",
@@ -25798,7 +25798,7 @@ const APP_DATA = {
     },
     "9068": {
       "name": "yalahari figurine",
-      "category": "Others"
+      "category": "Household"
     },
     "9069": {
       "name": "flower pot",
@@ -25846,7 +25846,7 @@ const APP_DATA = {
     },
     "9079": {
       "name": "rotworm stew",
-      "category": "Others"
+      "category": "Food"
     },
     "908": {
       "name": "shapeshifter ring",
@@ -25854,39 +25854,39 @@ const APP_DATA = {
     },
     "9080": {
       "name": "hydra tongue salad",
-      "category": "Others"
+      "category": "Food"
     },
     "9081": {
       "name": "roasted dragon wings",
-      "category": "Others"
+      "category": "Food"
     },
     "9082": {
       "name": "tropical fried terrorbird",
-      "category": "Others"
+      "category": "Food"
     },
     "9083": {
       "name": "banana chocolate shake",
-      "category": "Others"
+      "category": "Potions"
     },
     "9084": {
       "name": "veggie casserole",
-      "category": "Others"
+      "category": "Food"
     },
     "9085": {
       "name": "filled jalapeno peppers",
-      "category": "Others"
+      "category": "Food"
     },
     "9086": {
       "name": "blessed steak",
-      "category": "Others"
+      "category": "Food"
     },
     "9087": {
       "name": "carrot cake",
-      "category": "Others"
+      "category": "Food"
     },
     "9088": {
       "name": "northern fishburger",
-      "category": "Others"
+      "category": "Food"
     },
     "9093": {
       "name": "Jean Pierre's Cookbook I",
@@ -25894,11 +25894,11 @@ const APP_DATA = {
     },
     "9098": {
       "name": "black candle",
-      "category": "Others"
+      "category": "Household"
     },
     "9099": {
       "name": "black candle",
-      "category": "Others"
+      "category": "Household"
     },
     "9103": {
       "name": "batwing hat",
@@ -25926,11 +25926,11 @@ const APP_DATA = {
     },
     "9114": {
       "name": "wooden ties",
-      "category": "Others"
+      "category": "Tools"
     },
     "9115": {
       "name": "metal fitting",
-      "category": "Others"
+      "category": "Products"
     },
     "9127": {
       "name": "hat for Eclesius",
@@ -25958,11 +25958,11 @@ const APP_DATA = {
     },
     "9144": {
       "name": "Epaminondas doll",
-      "category": "Others"
+      "category": "Household"
     },
     "9145": {
       "name": "Epaminondas doll",
-      "category": "Others"
+      "category": "Household"
     },
     "9147": {
       "name": "glob of grease",
@@ -26026,15 +26026,15 @@ const APP_DATA = {
     },
     "9177": {
       "name": "voodoo doll",
-      "category": "Others"
+      "category": "Household"
     },
     "9178": {
       "name": "voodoo doll",
-      "category": "Others"
+      "category": "Household"
     },
     "9179": {
       "name": "voodoo doll",
-      "category": "Others"
+      "category": "Household"
     },
     "9181": {
       "name": "top right part of a map",
@@ -26058,7 +26058,7 @@ const APP_DATA = {
     },
     "9186": {
       "name": "old encrypted text",
-      "category": "Others"
+      "category": "Books"
     },
     "9187": {
       "name": "Xodet's first wand",
@@ -26090,11 +26090,11 @@ const APP_DATA = {
     },
     "9204": {
       "name": "old pirate poem",
-      "category": "Others"
+      "category": "Books"
     },
     "9205": {
       "name": "pirate treasure map",
-      "category": "Others"
+      "category": "Books"
     },
     "9206": {
       "name": "champion's cup",
@@ -26178,7 +26178,7 @@ const APP_DATA = {
     },
     "9233": {
       "name": "golem part",
-      "category": "Others"
+      "category": "Products"
     },
     "9234": {
       "name": "worm punisher",
@@ -26214,7 +26214,7 @@ const APP_DATA = {
     },
     "9247": {
       "name": "golem blueprint",
-      "category": "Others"
+      "category": "Books"
     },
     "9248": {
       "name": "stabilizer",
@@ -26254,7 +26254,7 @@ const APP_DATA = {
     },
     "9306": {
       "name": "mechanical fishing rod",
-      "category": "Rods"
+      "category": "Tools"
     },
     "9307": {
       "name": "mechanical fish",
@@ -26262,7 +26262,7 @@ const APP_DATA = {
     },
     "9308": {
       "name": "nautical map",
-      "category": "Others"
+      "category": "Books"
     },
     "9372": {
       "name": "meat shield",
@@ -26338,7 +26338,7 @@ const APP_DATA = {
     },
     "939": {
       "name": "bait",
-      "category": "Others"
+      "category": "Tools"
     },
     "9390": {
       "name": "machine crate",
@@ -26346,7 +26346,7 @@ const APP_DATA = {
     },
     "9391": {
       "name": "fan club membership card",
-      "category": "Club"
+      "category": "Books"
     },
     "9392": {
       "name": "claw of 'The Noxious Spawn'",
@@ -26382,7 +26382,7 @@ const APP_DATA = {
     },
     "940": {
       "name": "natural soil",
-      "category": "Others"
+      "category": "Products"
     },
     "9400": {
       "name": "rain coat",
@@ -26406,7 +26406,7 @@ const APP_DATA = {
     },
     "944": {
       "name": "iced soil",
-      "category": "Others"
+      "category": "Products"
     },
     "9446": {
       "name": "rain coat",
@@ -26426,7 +26426,7 @@ const APP_DATA = {
     },
     "947": {
       "name": "mother soil",
-      "category": "Others"
+      "category": "Products"
     },
     "948": {
       "name": "pure energy",
@@ -26434,7 +26434,7 @@ const APP_DATA = {
     },
     "953": {
       "name": "nail",
-      "category": "Others"
+      "category": "Products"
     },
     "9537": {
       "name": "headache pill",
@@ -26442,11 +26442,11 @@ const APP_DATA = {
     },
     "9538": {
       "name": "pigeon trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "954": {
       "name": "neutral matter",
-      "category": "Others"
+      "category": "Products"
     },
     "9585": {
       "name": "engraved wedding ring",
@@ -26454,7 +26454,7 @@ const APP_DATA = {
     },
     "9586": {
       "name": "wedding outfit box",
-      "category": "Containers"
+      "category": "Valuables"
     },
     "9593": {
       "name": "broken wedding ring",
@@ -26502,7 +26502,7 @@ const APP_DATA = {
     },
     "9605": {
       "name": "crown backpack",
-      "category": "Others"
+      "category": "Containers"
     },
     "9606": {
       "name": "egg of The Many",
@@ -26514,7 +26514,7 @@ const APP_DATA = {
     },
     "9613": {
       "name": "sea serpent trophy",
-      "category": "Others"
+      "category": "Household"
     },
     "9614": {
       "name": "famous golden bug",
@@ -26542,15 +26542,15 @@ const APP_DATA = {
     },
     "9626": {
       "name": "silver Fafnar trophy",
-      "category": "Others"
+      "category": "Valuables"
     },
     "9627": {
       "name": "silver Fafnar trophy",
-      "category": "Others"
+      "category": "Valuables"
     },
     "9631": {
       "name": "scarab pincers",
-      "category": "Others"
+      "category": "Products"
     },
     "9632": {
       "name": "ancient stone",
@@ -26574,7 +26574,7 @@ const APP_DATA = {
     },
     "9637": {
       "name": "hellhound slobber",
-      "category": "Others"
+      "category": "Products"
     },
     "9638": {
       "name": "cultish mask",
@@ -26586,7 +26586,7 @@ const APP_DATA = {
     },
     "9640": {
       "name": "poisonous slime",
-      "category": "Others"
+      "category": "Products"
     },
     "9641": {
       "name": "piece of scarab shell",
@@ -26626,11 +26626,11 @@ const APP_DATA = {
     },
     "9650": {
       "name": "polar bear paw",
-      "category": "Others"
+      "category": "Products"
     },
     "9651": {
       "name": "scorpion tail",
-      "category": "Others"
+      "category": "Products"
     },
     "9652": {
       "name": "witch broom",
@@ -26646,7 +26646,7 @@ const APP_DATA = {
     },
     "9655": {
       "name": "gear crystal",
-      "category": "Others"
+      "category": "Products"
     },
     "9656": {
       "name": "broken gladiator shield",
@@ -26654,7 +26654,7 @@ const APP_DATA = {
     },
     "9657": {
       "name": "cyclops toe",
-      "category": "Others"
+      "category": "Products"
     },
     "9658": {
       "name": "frost giant pelt",
@@ -26666,7 +26666,7 @@ const APP_DATA = {
     },
     "9660": {
       "name": "mystical hourglass",
-      "category": "Others"
+      "category": "Products"
     },
     "9661": {
       "name": "frosty heart",
@@ -26674,7 +26674,7 @@ const APP_DATA = {
     },
     "9662": {
       "name": "mutated bat ear",
-      "category": "Others"
+      "category": "Products"
     },
     "9664": {
       "name": "piece of hellfire armor",
@@ -26686,7 +26686,7 @@ const APP_DATA = {
     },
     "9666": {
       "name": "sea serpent scale",
-      "category": "Others"
+      "category": "Products"
     },
     "9667": {
       "name": "boggy dreads",
@@ -26694,7 +26694,7 @@ const APP_DATA = {
     },
     "9668": {
       "name": "mutated rat tail",
-      "category": "Others"
+      "category": "Products"
     },
     "9683": {
       "name": "haunted piece of wood",
@@ -26706,7 +26706,7 @@ const APP_DATA = {
     },
     "9685": {
       "name": "vampire teeth",
-      "category": "Others"
+      "category": "Products"
     },
     "9686": {
       "name": "swamp grass",
@@ -26734,11 +26734,11 @@ const APP_DATA = {
     },
     "9693": {
       "name": "pig foot",
-      "category": "Others"
+      "category": "Products"
     },
     "9694": {
       "name": "snake skin",
-      "category": "Others"
+      "category": "Products"
     },
     "9696": {
       "name": "plans for a strange device",
@@ -26767,94 +26767,6 @@ const APP_DATA = {
     "9843": {
       "name": "flask with beaver bait",
       "category": "Potions"
-    },
-    "32558": {
-      "name": "blue footboard",
-      "category": "Household"
-    },
-    "32549": {
-      "name": "blue headboard",
-      "category": "Household"
-    },
-    "32562": {
-      "name": "cot footboard",
-      "category": "Household"
-    },
-    "32553": {
-      "name": "cot headboard",
-      "category": "Household"
-    },
-    "32559": {
-      "name": "green footboard",
-      "category": "Household"
-    },
-    "32550": {
-      "name": "green headboard",
-      "category": "Household"
-    },
-    "32563": {
-      "name": "hammock foot section",
-      "category": "Household"
-    },
-    "32554": {
-      "name": "hammock head section",
-      "category": "Household"
-    },
-    "32560": {
-      "name": "red footboard",
-      "category": "Household"
-    },
-    "32551": {
-      "name": "red headboard",
-      "category": "Household"
-    },
-    "32564": {
-      "name": "simple footboard",
-      "category": "Household"
-    },
-    "32555": {
-      "name": "simple headboard",
-      "category": "Household"
-    },
-    "32525": {
-      "name": "straw mat head section",
-      "category": "Household"
-    },
-    "32561": {
-      "name": "yellow footboard",
-      "category": "Household"
-    },
-    "32552": {
-      "name": "yellow headboard",
-      "category": "Household"
-    },
-    "4056": {
-      "name": "globe",
-      "category": "Household"
-    },
-    "6085": {
-      "name": "large trunk",
-      "category": "Household"
-    },
-    "3000": {
-      "name": "rocking horse",
-      "category": "Household"
-    },
-    "2316": {
-      "name": "small round table",
-      "category": "Household"
-    },
-    "2426": {
-      "name": "small trunk",
-      "category": "Household"
-    },
-    "2352": {
-      "name": "thick trunk",
-      "category": "Household"
-    },
-    "51760": {
-      "name": "refined bow",
-      "category": "Distance"
     },
     "51895": {
       "name": "brooch",
@@ -27258,7 +27170,7 @@ const APP_DATA = {
     },
     "52830": {
       "name": "lit candlestick",
-      "category": "Others"
+      "category": "Household"
     },
     "52864": {
       "name": "test proficiency catalyst",
@@ -27366,10 +27278,6 @@ const APP_DATA = {
     },
     "53158": {
       "name": "old treasure map",
-      "category": "Others"
-    },
-    "53161": {
-      "name": "Item 53161",
       "category": "Others"
     },
     "53162": {
