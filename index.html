@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#050b07">
     <link rel="icon" type="image/png" sizes="1024x1024" href="assets/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="styles.css?v=20260717-beetales-redesign">
+    <link rel="stylesheet" href="styles.css?v=20260717-healthbar">
     <script src="data.js"></script>
     <script src="outfit_data.js"></script>
 </head>
@@ -48,7 +48,11 @@
                     <span class="live-indicator"><i></i> Live</span>
                 </div>
                 <div class="character-preview">
-                    <img id="preview-outfit" src="https://outfit-images-oracle.ots.me/latest_walk/animoutfit.php?id=128&addons=0&head=0&body=0&legs=0&feet=0&mount=0&direction=3" alt="Outfit Preview">
+                    <div class="character-stage" id="character-stage">
+                        <span class="preview-name" id="preview-name">Unnamed NPC</span>
+                        <span class="preview-healthbar" aria-hidden="true"><i></i></span>
+                        <img id="preview-outfit" src="https://outfit-images-oracle.ots.me/latest_walk/animoutfit.php?id=128&addons=0&head=0&body=0&legs=0&feet=0&mount=0&direction=3" alt="Outfit Preview">
+                    </div>
                 </div>
                 <p class="preview-caption">Changes to outfit, colors, addons, and mounts appear here automatically.</p>
                 <div class="compatibility-strip" aria-label="Compatible engines"><span>Canary</span><span>Crystal</span><span>TFS 1.8</span></div>
@@ -365,6 +369,6 @@
     </div>
 
     <script src="generator.js"></script>
-    <script src="app.js?v=20260717-beetales-redesign"></script>
+    <script src="app.js?v=20260717-healthbar"></script>
 </body>
 </html>

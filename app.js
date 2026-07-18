@@ -449,6 +449,28 @@ function updatePreview() {
     window.NPC.state.outfit.mount      = parseInt(mountId);
 }
 
+function updatePreviewName(value) {
+    var previewName = gid('preview-name');
+    if (!previewName) return;
+    previewName.textContent = String(value || '').trim() || 'Unnamed NPC';
+}
+
+function fitPreviewOutfit() {
+    var preview = document.querySelector('.character-preview');
+    var stage = gid('character-stage');
+    var image = gid('preview-outfit');
+    if (!preview || !stage || !image || !image.naturalWidth || !image.naturalHeight) return;
+
+    var availableWidth = Math.max(1, preview.clientWidth - 28);
+    var availableHeight = Math.max(1, preview.clientHeight - 46);
+    var scale = Math.min(2, availableWidth / image.naturalWidth, availableHeight / image.naturalHeight);
+    scale = Math.max(0.25, scale);
+
+    stage.style.width = Math.round(image.naturalWidth * scale) + 'px';
+    stage.style.height = Math.round(image.naturalHeight * scale) + 'px';
+    stage.style.setProperty('--outfit-scale', scale.toFixed(4));
+}
+
 // Initialization
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -474,6 +496,18 @@ document.addEventListener('DOMContentLoaded', function () {
             gid(tab.dataset.target).classList.add('active');
         });
     });
+
+    var previewImage = gid('preview-outfit');
+    if (previewImage) {
+        previewImage.addEventListener('load', fitPreviewOutfit);
+        if (previewImage.complete) fitPreviewOutfit();
+    }
+    if (typeof ResizeObserver !== 'undefined') {
+        var previewResizeObserver = new ResizeObserver(fitPreviewOutfit);
+        previewResizeObserver.observe(document.querySelector('.character-preview'));
+    } else {
+        window.addEventListener('resize', fitPreviewOutfit);
+    }
 
     // Outfit dropdown — powered by OUTFIT_DATA
     var outfitSelect = gid('outfit-select');
@@ -586,7 +620,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     // Basic config fields
-    gid('npc-name').addEventListener('input',          function (e) { window.NPC.state.name                  = e.target.value; });
+    gid('npc-name').addEventListener('input',          function (e) { window.NPC.state.name = e.target.value; updatePreviewName(e.target.value); });
     gid('npc-walk-interval').addEventListener('input', function (e) { window.NPC.state.walkInterval           = parseInt(e.target.value); });
     gid('npc-health').addEventListener('input',        function (e) { window.NPC.state.health                 = parseInt(e.target.value); });
     gid('npc-walk-radius').addEventListener('input',   function (e) { window.NPC.state.walkRadius             = parseInt(e.target.value); });
