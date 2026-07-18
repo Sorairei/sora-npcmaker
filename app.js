@@ -127,17 +127,35 @@ window.renderKeywords = function () {
 };
 
 // Modal
+var modalReturnFocus = null;
+
+function openModal(modal) {
+    if (!modal) return;
+    modalReturnFocus = document.activeElement;
+    modal.removeAttribute('style');
+    modal.classList.add('active');
+    var focusTarget = modal.querySelector('textarea, button, input, select');
+    if (focusTarget) focusTarget.focus();
+}
+
+function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.remove('active');
+    modal.removeAttribute('style');
+    if (modalReturnFocus && typeof modalReturnFocus.focus === 'function') modalReturnFocus.focus();
+    modalReturnFocus = null;
+}
+
 window.showLuaModal = function () {
     var modal = gid('output-modal');
     if (!modal) { alert('Modal not found'); return; }
     if (typeof window.generateLUA !== 'function') { alert('Generator not loaded'); return; }
     gid('lua-output').value = window.generateLUA(window.NPC.state);
-    modal.style.cssText = 'display:flex !important; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999;';
+    openModal(modal);
 };
 
 window.closeLuaModal = function () {
-    var modal = gid('output-modal');
-    if (modal) modal.style.display = 'none';
+    closeModal(gid('output-modal'));
 };
 
 window.downloadLua = function () {
@@ -151,13 +169,11 @@ window.downloadLua = function () {
 };
 
 window.showHelpModal = function () {
-    var modal = gid('help-modal');
-    if (modal) modal.style.cssText = 'display:flex !important; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999;';
+    openModal(gid('help-modal'));
 };
 
 window.closeHelpModal = function () {
-    var modal = gid('help-modal');
-    if (modal) modal.style.display = 'none';
+    closeModal(gid('help-modal'));
 };
 
 // Reset
@@ -435,6 +451,19 @@ function updatePreview() {
 
 // Initialization
 document.addEventListener('DOMContentLoaded', function () {
+
+    document.querySelectorAll('.modal-overlay').forEach(function (modal) {
+        modal.addEventListener('click', function (event) {
+            if (event.target !== modal) return;
+            closeModal(modal);
+        });
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key !== 'Escape' && event.key !== 'Esc') return;
+        var activeModal = document.querySelector('.modal-overlay.active');
+        if (activeModal) closeModal(activeModal);
+    });
 
     // Tabs
     document.querySelectorAll('.tab-btn').forEach(function (tab) {

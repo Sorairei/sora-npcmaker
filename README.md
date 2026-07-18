@@ -5,7 +5,7 @@
 <h1 align="center">Sorairei NPC Maker</h1>
 
 <p align="center">
-  A browser-based visual editor for creating Canary Server NPCs with RevScripts.
+  A browser-based visual editor for creating Canary, Crystal, and TFS 1.8 NPCs with RevScripts.
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
 
 ## Overview
 
-Sorairei NPC Maker is a specialized visual editor for rapidly building NPC scripts for the **Canary Server** ecosystem. It combines character configuration, a real-time outfit preview, a searchable item catalog, trade management, dialogue editing, custom keyword responses, and clean Lua export in a single interface.
+Sorairei NPC Maker is a specialized visual editor for rapidly building NPC scripts for **Canary, Crystal, and TFS 1.8** ecosystems. It combines character configuration, a real-time outfit preview, a searchable item catalog, trade management, dialogue editing, custom keyword responses, and clean Lua export in a single interface.
 
 The application is made from static HTML, CSS, JavaScript, images, and local catalog data. It requires no build step, backend, database, account, API key, or server-side processing. Open `index.html` in a modern browser, configure the NPC, and download the generated RevScript.
 
@@ -49,7 +49,7 @@ The application is made from static HTML, CSS, JavaScript, images, and local cat
 
 | Area | Capabilities |
 | --- | --- |
-| Canary compatibility | Generates NPC Lua following the Canary Server RevScript structure |
+| Engine compatibility | Generates RevScript NPC Lua for Canary, Crystal, and TFS 1.8 workflows |
 | Visual outfitter | Real-time preview for 240+ male, female, and monster outfits |
 | Appearance | Look type, addons, mounts, and indexed Tibia colors for head, primary, secondary, and detail areas |
 | Item catalog | Bundled modern item database with category filters and search by client ID or name |
@@ -64,7 +64,7 @@ The application is made from static HTML, CSS, JavaScript, images, and local cat
 2. Outfit, addon, mount, and color controls update the visual preview immediately.
 3. Catalog selections build the NPC's buy and sell inventory.
 4. Dialogue fields and keyword-response pairs define conversation behavior.
-5. The generator converts the in-memory NPC state into a Canary-compatible RevScript.
+5. The generator converts the in-memory NPC state into a compatible RevScript for Canary, Crystal, and TFS 1.8 workflows.
 6. The generated Lua can be reviewed in the application and downloaded as a `.lua` file.
 
 No project data is uploaded or persisted by the application. Starting a new NPC reloads the page and clears the current in-memory configuration.
@@ -174,7 +174,7 @@ The validation command checks `app.js` and `generator.js` syntax and runs regres
 - Outfit previews require an internet connection and availability of the Oracle OTS image service.
 - Google Fonts are loaded remotely; the browser uses fallback fonts if they are unavailable.
 - The current NPC configuration is held in memory and is not restored after reloading or closing the page.
-- The application exports Canary Server RevScripts and does not target every Open Tibia server distribution.
+- The application exports RevScripts for Canary, Crystal, and TFS 1.8 workflows and does not target every Open Tibia server distribution.
 - Item and outfit availability reflects the bundled catalog and may require periodic updates as server data evolves.
 - Generated scripts should be reviewed before installation on a production server.
 
