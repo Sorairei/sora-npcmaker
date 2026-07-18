@@ -233,7 +233,7 @@ function renderTemplateDetail(template) {
     var items = templateItems(template);
     var visibleItems = items.slice(0, 300);
     var rows = visibleItems.map(function (item) {
-        return '<div class="template-item-row"><span>' + window.sanitize(item.name) + ' <small>#' + window.sanitize(item.id) + (item.count ? ' · ' + window.sanitize(item.count) : '') + '</small></span>' +
+        return '<div class="template-item-row"><span class="template-item-identity"><span class="template-item-sprite"><img src="items/' + window.sanitize(item.id) + '.gif" loading="lazy" alt="" onerror="this.style.display=\'none\'"></span><span>' + window.sanitize(item.name) + ' <small>#' + window.sanitize(item.id) + (item.count ? ' · ' + window.sanitize(item.count) : '') + '</small></span></span>' +
             '<span>' + (item.buy ? item.buy.toLocaleString() + ' gp' : '—') + '</span><span>' + (item.sell ? item.sell.toLocaleString() + ' gp' : '—') + '</span></div>';
     }).join('');
     detail.innerHTML =

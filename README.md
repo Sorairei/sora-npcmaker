@@ -32,6 +32,7 @@ The application is made from static HTML, CSS, JavaScript, images, and local cat
 ## Contents
 
 - [Highlights](#highlights)
+- [Latest update](#latest-update)
 - [How it works](#how-it-works)
 - [Character and dialogue configuration](#character-and-dialogue-configuration)
 - [Trade system](#trade-system)
@@ -53,16 +54,31 @@ The application is made from static HTML, CSS, JavaScript, images, and local cat
 | Visual outfitter | Real-time preview for 995 named male, female, and monster appearances |
 | Appearance | Look type, addons, 245 mounts, indexed Tibia colors, and stable Tibia-style name and health bar positioning |
 | Item catalog | 6,835 bundled item sprites across 28 audited categories, searchable by client ID or name |
-| Trading | Buy and sell price configuration with a reviewable trade list |
+| Trading | Buy and sell price configuration, item thumbnails, 271 audited gold-shop templates, and Tibia RL economy checks |
 | Dialogue | Greeting, farewell, walk-away messages, and custom keyword responses |
 | Lua export | Readable generated source with direct `.lua` download |
 | Deployment | Static browser application with no package installation required at runtime |
+
+## Latest update
+
+This release expands the editor's catalogs, preview accuracy, and commercial NPC workflow:
+
+- Audited the complete item catalog against XML and OTB metadata, prioritizing canonical `primarytype` armor slots and using `weaponType` for weapons, shields, and compatible fallback records.
+- Expanded and corrected usable item categories, including fist weapons and newer equipment, while keeping unsupported objects in `Others` and excluding corpse states and static map objects.
+- Stabilized Tibia-style name and health-bar positioning across outfits, addons, monsters, and mounted characters.
+- Added 271 statically audited **NPC Shop Templates** containing only identity, outfit, basic messages, and standard gold-based shop entries.
+- Added safe **Use Template** and **Merge Items** workflows without importing quest callbacks, missions, rewards, storages, teleports, item exchanges, or custom currencies.
+- Added the **Smart Economy Analyzer** with 1,900 estimated Tibia RL item references, including 1,455 entries from the primary price table.
+- Added checks for suspicious price deviations, duplicate shop entries, and infinite self-trade profit loops.
+- Added lazy-loaded item thumbnails to template inventories and subtype-aware `count` generation for relevant shop entries.
+- Added performance safeguards that defer the compact shop dataset until requested and limit large DOM lists without removing items from Lua export.
+- Expanded the dependency-free regression suite to 25 passing tests.
 
 ## How it works
 
 1. The user defines the NPC name, health, walk interval, and walk radius.
 2. Outfit, addon, mount, and color controls update the visual preview immediately.
-3. Catalog selections build the NPC's buy and sell inventory.
+3. Catalog selections or an audited shop template build the NPC's buy and sell inventory.
 4. Dialogue fields and keyword-response pairs define conversation behavior.
 5. The generator converts the in-memory NPC state into a compatible RevScript for Canary, Crystal, and TFS 1.8 workflows.
 6. The generated Lua can be reviewed in the application and downloaded as a `.lua` file.
@@ -95,6 +111,8 @@ The Trade workspace includes two optional, browser-friendly commercial NPC tools
 - **NPC Shop Templates** provides audited gold-only merchants. A template may replace the current NPC's identity, outfit, basic messages, and shop, or merge only missing shop entries. Quest exchanges, custom currencies, mission logic, rewards, storage checks, and teleport behavior are excluded.
 - **Smart Economy Analyzer** compares the current shop against estimated Tibia RL prices and reports suspicious deviations, duplicate entries, and configurations that permit an infinite self-trade profit.
 
+Template inventories display local item-sprite thumbnails beside each item name and client ID. Images use native lazy loading, and very large lists are visually capped while every item remains available to the state and Lua exporter.
+
 The compact reference dataset is loaded only when either tool is opened. Source Lua files are parsed statically during development and are never shipped or executed in the user's browser.
 
 Regenerate the audited dataset with an existing NPC directory and an optional primary RL price table:
@@ -116,6 +134,9 @@ flowchart LR
     PALETTE[Outfit and color controls] --> STATE
     PALETTE --> PREVIEW[Oracle OTS outfit preview]
     CATALOG[Catalog and trade editor] --> STATE
+    TEMPLATES[Lazy shop templates] --> STATE
+    REFERENCES[RL price references] --> ANALYZER[Economy analyzer]
+    STATE --> ANALYZER
     DIALOGUE[Dialogue and keywords] --> STATE
     STATE --> GENERATOR[Lua generator]
     GENERATOR --> REVIEW[Generated script review]
@@ -128,7 +149,8 @@ flowchart LR
 - **State and interaction layer:** `app.js` owns the current NPC configuration, UI events, catalog search, palette behavior, preview updates, and download flow.
 - **Preview geometry layer:** `preview_geometry.js` keeps creature information anchored to Tibia's bottom-right 32x32 creature tile, independently of addon and monster silhouettes.
 - **Generation layer:** `generator.js` escapes user strings, validates numeric settings, and serializes the NPC state into Canary RevScript Lua.
-- **Data layer:** `data.js`, `outfit_data.js`, and `items/` provide the local item, outfit, mount, category, and sprite catalogs.
+- **Data layer:** `data.js`, `outfit_data.js`, `shop_templates.js`, and `items/` provide the local item, outfit, mount, category, commercial template, reference-price, and sprite catalogs.
+- **Shop tooling layer:** `shop_tools.js` expands compact template entries, merges shops without overwriting current prices, and produces economy audit reports.
 - **External preview boundary:** only character preview images depend on the Oracle OTS service; Lua generation remains local.
 
 ## Repository structure
@@ -139,6 +161,8 @@ flowchart LR
 | `styles.css` | RPG visual system, responsive layout, controls, tables, modals, branding, and footer styles |
 | `app.js` | NPC state, UI interactions, autocomplete, catalog, outfitter, colors, dialogue, and downloads |
 | `generator.js` | Canary RevScript Lua generation, defaults, validation, and escaping |
+| `shop_tools.js` | Template expansion, safe item merging, and economy-analysis logic |
+| `shop_templates.js` | Generated compact gold-shop templates and estimated RL reference prices, loaded on demand |
 | `preview_geometry.js` | Stable outfit, addon, mount, and monster preview anchoring |
 | `data.js` | Item catalog, categories, mounts, and fallback outfit metadata |
 | `outfit_data.js` | Named male, female, and monster outfit definitions |
@@ -146,7 +170,7 @@ flowchart LR
 | `items/` | Local item sprite catalog used by search, categories, and trade lists |
 | `tools/` | XML/OTB catalog importer, shop-template importer, classification overrides, and outfit-bound generator |
 | `assets/` | BeeTales logo, Sora mascot, and favicon assets |
-| `test/` | Dependency-free Node.js regression tests for Lua generation |
+| `test/` | Dependency-free regression tests for generation, catalogs, preview geometry, templates, and economy analysis |
 | `.github/FUNDING.yml` | GitHub Sponsors configuration |
 
 ## Security and privacy
@@ -157,6 +181,7 @@ flowchart LR
 | Lua string escaping | Backslashes, quotes, line endings, and tabs are escaped before entering generated Lua strings |
 | Numeric safeguards | Health, movement, outfit, mount, item ID, and shop price values are normalized before Lua generation |
 | Local generation | NPC configuration and Lua generation remain inside the browser |
+| Static shop import | Development-time NPC sources are parsed as text and are never executed or shipped to the browser |
 | No tracking | The project contains no accounts, analytics, advertising, or remote storage |
 
 The application does request remote Google Fonts and outfit preview images. Item sprites, catalog data, application logic, and Lua generation are served locally.
@@ -205,7 +230,7 @@ With Node.js 18 or newer installed, run the dependency-free syntax and generator
 npm run check
 ```
 
-The validation command checks application, preview geometry, generator, and importer syntax. Regression coverage includes default generation, stationary NPCs, numeric normalization, Lua string escaping, shop callbacks, XML/OTB categorization, corpse exclusion, stable addon positioning, mount bounds, and 32px/64px monster anchors.
+The validation command checks application, preview geometry, generator, compact dataset, shop tooling, and importer syntax. The current 25-test suite covers default generation, stationary NPCs, numeric normalization, Lua string escaping, subtype-aware shop callbacks, XML/OTB categorization, corpse exclusion, stable addon positioning, mount bounds, monster anchors, gold-only template filtering, quest-message exclusion, price references, merging, duplicates, and self-trade loops.
 
 ## Limitations
 

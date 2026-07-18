@@ -418,6 +418,10 @@ img { max-width: 100%; }
 .template-items-header { position:sticky; top:0; color:var(--accent-strong); background:#061008; font-size:.61rem; font-weight:850; text-transform:uppercase; }
 .template-item-row { border-top:1px solid rgba(110,143,74,.12); color:#cbd7c3; font-size:.69rem; }
 .template-item-row small { color:#778b79; }
+.template-item-identity { min-width:0; display:flex; align-items:center; gap:9px; }
+.template-item-identity > span:last-child { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.template-item-sprite { width:34px; height:34px; flex:0 0 34px; display:grid; place-items:center; border:1px solid rgba(110,143,74,.2); border-radius:5px; background:#041008; }
+.template-item-sprite img { width:32px; height:32px; object-fit:contain; image-rendering:pixelated; }
 .economy-modal-box { width:min(980px,96vw); }
 .economy-summary { display:grid; grid-template-columns:repeat(5,minmax(100px,1fr)); gap:8px; padding:14px 17px; border-bottom:1px solid var(--line); background:#07120a; }
 .economy-stat { padding:10px; border:1px solid rgba(110,143,74,.24); border-radius:7px; background:#0a1b10; }
