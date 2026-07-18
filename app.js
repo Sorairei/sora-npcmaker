@@ -157,6 +157,9 @@ function closeModal(modal) {
 var shopDataPromise = null;
 var selectedShopTemplate = null;
 var shopTemplateRenderTimer = null;
+var templateItemPage = 0;
+var templateItemQuery = '';
+var templateItemsPerPage = 100;
 
 function loadShopTemplateData() {
     if (window.SHOP_TEMPLATE_DATA) return Promise.resolve(window.SHOP_TEMPLATE_DATA);
@@ -213,6 +216,8 @@ function renderTemplateList(data) {
         button.innerHTML = '<strong>' + window.sanitize(template.name) + '</strong><span><em>' + window.sanitize(template.type) + '</em>' + template.items.length + ' items</span>';
         button.addEventListener('click', function () {
             selectedShopTemplate = template;
+            templateItemPage = 0;
+            templateItemQuery = '';
             renderTemplateList(data);
             renderTemplateDetail(template);
         });
@@ -231,21 +236,57 @@ function renderTemplateDetail(template) {
     var detail = gid('shop-template-detail');
     if (!detail) return;
     var items = templateItems(template);
-    var visibleItems = items.slice(0, 300);
-    var rows = visibleItems.map(function (item) {
-        return '<div class="template-item-row"><span class="template-item-identity"><span class="template-item-sprite"><img src="items/' + window.sanitize(item.id) + '.gif" loading="lazy" alt="" onerror="this.style.display=\'none\'"></span><span>' + window.sanitize(item.name) + ' <small>#' + window.sanitize(item.id) + (item.count ? ' · ' + window.sanitize(item.count) : '') + '</small></span></span>' +
-            '<span>' + (item.buy ? item.buy.toLocaleString() + ' gp' : '—') + '</span><span>' + (item.sell ? item.sell.toLocaleString() + ' gp' : '—') + '</span></div>';
-    }).join('');
     detail.innerHTML =
         '<div class="template-detail-heading"><div class="template-outfit-preview"><img src="' + outfitPreviewUrl(template.outfit) + '" alt="' + window.sanitize(template.name) + ' outfit"></div>' +
         '<div><h3>' + window.sanitize(template.name) + '</h3><p>' + window.sanitize(template.type) + ' shop · ' + items.length + ' gold-priced items · No quest logic</p></div>' +
         '<div class="template-detail-actions"><button id="template-replace" class="rpg-btn highlight" type="button">Use Template</button><button id="template-merge" class="rpg-btn" type="button">Merge Items</button></div></div>' +
         '<div class="template-message-grid"><div class="template-message"><span>Greeting</span><p>' + window.sanitize(template.greet || 'Welcome, |PLAYERNAME|. Ask me for a {trade}.') + '</p></div>' +
         '<div class="template-message"><span>Farewell</span><p>' + window.sanitize(template.farewell || 'Goodbye.') + '</p></div></div>' +
-        '<div class="template-items"><div class="template-items-header"><span>Item</span><span>NPC sells</span><span>NPC buys</span></div>' + rows +
-        (items.length > visibleItems.length ? '<div class="shop-tool-empty">' + (items.length - visibleItems.length) + ' additional items will still be included when this template is used.</div>' : '') + '</div>';
+        '<div class="template-items"><div class="template-items-toolbar"><input id="template-item-search" class="rpg-input" type="search" placeholder="Search item name or ID" aria-label="Search items in this shop"><span id="template-items-range"></span>' +
+        '<div class="template-pagination"><button id="template-items-prev" class="rpg-btn" type="button">Previous</button><span id="template-items-page"></span><button id="template-items-next" class="rpg-btn" type="button">Next</button></div></div>' +
+        '<div class="template-items-header"><span>Item</span><span>NPC sells</span><span>NPC buys</span></div><div id="template-items-body"></div></div>';
     gid('template-replace').addEventListener('click', function () { applyShopTemplate(template, false); });
     gid('template-merge').addEventListener('click', function () { applyShopTemplate(template, true); });
+    gid('template-item-search').addEventListener('input', function (event) {
+        templateItemQuery = event.target.value;
+        templateItemPage = 0;
+        renderTemplateItemsPage(template);
+    });
+    gid('template-items-prev').addEventListener('click', function () {
+        templateItemPage = Math.max(0, templateItemPage - 1);
+        renderTemplateItemsPage(template);
+    });
+    gid('template-items-next').addEventListener('click', function () {
+        templateItemPage += 1;
+        renderTemplateItemsPage(template);
+    });
+    renderTemplateItemsPage(template);
+}
+
+function renderTemplateItemsPage(template) {
+    var body = gid('template-items-body');
+    var range = gid('template-items-range');
+    var pageLabel = gid('template-items-page');
+    var previousButton = gid('template-items-prev');
+    var nextButton = gid('template-items-next');
+    if (!body || !range || !pageLabel || !previousButton || !nextButton) return;
+    var query = templateItemQuery.trim().toLowerCase();
+    var items = templateItems(template).filter(function (item) {
+        return !query || item.name.toLowerCase().includes(query) || String(item.id).includes(query);
+    });
+    var pageCount = Math.max(1, Math.ceil(items.length / templateItemsPerPage));
+    templateItemPage = Math.min(Math.max(0, templateItemPage), pageCount - 1);
+    var start = templateItemPage * templateItemsPerPage;
+    var visibleItems = items.slice(start, start + templateItemsPerPage);
+    body.innerHTML = visibleItems.map(function (item) {
+        return '<div class="template-item-row"><span class="template-item-identity"><span class="template-item-sprite"><img src="items/' + window.sanitize(item.id) + '.gif" loading="lazy" alt="" onerror="this.style.display=\'none\'"></span><span>' + window.sanitize(item.name) + ' <small>#' + window.sanitize(item.id) + (item.count ? ' · ' + window.sanitize(item.count) : '') + '</small></span></span>' +
+            '<span>' + (item.buy ? item.buy.toLocaleString() + ' gp' : '—') + '</span><span>' + (item.sell ? item.sell.toLocaleString() + ' gp' : '—') + '</span></div>';
+    }).join('');
+    if (!visibleItems.length) body.innerHTML = '<div class="shop-tool-empty">No items match this search.</div>';
+    range.textContent = items.length ? 'Showing ' + (start + 1) + '–' + (start + visibleItems.length) + ' of ' + items.length : '0 items';
+    pageLabel.textContent = 'Page ' + (templateItemPage + 1) + ' of ' + pageCount;
+    previousButton.disabled = templateItemPage === 0;
+    nextButton.disabled = templateItemPage >= pageCount - 1;
 }
 
 function syncTemplateOutfit(outfit) {
